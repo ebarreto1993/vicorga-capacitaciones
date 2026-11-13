@@ -1,4 +1,4 @@
-// Datos de las 8 carreras de Vicorga Academy
+// Datos de las 7 carreras de Vicorga Academy
 const carreras = {
     "maestria-belleza": {
         nombre: "Maestría en Belleza",
@@ -24,26 +24,6 @@ const carreras = {
             "Martes y Jueves 15 de octubre 9:00 AM - 4:00 PM",
             "Sábados 18 de octubre 9:00 AM - 4:00 PM",
             "Lunes y Miércoles 13 de octubre 6:00 PM - 9:00 PM"
-        ]
-    },
-    "cosmetologia": {
-        nombre: "Cosmetología",
-        descripcion: "Especialización en ciencias cosméticas y tratamientos estéticos avanzados. Conviértete en una experta en cosmetología, cosmiatría y dermocosmiatría. Duración: 6 meses.",
-        duracion: "6 meses",
-        videoId: "dummyId002",
-        modulos: [
-            { numero: "01", nombre: "Fundamentos de Cosmetología", icono: "fas fa-flask", imagen: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?w=600", temas: ["Célula y piel", "Biotipos cutáneos", "Lesiones elementales", "Dermis y epidermis"] },
-            { numero: "02", nombre: "Tratamientos Faciales", icono: "fas fa-face-smile", imagen: "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?w=600", temas: ["Higiene facial", "Exfoliación", "Hidratación profunda", "Masaje facial"] },
-            { numero: "03", nombre: "Cosmetología Aplicada", icono: "fas fa-vial", imagen: "https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?w=600", temas: ["Productos cosméticos", "Fórmulas y principios", "Manipulación de principios activos", "Prácticas en pacientes reales"] },
-            { numero: "04", nombre: "Cosmiatría", icono: "fas fa-wand-magic-sparkles", imagen: "https://images.pexels.com/photos/3945682/pexels-photo-3945682.jpeg?w=600", temas: ["Técnicas no invasivas", "Electroestética", "Radiofrecuencia", "Fotoenvejecimiento"] },
-            { numero: "05", nombre: "Dermocosmiatría", icono: "fas fa-microscope", imagen: "https://images.pexels.com/photos/3807516/pexels-photo-3807516.jpeg?w=600", temas: ["Dermatología básica", "Patologías de piel", "Tratamiento de acné", "Hiperpigmentación"] }
-        ],
-        matricula: 80,
-        mensualidad: 150,
-        incluye: ["30% de material para prácticas en clases por módulo", "Uniforme completo", "Mochila de la academia"],
-        horarios: [
-            "Martes y Jueves 29 de septiembre 9:00 AM - 4:00 PM",
-            "Sábados 3 de octubre 9:00 AM - 4:00 PM"
         ]
     },
         "unas": {
