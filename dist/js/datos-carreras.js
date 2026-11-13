@@ -3,7 +3,7 @@ const carreras = {
     "maestria-belleza": {
         nombre: "Maestría en Belleza",
         descripcion: "Programa integral de formación profesional con 10 módulos especializados. Conviértete en un estilista experto dominando todas las áreas de la belleza, desde barbería hasta colorimetría.",
-        duracion: "6 meses",
+        duracion: "10 meses (sábados) o 5 meses (2x semana)",
         videoId: "dummyId001",
         modulos: [
             { numero: "01", nombre: "Manicura y Pedicura", icono: "fas fa-hand-sparkles", imagen: "https://images.pexels.com/photos/3997386/pexels-photo-3997386.jpeg?w=600", temas: ["Manicura Rusa", "Acrygel y Gel", "Diseños 3D", "Acrílico full cover"] },
