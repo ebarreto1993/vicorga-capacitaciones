@@ -5,3 +5,5 @@
 
 /* Sección de academia sin fotografía, con el texto centrado. */
 .academy-grid{grid-template-columns:1fr;text-align:center;gap:22px;padding-block:40px}.academy-grid .line{margin-inline:auto}.academy-grid .values{border:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}.academy-grid .values>div{flex-direction:column;align-items:center;gap:8px;margin:0}.academy-grid .values p{max-width:310px}.academy-grid .values strong{margin-bottom:6px}@media(max-width:600px){.academy-grid .values{grid-template-columns:1fr;gap:24px}.academy-grid{padding-block:32px}}
+
+.button-whatsapp{background:#128c45;gap:10px}.button-whatsapp:hover{background:#0b7136}.button-whatsapp svg{flex-shrink:0}
