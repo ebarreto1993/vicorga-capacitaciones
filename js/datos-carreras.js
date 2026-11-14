@@ -2,8 +2,8 @@
 const carreras = {
     "cosmetologia": {
         nombre: "Cosmetología",
-        descripcion: "Especialización en ciencias cosméticas y tratamientos estéticos avanzados. Conviértete en una experta en cosmetología, cosmiatría y dermocosmiatría. Duración: 6 meses.",
-        duracion: "6 meses",
+        descripcion: "Especialización en ciencias cosméticas y tratamientos estéticos avanzados. Conviértete en una experta en cosmetología, cosmiatría y dermocosmiatría.",
+        duracion: "6 meses (dos veces por semana) o 12 meses (solo sábados)",
         videoId: "dummyId002",
         modulos: [
             { numero: "01", nombre: "Fundamentos de Cosmetología", icono: "fas fa-flask", imagen: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?w=600", temas: ["Célula y piel", "Biotipos cutáneos", "Lesiones elementales", "Dermis y epidermis"] },
