@@ -13,7 +13,7 @@ const carreras = {
             { numero: "05", nombre: "Dermocosmiatría", icono: "fas fa-microscope", imagen: "https://images.pexels.com/photos/3807516/pexels-photo-3807516.jpeg?w=600", temas: ["Dermatología básica", "Patologías de piel", "Tratamiento de acné", "Hiperpigmentación"] }
         ],
         matricula: 80,
-        mensualidad: 120,
+        mensualidad: 150,
         mensualidadEntreSemana: 190,
         incluye: ["30% de material para prácticas en clases por módulo", "Uniforme completo", "Mochila de la academia"],
         horarios: [
@@ -40,6 +40,7 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 120,
+        mensualidadEntreSemana: 190,
         incluye: ["Chaqueta de la academia", "Guía de estudio", "Mochila", "Materiales para clases", "Certificado avalado"],
         horarios: [
             "Martes y Jueves 15 de octubre 9:00 AM - 4:00 PM",
@@ -61,6 +62,7 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
+        mensualidadEntreSemana: 190,
         incluye: ["Drill y lámparas para prácticas", "Material para prácticas en clase", "Uniforme completo", "Mochila de la academia"],
         horarios: [
             "Lunes y Miércoles 30 de septiembre 9:00 AM - 12:00 PM",
@@ -80,6 +82,7 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
+        mensualidadEntreSemana: 190,
         incluye: ["Uniforme completo", "Mochila de la academia", "Materiales básicos para prácticas"],
         horarios: [
             "Jueves 24 de septiembre 9:00 AM - 12:00 PM"
@@ -99,6 +102,7 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
+        mensualidadEntreSemana: 190,
         incluye: ["Uniforme completo", "Mochila de la academia", "Materiales básicos para prácticas"],
         horarios: [
             "Viernes 8 de enero 9:00 AM - 12:00 PM",
@@ -118,6 +122,7 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
+        mensualidadEntreSemana: 190,
         incluye: ["Uniforme completo", "Materiales para prácticas en clase", "Mochila de la academia"],
         horarios: [
             "Martes 1 de septiembre 9:00 AM - 4:00 PM"
@@ -136,6 +141,7 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
+        mensualidadEntreSemana: 190,
         incluye: ["Máquina para prácticas en clase", "Chaqueta uniforme", "Mochila de la academia", "Certificación con aval del ministerio de trabajo (valor adicional)"],
         horarios: [
             "Sábados 29 de agosto 9:00 AM - 4:00 PM (6 meses)",
@@ -156,6 +162,7 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
+        mensualidadEntreSemana: 190,
         incluye: ["Equipos básicos para prácticas", "Uniforme completo", "Mochila de la academia", "Materiales de práctica"],
         horarios: [
             "Martes y Jueves 3 de octubre 9:00 AM - 5:00 PM",
