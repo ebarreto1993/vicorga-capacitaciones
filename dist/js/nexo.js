@@ -9,3 +9,25 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remov
 const grid=document.getElementById('course-grid');
 if(grid){function render(filter='todos'){const keys=order.filter(k=>filter==='todos'||groups[k]===filter);grid.innerHTML=keys.map(k=>{const c=carreras[k];return `<article class="course-card"><a class="card-photo" style="display:block" href="curso.html?carrera=${k}" aria-label="Ver carrera de ${c.nombre}"><img src="${cardImages[k]}" alt="Formación de ${c.nombre}" loading="lazy"><span class="badge">${labels[groups[k]].toUpperCase()}</span></a><div class="card-content"><h3>${c.nombre}</h3><p>${c.duracion} · Presencial</p><a href="curso.html?carrera=${k}">Ver curso ↗</a></div></article>`}).join('');document.querySelector('.result-count').textContent=`${keys.length} ${keys.length===1?'carrera disponible':'carreras disponibles'}`;}render();document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',x===b)});render(b.dataset.filter)}));}
 if(document.getElementById('course-title')){const requested=new URLSearchParams(location.search).get('carrera')||'maquillaje';const key=Object.hasOwn(carreras,requested)?requested:'maquillaje';const c=carreras[key];document.title=`${c.nombre} · Vicorga Capacitaciones`;document.getElementById('crumb').textContent=c.nombre;document.getElementById('course-badge').textContent=`${labels[groups[key]].toUpperCase()} · PRESENCIAL`;document.getElementById('course-title').textContent=c.nombre;document.getElementById('course-description').textContent=c.descripcion;const img=document.getElementById('course-image');img.src=cardImages[key];img.alt=`Formación profesional de ${c.nombre}`;document.getElementById('course-meta').innerHTML=`<span>◷ ${c.duracion}</span><span>◇ ${c.modulos.length} módulos</span>`;document.getElementById('achievements').innerHTML=c.modulos.slice(0,4).map(m=>`<li>${m.temas.slice(0,2).join(' y ')}.</li>`).join('');document.getElementById('modules').innerHTML=c.modulos.map((m,i)=>`<details ${i===0?'open':''}><summary><b>${m.numero}</b>${m.nombre}</summary><ul>${m.temas.map(t=>`<li>${t}</li>`).join('')}</ul></details>`).join('');document.getElementById('includes').innerHTML=c.incluye.map(t=>`<li>${t}</li>`).join('');document.getElementById('price').innerHTML=`$${c.mensualidad}<span> / mes</span><small>Matrícula: $${c.matricula}</small>`;document.getElementById('duration').textContent=c.duracion;document.getElementById('request-info').href=`https://wa.me/593969124761?text=${encodeURIComponent(`Hola, me interesa la carrera de ${c.nombre}. Quisiera confirmar próxima fecha, horarios, inversión y disponibilidad.`)}`;}
+const heroCarousel=document.querySelector('.hero-carousel');
+if(heroCarousel){
+ const slides=[...heroCarousel.querySelectorAll('.hero-slide')];
+ const pauseButton=heroCarousel.querySelector('.carousel-pause');
+ const count=heroCarousel.querySelector('.carousel-count');
+ const name=heroCarousel.querySelector('.carousel-name');
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+ let current=0,paused=reduced.matches,timer=null,hovered=false;
+ function schedule(){clearInterval(timer);timer=null;if(!paused&&!hovered&&!document.hidden&&!heroCarousel.contains(document.activeElement))timer=setInterval(()=>show(current+1),5000);}
+ function show(index){current=(index+slides.length)%slides.length;slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===current);slide.setAttribute('aria-hidden',String(i!==current));});count.textContent=`${current+1} / ${slides.length}`;name.textContent=slides[current].alt;slides[(current+1)%slides.length].loading='eager';}
+ function updatePause(){pauseButton.textContent=paused?'▶':'Ⅱ';pauseButton.setAttribute('aria-label',paused?'Reproducir carrusel':'Pausar carrusel');schedule();}
+ pauseButton.addEventListener('click',()=>{paused=!paused;updatePause();});
+ heroCarousel.querySelectorAll('[data-direction]').forEach(button=>button.addEventListener('click',()=>{show(current+Number(button.dataset.direction));schedule();}));
+ heroCarousel.addEventListener('pointerenter',event=>{if(event.pointerType==='mouse'){hovered=true;schedule();}});
+ heroCarousel.addEventListener('pointerleave',()=>{hovered=false;schedule();});
+ heroCarousel.addEventListener('focusin',schedule);
+ heroCarousel.addEventListener('focusout',()=>setTimeout(schedule,0));
+ document.addEventListener('visibilitychange',schedule);
+ reduced.addEventListener('change',()=>{paused=reduced.matches;updatePause();});
+ heroCarousel.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();show(current+(event.key==='ArrowRight'?1:-1));schedule();}});
+ updatePause();
+}
