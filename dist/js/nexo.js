@@ -12,22 +12,13 @@ if(document.getElementById('course-title')){const requested=new URLSearchParams(
 const heroCarousel=document.querySelector('.hero-carousel');
 if(heroCarousel){
  const slides=[...heroCarousel.querySelectorAll('.hero-slide')];
- const pauseButton=heroCarousel.querySelector('.carousel-pause');
- const count=heroCarousel.querySelector('.carousel-count');
- const name=heroCarousel.querySelector('.carousel-name');
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
- let current=0,paused=reduced.matches,timer=null,hovered=false;
- function schedule(){clearInterval(timer);timer=null;if(!paused&&!hovered&&!document.hidden&&!heroCarousel.contains(document.activeElement))timer=setInterval(()=>show(current+1),5000);}
- function show(index){current=(index+slides.length)%slides.length;slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===current);slide.setAttribute('aria-hidden',String(i!==current));});count.textContent=`${current+1} / ${slides.length}`;name.textContent=slides[current].alt;slides[(current+1)%slides.length].loading='eager';}
- function updatePause(){pauseButton.textContent=paused?'▶':'Ⅱ';pauseButton.setAttribute('aria-label',paused?'Reproducir carrusel':'Pausar carrusel');schedule();}
- pauseButton.addEventListener('click',()=>{paused=!paused;updatePause();});
- heroCarousel.querySelectorAll('[data-direction]').forEach(button=>button.addEventListener('click',()=>{show(current+Number(button.dataset.direction));schedule();}));
+ let current=0,timer=null,hovered=false;
+ function showNext(){current=(current+1)%slides.length;slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===current);slide.setAttribute('aria-hidden',String(i!==current));});slides[(current+1)%slides.length].loading='eager';}
+ function schedule(){clearInterval(timer);timer=null;if(!reduced.matches&&!hovered&&!document.hidden)timer=setInterval(showNext,5000);}
  heroCarousel.addEventListener('pointerenter',event=>{if(event.pointerType==='mouse'){hovered=true;schedule();}});
  heroCarousel.addEventListener('pointerleave',()=>{hovered=false;schedule();});
- heroCarousel.addEventListener('focusin',schedule);
- heroCarousel.addEventListener('focusout',()=>setTimeout(schedule,0));
  document.addEventListener('visibilitychange',schedule);
- reduced.addEventListener('change',()=>{paused=reduced.matches;updatePause();});
- heroCarousel.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();show(current+(event.key==='ArrowRight'?1:-1));schedule();}});
- updatePause();
+ reduced.addEventListener('change',schedule);
+ schedule();
 }
