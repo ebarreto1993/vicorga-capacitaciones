@@ -1,7 +1,7 @@
 // Datos de las 7 carreras de Vicorga Academy
 const carreras = {
     "maestria-belleza": {
-        nombre: "Maestría en Belleza",
+        nombre: "Maestra en Belleza",
         descripcion: "Programa integral de formación profesional con 10 módulos especializados. Conviértete en un estilista experto dominando todas las áreas de la belleza, desde barbería hasta colorimetría.",
         duracion: "10 meses (sábados) o 5 meses (2x semana)",
         videoId: "dummyId001",
