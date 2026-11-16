@@ -30,7 +30,7 @@ if(heroCarousel){
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
  let current=0,timer=null,hovered=false;
  function showNext(){current=(current+1)%slides.length;slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===current);slide.setAttribute('aria-hidden',String(i!==current));});slides[(current+1)%slides.length].loading='eager';}
- function schedule(){clearInterval(timer);timer=null;if(!reduced.matches&&!hovered&&!document.hidden)timer=setInterval(showNext,4000);}
+ function schedule(){clearInterval(timer);timer=null;if(!reduced.matches&&!hovered&&!document.hidden)timer=setInterval(showNext,3000);}
  heroCarousel.addEventListener('pointerenter',event=>{if(event.pointerType==='mouse'){hovered=true;schedule();}});
  heroCarousel.addEventListener('pointerleave',()=>{hovered=false;schedule();});
  document.addEventListener('visibilitychange',schedule);
