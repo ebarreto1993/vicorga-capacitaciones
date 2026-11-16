@@ -113,7 +113,7 @@ const carreras = {
         nombre: "Maquillaje",
         descripcion: "Titúlate como maquilladora profesional en tan solo 4 meses. Domina técnicas de maquillaje artístico, de novia, y peinado profesional. Alto rendimiento.",
         duracion: "4 meses",
-        videoId: "dummyId006",
+        videoId: "ccu2RzYMCLI",
         modulos: [
             { numero: "01", nombre: "Fundamentos de Maquillaje", icono: "fas fa-palette", imagen: "https://images.pexels.com/photos/2688992/pexels-photo-2688992.jpeg?w=600", temas: ["Teoría del color", "Biotipos de piel", "Preparación de la piel", "Herramientas y brochas"] },
             { numero: "02", nombre: "Maquillaje de Día y Noche", icono: "fas fa-sun", imagen: "https://images.pexels.com/photos/2689008/pexels-photo-2689008.jpeg?w=600", temas: ["Maquillaje natural", "Maquillaje de noche", "Contouring básico", "Técnicas de iluminación"] },
@@ -132,7 +132,7 @@ const carreras = {
         nombre: "Barbería",
         descripcion: "Titúlate como técnico profesional en barbería en tan solo 4 meses. Domina cortes modernos, técnicas de barba y servicio profesional. Cupos limitados a 8 estudiantes.",
         duracion: "4 meses (sábados) o 3 meses (lunes-miércoles)",
-        videoId: "dummyId007",
+        videoId: "FaFkNU3nGTk",
         modulos: [
             { numero: "01", nombre: "Historia y Fundamentos de Barbería", icono: "fas fa-book", imagen: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?w=600", temas: ["Historia de la barbería", "Técnicas clásicas", "Herramientas profesionales", "Seguridad e higiene"] },
             { numero: "02", nombre: "Cortes Clásicos", icono: "fas fa-scissors", imagen: "https://images.pexels.com/photos/1813273/pexels-photo-1813273.jpeg?w=600", temas: ["Corte sólido 0° y 45°", "Taper fade", "Mohicano", "Skin fade"] },
