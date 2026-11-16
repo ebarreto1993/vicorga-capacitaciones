@@ -4,7 +4,7 @@ const carreras = {
         nombre: "Cosmiatría",
         descripcion: "Especialización en ciencias cosméticas y tratamientos estéticos avanzados. Conviértete en una experta en cosmetología, cosmiatría y dermocosmiatría.",
         duracion: "6 meses (dos veces por semana) o 12 meses (solo sábados)",
-        videoId: "dummyId002",
+        videoId: "6HDYJQtG69Y",
         modulos: [
             { numero: "01", nombre: "Fundamentos de Cosmetología", icono: "fas fa-flask", imagen: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?w=600", temas: ["Célula y piel", "Biotipos cutáneos", "Lesiones elementales", "Dermis y epidermis"] },
             { numero: "02", nombre: "Tratamientos Faciales", icono: "fas fa-face-smile", imagen: "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?w=600", temas: ["Higiene facial", "Exfoliación", "Hidratación profunda", "Masaje facial"] },
@@ -25,7 +25,7 @@ const carreras = {
         nombre: "Maestra en Belleza",
         descripcion: "Programa integral de formación profesional con 10 módulos especializados. Conviértete en un estilista experto dominando todas las áreas de la belleza, desde barbería hasta colorimetría.",
         duracion: "10 meses (sábados) o 5 meses (2x semana)",
-        videoId: "dummyId001",
+        videoId: "sV3_Bk5__3A",
         modulos: [
             { numero: "01", nombre: "Manicura y Pedicura", icono: "fas fa-hand-sparkles", imagen: "https://images.pexels.com/photos/3997386/pexels-photo-3997386.jpeg?w=600", temas: ["Manicura Rusa", "Acrygel y Gel", "Diseños 3D", "Acrílico full cover"] },
             { numero: "02", nombre: "Maquillaje I - Skin Care", icono: "fas fa-spa", imagen: "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?w=600", temas: ["Cuidado de la piel", "Biotipos cutáneos", "Hidratación avanzada", "Corriente galvánica"] },
@@ -74,7 +74,7 @@ const carreras = {
         nombre: "Lashista",
         descripcion: "Conviértete en lashista profesional en tan solo 3 meses. Curso exclusivo de 3 módulos donde te convertirás en especialista de miradas con extensiones de pestañas.",
         duracion: "3 meses",
-        videoId: "dummyId004",
+        videoId: "IkzzymNarfE",
         modulos: [
             { numero: "01", nombre: "Fundamentos de Lashista", icono: "fas fa-eye", imagen: "https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?w=600", temas: ["Anatomía del párpado", "Tipos de pestañas naturales", "Herramientas profesionales", "Seguridad e higiene"] },
             { numero: "02", nombre: "Técnica de Extensiones", icono: "fas fa-feather", imagen: "https://images.pexels.com/photos/5128221/pexels-photo-5128221.jpeg?w=600", temas: ["Técnica clásica", "Técnica volumen ruso", "Aplicación de extensiones", "Retoque y mantenimiento"] },
@@ -92,7 +92,7 @@ const carreras = {
         nombre: "Micropigmentación",
         descripcion: "Aprende micropigmentación facial: cejas, labios y perfilado con técnicas de precisión. Especialización en 6 meses. Conviértete en una experta en esta técnica semipermanente.",
         duracion: "6 meses",
-        videoId: "dummyId005",
+        videoId: "vXYwpOcHC-w",
         modulos: [
             { numero: "01", nombre: "Fundamentos de Micropigmentación", icono: "fas fa-pen", imagen: "https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?w=600", temas: ["Historia de la micropigmentación", "Técnicas básicas", "Equipos y herramientas", "Seguridad e higiene"] },
             { numero: "02", nombre: "Diseño de Cejas", icono: "fas fa-wand-magic-sparkles", imagen: "https://images.pexels.com/photos/5069433/pexels-photo-5069433.jpeg?w=600", temas: ["Análisis facial", "Formas de cejas", "Diseño personalizado", "Técnica de aplicación"] },
