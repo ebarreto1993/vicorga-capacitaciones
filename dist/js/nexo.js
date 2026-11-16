@@ -17,11 +17,7 @@ if(document.getElementById('course-title')){const requested=new URLSearchParams(
    player.allowFullscreen = true;
    player.referrerPolicy = 'strict-origin-when-cross-origin';
    player.src = 'https://www.youtube-nocookie.com/embed/' + c.videoId;
-   const link = document.createElement('a');
-   link.className = 'text-link';
-   link.href = 'https://www.youtube.com/shorts/' + c.videoId;
-   link.textContent = 'Ver en YouTube ↗';
-   videoSection.append(player, link);
+   videoSection.append(player);
    videoSection.hidden = false;
  }
  document.title=`${c.nombre} · Vicorga Capacitaciones`;document.getElementById('crumb').textContent=c.nombre;document.getElementById('course-badge').textContent=`${labels[groups[key]].toUpperCase()} · PRESENCIAL`;document.getElementById('course-title').textContent=c.nombre;document.getElementById('course-description').textContent=c.descripcion;const img=document.getElementById('course-image');img.src=cardImages[key];img.alt=`Formación profesional de ${c.nombre}`;document.getElementById('course-meta').innerHTML=`<span>◷ ${c.duracion}</span><span>◇ ${c.modulos.length} módulos</span>`;document.getElementById('achievements').innerHTML=c.modulos.slice(0,4).map(m=>`<li>${m.temas.slice(0,2).join(' y ')}.</li>`).join('');document.getElementById('modules').innerHTML=c.modulos.map((m,i)=>`<details ${i===0?'open':''}><summary><b>${m.numero}</b>${m.nombre}</summary><ul>${m.temas.map(t=>`<li>${t}</li>`).join('')}</ul></details>`).join('');document.getElementById('includes').innerHTML=c.incluye.map(t=>`<li>${t}</li>`).join('');const pensiones = c.mensualidadEntreSemana
