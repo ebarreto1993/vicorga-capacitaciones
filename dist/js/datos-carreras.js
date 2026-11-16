@@ -15,7 +15,7 @@ const carreras = {
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["30% de material para prácticas en clases por módulo", "Uniforme completo", "Mochila de la academia"],
+        incluye: ["30% de los materiales para las clases", "Uniforme de la academia", "Mochila de la academia"],
         horarios: [
             "Martes y Jueves 29 de septiembre 9:00 AM - 4:00 PM",
             "Sábados 3 de octubre 9:00 AM - 4:00 PM"
@@ -41,7 +41,7 @@ const carreras = {
         matricula: 80,
         mensualidad: 120,
         mensualidadEntreSemana: 190,
-        incluye: ["Chaqueta de la academia", "Guía de estudio", "Mochila", "Materiales para clases", "Certificado avalado"],
+        incluye: ["Uniforme de la academia", "Mochila", "30% de los materiales para las clases", "Certificado avalado"],
         horarios: [
             "Martes y Jueves 15 de octubre 9:00 AM - 4:00 PM",
             "Sábados 18 de octubre 9:00 AM - 4:00 PM",
@@ -63,7 +63,7 @@ const carreras = {
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["Drill y lámparas para prácticas", "Material para prácticas en clase", "Uniforme completo", "Mochila de la academia"],
+        incluye: ["Drill y lámparas para prácticas", "30% de los materiales para las clases", "Uniforme de la academia", "Mochila de la academia"],
         horarios: [
             "Lunes y Miércoles 30 de septiembre 9:00 AM - 12:00 PM",
             "Martes y Jueves 1 de octubre 9:00 AM - 12:00 PM",
@@ -83,7 +83,7 @@ const carreras = {
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["Uniforme completo", "Mochila de la academia", "Materiales básicos para prácticas"],
+        incluye: ["Uniforme de la academia", "Mochila de la academia", "30% de los materiales para las clases"],
         horarios: [
             "Jueves 24 de septiembre 9:00 AM - 12:00 PM"
         ]
@@ -103,7 +103,7 @@ const carreras = {
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["Uniforme completo", "Mochila de la academia", "Materiales básicos para prácticas"],
+        incluye: ["Uniforme de la academia", "Mochila de la academia", "30% de los materiales para las clases"],
         horarios: [
             "Viernes 8 de enero 9:00 AM - 12:00 PM",
             "Viernes 8 de enero 2:00 PM - 5:00 PM"
@@ -123,7 +123,7 @@ const carreras = {
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["Uniforme completo", "Materiales para prácticas en clase", "Mochila de la academia"],
+        incluye: ["Uniforme de la academia", "30% de los materiales para las clases", "Mochila de la academia"],
         horarios: [
             "Martes 1 de septiembre 9:00 AM - 4:00 PM"
         ]
@@ -142,7 +142,7 @@ const carreras = {
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["Máquina para prácticas en clase", "Chaqueta uniforme", "Mochila de la academia", "Certificación con aval del ministerio de trabajo (valor adicional)"],
+        incluye: ["Máquina para prácticas en clase", "Uniforme de la academia", "Mochila de la academia", "30% de los materiales para las clases", "Certificación con aval del ministerio de trabajo (valor adicional)"],
         horarios: [
             "Sábados 29 de agosto 9:00 AM - 4:00 PM (6 meses)",
             "Lunes y Miércoles 28 de septiembre 9:00 AM - 4:00 PM (3 meses)"
@@ -163,7 +163,7 @@ const carreras = {
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["Equipos básicos para prácticas", "Uniforme completo", "Mochila de la academia", "Materiales de práctica"],
+        incluye: ["Equipos básicos para prácticas", "Uniforme de la academia", "Mochila de la academia", "30% de los materiales para las clases"],
         horarios: [
             "Martes y Jueves 3 de octubre 9:00 AM - 5:00 PM",
             "Viernes 11 de octubre 1:00 PM - 8:00 PM",
