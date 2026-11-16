@@ -142,7 +142,7 @@ const carreras = {
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["Máquina para prácticas en clase", "Uniforme de la academia", "Mochila de la academia", "30% de los materiales para las clases", "Certificación con aval del ministerio de trabajo (valor adicional)"],
+        incluye: ["Máquina de cortar cabello de regalo para cada alumno", "Uniforme de la academia", "Mochila de la academia", "30% de los materiales para las clases", "Certificación con aval del ministerio de trabajo (valor adicional)"],
         horarios: [
             "Sábados 29 de agosto 9:00 AM - 4:00 PM (6 meses)",
             "Lunes y Miércoles 28 de septiembre 9:00 AM - 4:00 PM (3 meses)"
