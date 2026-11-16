@@ -10,4 +10,5 @@
 
 .hero-carousel{overflow:hidden;border-top-left-radius:120px;isolation:isolate}.hero-carousel .hero-slide{inset:0;opacity:0;transition:opacity 250ms cubic-bezier(.23,1,.32,1);border-radius:0;pointer-events:none}.hero-carousel .hero-slide.is-active{opacity:1}.hero-carousel p{z-index:2;pointer-events:none}@media(max-width:600px){.hero-carousel{border-top-left-radius:85px}}@media(prefers-reduced-motion:reduce){.hero-carousel .hero-slide{transition:none}}
 
-#course-video iframe { display: block; width: min(100%, 320px); aspect-ratio: 9/16; border: 0; border-radius: 8px; margin: 16px 0 10px; }
+#course-video { text-align: center; }
+#course-video iframe { display: block; width: min(100%, 320px); aspect-ratio: 9/16; border: 0; border-radius: 8px; margin: 16px auto 10px; }
