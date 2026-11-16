@@ -1,5 +1,5 @@
-const groups={cosmiatria:"bienestar","maestria-belleza":"belleza",maquillaje:"belleza",unas:"belleza",lashista:"belleza",micropigmentacion:"belleza",barberia:"barberia",tatuajes:"arte"};
-const labels={belleza:'Belleza',barberia:'Barbería',bienestar:'Bienestar',arte:'Arte corporal'};
+const groups={cosmiatria:"spa","maestria-belleza":"belleza",maquillaje:"belleza",unas:"belleza",lashista:"belleza",micropigmentacion:"belleza",barberia:"barberia",tatuajes:"arte"};
+const labels={belleza:'Belleza',barberia:'Barbería',spa:'Spa',arte:'Arte corporal'};
 const cardImages={cosmiatria:'assets/photos/cosmetologia.jpg',maquillaje:'assets/images/maquillaje.jpeg',barberia:'assets/images/barberia.jpeg',unas:'assets/images/uñas.jpeg',lashista:'assets/images/lashista.jpeg',micropigmentacion:'assets/images/micropigmentacion.jpeg','maestria-belleza':'assets/images/belleza.jpeg',tatuajes:'assets/photos/tatuajes.jpg'};
 const order=['maestria-belleza','unas','lashista','barberia','maquillaje','micropigmentacion','tatuajes','cosmiatria'];
 const menu=document.querySelector('.menu'),nav=document.querySelector('nav');
