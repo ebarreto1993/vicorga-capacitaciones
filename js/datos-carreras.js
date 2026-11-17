@@ -73,7 +73,7 @@ const carreras = {
     "lashista": {
         nombre: "Lashista",
         descripcion: "Conviértete en lashista profesional en tan solo 3 meses. Curso exclusivo de 3 módulos donde te convertirás en especialista de miradas con extensiones de pestañas.",
-        duracion: "3 meses",
+        duracion: "3 meses (una vez por semana)",
         videoId: "IkzzymNarfE",
         modulos: [
             { numero: "01", nombre: "Fundamentos de Lashista", icono: "fas fa-eye", imagen: "https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?w=600", temas: ["Anatomía del párpado", "Tipos de pestañas naturales", "Herramientas profesionales", "Seguridad e higiene"] },
@@ -82,7 +82,6 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
-        mensualidadEntreSemana: 190,
         incluye: ["Uniforme de la academia", "Mochila de la academia", "30% de los materiales para las clases", "Certificación de la academia"],
         horarios: [
             "Jueves 24 de septiembre 9:00 AM - 12:00 PM"
@@ -91,7 +90,7 @@ const carreras = {
     "micropigmentacion": {
         nombre: "Micropigmentación",
         descripcion: "Aprende micropigmentación facial: cejas, labios y perfilado con técnicas de precisión. Especialización en 6 meses. Conviértete en una experta en esta técnica semipermanente.",
-        duracion: "6 meses",
+        duracion: "6 meses (una vez por semana)",
         videoId: "vXYwpOcHC-w",
         modulos: [
             { numero: "01", nombre: "Fundamentos de Micropigmentación", icono: "fas fa-pen", imagen: "https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?w=600", temas: ["Historia de la micropigmentación", "Técnicas básicas", "Equipos y herramientas", "Seguridad e higiene"] },
@@ -102,7 +101,6 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
-        mensualidadEntreSemana: 190,
         incluye: ["Uniforme de la academia", "Mochila de la academia", "30% de los materiales para las clases", "Certificación de la academia"],
         horarios: [
             "Viernes 8 de enero 9:00 AM - 12:00 PM",
@@ -112,7 +110,7 @@ const carreras = {
         "maquillaje": {
         nombre: "Maquillaje",
         descripcion: "Titúlate como maquilladora profesional en tan solo 4 meses. Domina técnicas de maquillaje artístico, de novia, y peinado profesional. Alto rendimiento.",
-        duracion: "4 meses",
+        duracion: "4 meses (una vez por semana)",
         videoId: "ccu2RzYMCLI",
         modulos: [
             { numero: "01", nombre: "Fundamentos de Maquillaje", icono: "fas fa-palette", imagen: "https://images.pexels.com/photos/2688992/pexels-photo-2688992.jpeg?w=600", temas: ["Teoría del color", "Biotipos de piel", "Preparación de la piel", "Herramientas y brochas"] },
@@ -122,7 +120,6 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
-        mensualidadEntreSemana: 190,
         incluye: ["Uniforme de la academia", "30% de los materiales para las clases", "Mochila de la academia", "Certificación de la academia"],
         horarios: [
             "Martes 1 de septiembre 9:00 AM - 4:00 PM"
