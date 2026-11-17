@@ -24,7 +24,7 @@ const carreras = {
     "maestria-belleza": {
         nombre: "Maestra en Belleza",
         descripcion: "Programa integral de formación profesional con 10 módulos especializados. Conviértete en un estilista experto dominando todas las áreas de la belleza, desde barbería hasta colorimetría.",
-        duracion: "10 meses (sábados) o 5 meses (2x semana)",
+        duracion: "5 meses (2 veces por semana) o 10 meses (sábados)",
         videoId: "sV3_Bk5__3A",
         modulos: [
             { numero: "01", nombre: "Manicura y Pedicura", icono: "fas fa-hand-sparkles", imagen: "https://images.pexels.com/photos/3997386/pexels-photo-3997386.jpeg?w=600", temas: ["Manicura Rusa", "Acrygel y Gel", "Diseños 3D", "Acrílico full cover"] },
@@ -49,9 +49,9 @@ const carreras = {
         ]
     },
         "unas": {
-        nombre: "Uñas",
+        nombre: "Técnica profesional en uñas",
         descripcion: "Maestra en taller de manicura y pedicura. Domina todas las técnicas profesionales de diseño y aplicación. Duración: 5 meses.",
-        duracion: "5 meses",
+        duracion: "5 meses (2 veces por semana, en horario matutino o vespertino, o sábados intensivos, 1 vez por semana)",
         videoId: "dummyId003",
         modulos: [
             { numero: "01", nombre: "Manicura Rusa", icono: "fas fa-hand-sparkles", imagen: "https://images.pexels.com/photos/3997386/pexels-photo-3997386.jpeg?w=600", temas: ["Técnica de manicura rusa", "Herramientas especializadas", "Cuidado de cutículas", "Diseños básicos"] },
@@ -73,7 +73,7 @@ const carreras = {
     "lashista": {
         nombre: "Lashista",
         descripcion: "Conviértete en lashista profesional en tan solo 3 meses. Curso exclusivo de 3 módulos donde te convertirás en especialista de miradas con extensiones de pestañas.",
-        duracion: "3 meses (una vez por semana)",
+        duracion: "3 meses (1 vez por semana, en horario matutino o vespertino)",
         videoId: "IkzzymNarfE",
         modulos: [
             { numero: "01", nombre: "Fundamentos de Lashista", icono: "fas fa-eye", imagen: "https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?w=600", temas: ["Anatomía del párpado", "Tipos de pestañas naturales", "Herramientas profesionales", "Seguridad e higiene"] },
@@ -90,7 +90,7 @@ const carreras = {
     "micropigmentacion": {
         nombre: "Micropigmentación",
         descripcion: "Aprende micropigmentación facial: cejas, labios y perfilado con técnicas de precisión. Especialización en 6 meses. Conviértete en una experta en esta técnica semipermanente.",
-        duracion: "6 meses (una vez por semana)",
+        duracion: "6 meses (1 vez por semana, en horario matutino o vespertino)",
         videoId: "vXYwpOcHC-w",
         modulos: [
             { numero: "01", nombre: "Fundamentos de Micropigmentación", icono: "fas fa-pen", imagen: "https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?w=600", temas: ["Historia de la micropigmentación", "Técnicas básicas", "Equipos y herramientas", "Seguridad e higiene"] },
@@ -128,7 +128,7 @@ const carreras = {
     "barberia": {
         nombre: "Barbería",
         descripcion: "Titúlate como técnico profesional en barbería en tan solo 4 meses. Domina cortes modernos, técnicas de barba y servicio profesional. Cupos limitados a 8 estudiantes.",
-        duracion: "4 meses (sábados) o 3 meses (lunes-miércoles)",
+        duracion: "3 meses (lunes y miércoles) o 4 meses (sábados)",
         videoId: "FaFkNU3nGTk",
         modulos: [
             { numero: "01", nombre: "Historia y Fundamentos de Barbería", icono: "fas fa-book", imagen: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?w=600", temas: ["Historia de la barbería", "Técnicas clásicas", "Herramientas profesionales", "Seguridad e higiene"] },
