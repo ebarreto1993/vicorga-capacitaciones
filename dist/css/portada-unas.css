@@ -1,0 +1,126 @@
+/* Portada de revista de uñas, compuesta con los archivos originales. */
+.nails-magazine > .header { display: none; }
+.nails-cover {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  aspect-ratio: 3508 / 2480;
+  overflow: hidden;
+  background: white;
+  color: black;
+  container-type: inline-size;
+}
+.nails-cover-photo {
+  position: absolute;
+  inset: -14% auto auto -19%;
+  z-index: -3;
+  width: 71.5%;
+  height: 130%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+}
+.nails-cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(90deg, transparent 30%, #ffffff00 35%, #ffffffb3 44%, white 51%);
+}
+.nails-cover::after {
+  content: '';
+  position: absolute;
+  top: 3.75%;
+  left: 0;
+  right: 0;
+  height: .4%;
+  background: #cfaa6a;
+}
+.nails-watermark {
+  position: absolute;
+  z-index: -1;
+  width: 48%;
+  max-width: none;
+  right: -10.5%;
+  bottom: -5%;
+  filter: grayscale(1);
+  opacity: .16;
+}
+.nails-cover-heading {
+  position: absolute;
+  left: 53.5%;
+  top: 30.4%;
+  width: 34%;
+}
+.nails-cover h1 {
+  font: 700 4.1cqw/1.12 'Gelasio', Georgia, serif;
+  letter-spacing: .015em;
+  white-space: nowrap;
+  max-width: none;
+  color: #000;
+  margin: 0;
+}
+.nails-cover-subtitle {
+  font: 700 2.12cqw/1.16 'Caladea', Georgia, serif;
+  letter-spacing: -.025em;
+  margin-top: .8cqw;
+  white-space: nowrap;
+}
+.nails-polish {
+  position: absolute;
+  width: 7.8%;
+  aspect-ratio: .8;
+  right: 5.65%;
+  top: 22.2%;
+  transform: rotate(-13deg);
+  overflow: hidden;
+}
+.nails-polish img {
+  position: absolute;
+  max-width: none;
+  width: 320%;
+  left: -112%;
+  top: -55%;
+}
+.nails-edition {
+  position: absolute;
+  left: 52%;
+  top: 81.7%;
+  display: flex;
+  align-items: center;
+  gap: 1.7cqw;
+}
+.nails-edition p {
+  font: 700 2.25cqw/1.2 'Caladea', Georgia, serif;
+  white-space: nowrap;
+  margin: 0;
+}
+.nails-book {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 4.8cqw;
+  aspect-ratio: 1.65;
+}
+.nails-book img {
+  position: absolute;
+  max-width: none;
+  width: 240%;
+  left: -70%;
+  top: -68%;
+}
+@media(max-width:600px) {
+  .nails-cover { aspect-ratio: 3 / 4; }
+  .nails-cover-photo { inset: 0 auto 0 0; width: 67%; height: 100%; object-position: 48% center; }
+  .nails-cover::before {
+    background: linear-gradient(90deg, transparent 18%, #ffffff00 27%, #ffffffad 44%, white 57%);
+  }
+  .nails-cover-heading { left: 49%; top: 32%; width: 48%; }
+  .nails-cover h1 { white-space: normal; font-size: 7.2cqw; line-height: 1.07; }
+  .nails-cover-subtitle { white-space: normal; font-size: 3.8cqw; margin-top: 3cqw; max-width: 90%; line-height: 1.25; }
+  .nails-polish { width: 12%; right: 6%; top: 18%; }
+  .nails-watermark { width: 72%; right: -22%; bottom: -3%; }
+  .nails-edition { left: 46%; top: 83%; gap: 2cqw; }
+  .nails-edition p { font-size: 4.2cqw; }
+  .nails-book { width: 7.5cqw; }
+}

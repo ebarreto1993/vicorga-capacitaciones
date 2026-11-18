@@ -34,6 +34,20 @@ get('formation-image').src = coursePhotos[courseKey];
 get('formation-image').alt = 'Práctica de ' + course.nombre;
 get('duration').textContent = course.duracion;
 
+if (courseKey === 'unas') {
+  const fonts = document.createElement('link');
+  fonts.rel = 'stylesheet';
+  fonts.href = 'https://fonts.googleapis.com/css2?family=Caladea:wght@400;700&family=Gelasio:wght@400;700&display=swap';
+  document.head.append(fonts);
+  document.body.classList.add('nails-magazine');
+  const cover = get('nails-cover-template').content.cloneNode(true);
+  document.querySelector('.catalog-cover').replaceWith(cover);
+  const back = document.createElement('a');
+  back.href = 'index.html#cursos';
+  back.textContent = '← Carreras';
+  document.querySelector('.catalog-nav .wrap').prepend(back);
+}
+
 course.modulos.forEach((module, index) => {
   const card = document.createElement('article');
   card.className = 'module-card';

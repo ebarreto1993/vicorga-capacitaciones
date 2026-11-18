@@ -15,10 +15,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/catalogo.css">
+  <link rel="stylesheet" href="css/portada-unas.css">
   <script src="js/datos-carreras.js" defer></script>
   <script src="js/catalogo.js" defer></script>
 </head>
 <body>
+  <template id="nails-cover-template">
+    <section class="nails-cover" aria-labelledby="course-title">
+      <img class="nails-cover-photo" src="assets/images/modulo_uñas/m1.jpeg" alt="" fetchpriority="high">
+      <img class="nails-watermark" src="assets/images/modulo_uñas/vc_transparencia.png" alt="">
+      <div class="nails-cover-heading">
+        <h1 id="course-title">EXPERT NAILS</h1>
+        <p class="nails-cover-subtitle">TÉCNICO PROFESIONAL EN UÑAS</p>
+      </div>
+      <span class="nails-polish" aria-hidden="true"><img src="assets/images/modulo_uñas/esmalte.png" alt=""></span>
+      <div class="nails-edition">
+        <p>PENSUM 2027</p>
+        <span class="nails-book" aria-hidden="true"><img src="assets/images/modulo_uñas/libro.png" alt=""></span>
+      </div>
+    </section>
+  </template>
   <a class="skip" href="#pensum">Ir al pénsum</a>
   <header class="wrap header">
     <a class="brand" href="index.html" aria-label="Vicorga Capacitaciones, inicio"><img src="assets/images/logo_vicorga.png" alt="Vicorga Capacitaciones" width="1536" height="1024"></a>
