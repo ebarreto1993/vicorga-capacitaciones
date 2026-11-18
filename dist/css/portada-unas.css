@@ -53,9 +53,12 @@
   width: 43%;
 }
 .nails-title-row {
-  display: flex;
-  align-items: center;
-  gap: .6cqw;
+  display: block;
+}
+.nails-last-word {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
 }
 .nails-cover h1 {
   font: 700 min(4.1cqw, 7.8cqh)/1.12 'Gelasio', Georgia, serif;
@@ -72,12 +75,13 @@
   white-space: nowrap;
 }
 .nails-polish {
-  position: relative;
-  flex: 0 0 min(7.8cqw, 11cqh);
+  position: absolute;
+  left: 100%;
+  bottom: .08em;
+  margin-left: -.04em;
   width: min(7.8cqw, 11cqh);
   aspect-ratio: .8;
   transform: rotate(-13deg);
-  margin-block: -1.3cqw;
   overflow: hidden;
 }
 .nails-polish img {
@@ -121,10 +125,10 @@
     background: linear-gradient(90deg, transparent 18%, #ffffff00 27%, #ffffffad 44%, white 57%);
   }
   .nails-cover-heading { left: 49%; top: 32%; width: 48%; }
-  .nails-title-row { gap: 2.5cqw; }
-  .nails-cover h1 { white-space: normal; font-size: 7.2cqw; line-height: 1.07; }
+  .nails-cover h1 { width: max-content; white-space: normal; overflow-wrap: normal; font-size: 7.2cqw; line-height: 1.07; }
+  .nails-last-word { display: block; width: max-content; }
   .nails-cover-subtitle { white-space: normal; font-size: 3.8cqw; margin-top: 3cqw; max-width: 90%; line-height: 1.25; }
-  .nails-polish { flex-basis: 11cqw; width: 11cqw; margin-block: 0; transform: rotate(-8deg); }
+  .nails-polish { width: 11cqw; transform: rotate(-8deg); }
   .nails-watermark { width: 72%; right: -22%; bottom: -3%; }
   .nails-edition { left: 46%; top: 83%; gap: 2cqw; }
   .nails-edition p { font-size: 4.2cqw; }
