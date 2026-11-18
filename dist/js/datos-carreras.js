@@ -62,7 +62,6 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
-        mensualidadEntreSemana: 190,
         incluye: ["Drill y lámparas para prácticas", "30% de los materiales para las clases", "Uniforme de la academia", "Mochila de la academia", "Certificación de la academia"],
         horarios: [
             "Lunes y Miércoles 30 de septiembre 9:00 AM - 12:00 PM",
