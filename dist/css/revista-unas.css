@@ -66,7 +66,7 @@
 .nails-module-one ol { font-size: clamp(16px, 1.9cqw, 28px); line-height: 1.42; }
 .nails-module-two .nails-page-copy { padding-top: 6%; }
 .nails-module-two .nails-page-photo { object-position: 35% center; }
-.nails-video-trigger {
+.nails-video-circle {
   display: grid;
   place-items: center;
   position: relative;
@@ -77,18 +77,35 @@
   border-radius: 50%;
   border: 8px solid #bd8623;
   background: #bd8623;
-  cursor: pointer;
   padding: 0;
 }
-.nails-video-trigger img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-.nails-video-trigger span { position: relative; display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: #fff; color: #000; font-size: 23px; padding-left: 4px; transition: transform .18s; }
-.nails-video-trigger:hover span { transform: scale(1.08); }
-.nails-video-dialog { width: min(90vw, 620px); max-height: 94svh; padding: 18px; border: 1px solid #cfaa6a; color: #000; background: #fff; }
-.nails-video-dialog::backdrop { background: #000c; }
-.nails-video-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 15px; }
-.nails-video-heading h2 { font-size: 24px; margin: 0; }
-.nails-video-close { background: white; border: 1px solid #ccc; color: black; width: 44px; height: 44px; cursor: pointer; font-size: 30px; }
-.nails-video-dialog video { display: block; width: 100%; max-height: 76svh; background: #000; }
+.nails-video-circle video { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.nails-video-toggle { display: block; margin: 8px 4% 0 auto; min-height: 44px; padding: 6px 14px; border: 1px solid #b8a27a; background: white; color: black; cursor: pointer; }
+.nails-magazine [hidden] { display: none !important; }
+.nails-magazine #pagos .investment-grid { display: block; max-width: 850px; margin-inline: auto; }
+.nails-module-three .nails-page-photo,
+.nails-investment .nails-page-photo { left: auto; right: 0; width: 53%; }
+.nails-module-three::before { background: linear-gradient(90deg, white 39%, #ffffffe6 49%, transparent 72%); }
+.nails-module-three .nails-page-copy { margin-left: 0; width: 59%; }
+.nails-module-three .nails-page-watermark { left: -13%; right: auto; }
+.nails-module-three ol { margin-top: 14%; }
+.nails-module-four ol { margin-top: 12%; }
+.nails-module-five .nails-page-photo { width: 41%; mask-image: linear-gradient(90deg, black 65%, transparent); }
+.nails-module-five .nails-page-photo-second { left: auto; right: 0; width: 43%; mask-image: linear-gradient(90deg, transparent, black 35%); }
+.nails-module-five::before { background: linear-gradient(90deg, #ffffff00 10%, #ffffffd9 31%, white 47%, #ffffffc7 60%, #ffffff11 92%); }
+.nails-module-five .nails-page-copy { width: 61%; margin-left: 24%; padding-top: 9%; }
+.nails-module-five ol { font-size: clamp(16px, 1.9cqw, 28px); }
+.nails-exam { min-height: min(70.7vw, 100svh); background: #b75d8b; }
+.nails-exam::before { display: none; }
+.nails-exam .nails-page-photo { width: 50%; object-position: center 55%; }
+.nails-exam .nails-page-photo-second { left: 50%; object-position: center 40%; }
+.nails-exam h2 { color: white; position: relative; padding-top: 5%; text-shadow: 0 2px 6px #53213c88; }
+.nails-investment::before { background: linear-gradient(90deg, white 38%, #ffffffed 51%, #ffffff19 78%); }
+.nails-investment .nails-page-copy { margin-left: 0; width: 73%; padding: 4.8% 2.5% 3%; }
+.nails-investment h2 { white-space: nowrap; margin-bottom: 5%; }
+.nails-investment p, .nails-investment ul { font: 400 clamp(16px, 1.8cqw, 26px)/1.45 'Caladea', Georgia, serif; margin: 0 0 .5em; }
+.nails-investment ul { padding-left: 1.05em; }
+.nails-investment strong { font-weight: 700; }
 @media(max-width:600px) {
   .nails-page { min-height: 0; padding-top: 230px; }
   .nails-page-photo, .nails-module-one .nails-page-photo { top: 0; left: 0; width: 100%; height: 300px; object-position: center 40%; }
@@ -101,5 +118,19 @@
   .nails-audience p { margin-top: 0; }
   .nails-page li + li { margin-top: 5px; }
   .nails-page-watermark { width: 80%; right: -15%; bottom: -4%; opacity: .08; }
-  .nails-video-trigger { width: min(70vw, 280px); margin: 24px auto 0; }
+  .nails-video-circle { width: min(70vw, 280px); margin: 24px auto 0; }
+  .nails-video-toggle { margin-inline: auto; }
+  .nails-module-three .nails-page-photo,
+  .nails-investment .nails-page-photo { top: 0; left: 0; width: 100%; height: 300px; }
+  .nails-module-three::before, .nails-module-five::before, .nails-investment::before { background: linear-gradient(180deg, transparent 100px, #ffffff22 170px, white 290px); }
+  .nails-module-three .nails-page-copy, .nails-module-five .nails-page-copy,
+  .nails-investment .nails-page-copy { width: 100%; margin-left: 0; padding: 25px 6% 40px; }
+  .nails-module-three ol, .nails-module-four ol { margin-top: 0; }
+  .nails-module-five .nails-page-photo { width: 50%; }
+  .nails-module-five .nails-page-photo-second { left: 50%; width: 50%; }
+  .nails-module-five ol, .nails-investment p, .nails-investment ul { font-size: 18px; line-height: 1.55; }
+  .nails-investment h2 { white-space: normal; }
+  .nails-exam { min-height: 540px; padding-top: 0; }
+  .nails-exam .nails-page-photo, .nails-exam .nails-page-photo-second { height: 100%; }
+  .nails-exam h2 { padding: 35px 12px 0; }
 }

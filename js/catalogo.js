@@ -78,25 +78,52 @@ course.modulos.forEach((module, index) => {
 });
 
 if (courseKey === 'unas') {
-  get('modulo-01').remove();
-  get('modulo-02').remove();
+  get('modules').replaceChildren();
   get('pensum').id = 'modulos-siguientes';
-  get('pensum-title').textContent = 'Módulos 3 a 5';
+  get('modulos-siguientes').hidden = true;
+  get('formacion').hidden = true;
+  document.querySelector('.catalog-nav a[href="#formacion"]').remove();
   const pages = get('nails-pages-template').content.cloneNode(true);
   pages.querySelector('.nails-pages').id = 'pensum';
   document.querySelector('.catalog-nav').after(pages);
-  get('module-select').options[1].textContent = '01 · Módulo 1';
-  get('module-select').options[2].textContent = '02 · Módulo 2';
-  const videoDialog = document.querySelector('.nails-video-dialog');
-  const moduleVideo = videoDialog.querySelector('video');
-  document.querySelector('.nails-video-trigger').addEventListener('click', () => {
-    videoDialog.showModal();
-    moduleVideo.play().catch(() => {
-      // Native controls remain available if the browser requires another tap.
-    });
+
+  const originalInvestment = get('inversion');
+  originalInvestment.id = 'pagos';
+  originalInvestment.removeAttribute('aria-labelledby');
+  originalInvestment.setAttribute('aria-label', 'Datos de pago e inscripción');
+  originalInvestment.querySelector('.section-heading').hidden = true;
+  originalInvestment.querySelector('.investment').hidden = true;
+  originalInvestment.querySelector('.date-row').remove();
+  originalInvestment.querySelector('.bank-details').append(get('request-info'));
+  const investmentPage = get('nails-investment-template').content.cloneNode(true);
+  course.incluye.forEach(text => {
+    const item = document.createElement('li');
+    item.textContent = text.toLocaleUpperCase('es');
+    investmentPage.querySelector('#nails-investment-includes').append(item);
   });
-  document.querySelector('.nails-video-close').addEventListener('click', () => videoDialog.close());
-  videoDialog.addEventListener('close', () => moduleVideo.pause());
+  originalInvestment.before(investmentPage);
+
+  const moduleVideo = get('nails-module-video');
+  const videoToggle = document.querySelector('.nails-video-toggle');
+  moduleVideo.muted = true;
+  moduleVideo.play().catch(() => {
+    videoToggle.textContent = 'Reproducir video';
+  });
+  moduleVideo.addEventListener('play', () => {
+    videoToggle.textContent = 'Pausar video';
+  });
+  moduleVideo.addEventListener('pause', () => {
+    videoToggle.textContent = 'Reproducir video';
+  });
+  videoToggle.addEventListener('click', () => {
+    if (moduleVideo.paused) {
+      moduleVideo.play().catch(() => {
+        videoToggle.textContent = 'Reproducir video';
+      });
+    } else {
+      moduleVideo.pause();
+    }
+  });
 }
 
 get('module-select').addEventListener('change', event => {

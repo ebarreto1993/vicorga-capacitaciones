@@ -84,17 +84,88 @@
             <li>TÉCNICA DE ONE STROKE</li>
             <li>BABY SHINE EN POLYGEL</li>
           </ol>
-          <button class="nails-video-trigger" type="button" aria-label="Reproducir video del módulo 2" aria-haspopup="dialog">
-            <img src="assets/images/modulo_uñas/m4/m4.jpeg" alt="" loading="lazy">
-            <span aria-hidden="true">▶</span>
-          </button>
+          <div class="nails-video-circle">
+            <video id="nails-module-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/modulo_uñas/m4/m4.jpeg" aria-label="Demostración de técnicas del módulo 2" src="assets/images/modulo_uñas/m4/m4_video.mp4"></video>
+          </div>
+          <button type="button" class="nails-video-toggle" aria-controls="nails-module-video">Pausar video</button>
         </div>
       </section>
-      <dialog class="nails-video-dialog" aria-labelledby="nails-video-title">
-        <div class="nails-video-heading"><h2 id="nails-video-title">Módulo 2</h2><button type="button" class="nails-video-close" aria-label="Cerrar video">×</button></div>
-        <video controls playsinline preload="none" aria-label="Demostración del módulo 2" src="assets/images/modulo_uñas/m4/m4_video.mp4">Tu navegador no puede reproducir este video. <a href="assets/images/modulo_uñas/m4/m4_video.mp4">Abrir video</a>.</video>
-      </dialog>
+
+      <section class="nails-page nails-module-three" id="modulo-03" aria-labelledby="nails-module-three-title">
+        <img class="nails-page-photo" src="assets/images/modulo_uñas/m5/m5.jpeg" alt="" loading="lazy">
+        <img class="nails-page-watermark" src="assets/images/modulo_uñas/vc_transparencia.png" alt="" loading="lazy">
+        <div class="nails-page-copy"><h2 id="nails-module-three-title">MÓDULO 3</h2><ol>
+          <li>SISTEMA DUAL - CONOCIMIENTO DE LAS CÁPSULAS</li>
+          <li>SISTEMA DUAL - FULL COVER</li>
+          <li>SISTEMA DUAL - ENCAPSULADAS</li>
+          <li>TÉCNICA BABY GLITTER</li>
+          <li>TÉCNICA BABY BOOMER</li>
+          <li>TÉCNICA OMBRÉ</li>
+          <li>TÉCNICA DE REVERSA BÁSICA Y ENCAPSULADAS.</li>
+          <li>DUAL SANDWICH</li>
+        </ol></div>
+      </section>
+
+      <section class="nails-page nails-module-four" id="modulo-04" aria-labelledby="nails-module-four-title">
+        <img class="nails-page-photo" src="assets/images/modulo_uñas/m6/m6.jpeg" alt="" loading="lazy">
+        <img class="nails-page-watermark" src="assets/images/modulo_uñas/vc_transparencia.png" alt="" loading="lazy">
+        <div class="nails-page-copy"><h2 id="nails-module-four-title">MÓDULO 4</h2><ol>
+          <li>ACRÍLICO - CONOCIMIENTO DEL PRODUCTO Y CONTROL DE PERLAS</li>
+          <li>TÉCNICA FULL COVER</li>
+          <li>TÉCNICA BABY SHINE</li>
+          <li>TÉCNICA BABY GLITTER</li>
+          <li>TÉCNICA NOT POLISH</li>
+          <li>TÉCNICA REVERSA BÁSICA Y DOBLE REVERSA</li>
+          <li>TÉCNICA DE 3D FLORES Y ROSAS</li>
+          <li>4 ESTRUCTURAS DE SALÓN Y SUS ÁNGULOS DE LIMADO</li>
+        </ol></div>
+      </section>
+
+      <section class="nails-page nails-module-five" id="modulo-05" aria-labelledby="nails-module-five-title">
+        <img class="nails-page-photo" src="assets/images/modulo_uñas/m7/m7_2.jpeg" alt="" loading="lazy">
+        <img class="nails-page-photo nails-page-photo-second" src="assets/images/modulo_uñas/m7/m7.jpeg" alt="" loading="lazy">
+        <div class="nails-page-copy"><h2 id="nails-module-five-title">MÓDULO 5</h2><ol>
+          <li>ESTRUCTURAS ESCULPIDAS</li>
+          <li>POSICIONAMIENTO DEL MOLDE</li>
+          <li>ÁNGULOS DE ENCASTRE Y CORTE</li>
+          <li>ESTRUCTURAS DE POLYGEL ESCULPIDAS</li>
+          <li>ESTRUCTURAS DE GEL DE CONSTRUCCIÓN ESCULPIDAS - TÉCNICA DE HILO</li>
+          <li>ESTRUCTURAS DE ACRÍLICO ESCULPIDAS</li>
+          <li>PEDICURA ESTÉTICA - SIN CORTES</li>
+          <li>ELIMINACIÓN DE LATERALES - CALLOS</li>
+          <li>USO DEL PODODISK</li>
+          <li>ASEPSIA Y BIOSEGURIDAD</li>
+          <li>RECONSTRUCCIÓN DE UÑAS CON POLYGEL</li>
+          <li>ESTRUCTURA DE FANTASÍA PARA SU EXAMEN FINAL.</li>
+        </ol></div>
+      </section>
+
+      <section class="nails-page nails-exam" aria-labelledby="nails-exam-title">
+        <img class="nails-page-photo" src="assets/images/modulo_uñas/m8/m8_2.jpeg" alt="Trabajo de fantasía con uñas decoradas para el examen final" loading="lazy">
+        <img class="nails-page-photo nails-page-photo-second" src="assets/images/modulo_uñas/m8/m8.jpeg" alt="Estudiante presentando su trabajo de uñas" loading="lazy">
+        <h2 id="nails-exam-title">EXAMEN FINAL</h2>
+      </section>
+
     </div>
+  </template>
+
+  <template id="nails-investment-template">
+    <section class="nails-page nails-investment" id="inversion" aria-labelledby="nails-investment-title">
+      <img class="nails-page-photo" src="assets/images/modulo_uñas/m9/m9.jpeg" alt="" loading="lazy">
+      <div class="nails-page-copy">
+        <h2 id="nails-investment-title">INVERSIÓN TOTAL</h2>
+        <p>NUESTRA CARRERA TIENE UNA DURACIÓN DE 5 MESES</p>
+        <ul class="nails-investment-values"><li>MATRÍCULA: $80</li><li>MENSUALIDAD: $150</li></ul>
+        <p>INCLUYE:</p>
+        <ul id="nails-investment-includes"></ul>
+        <p>NOTAS:</p>
+        <ul>
+          <li>EXAMEN FINAL OBLIGATORIO PARA RECIBIR TU CERTIFICACIÓN (SESIÓN DE FOTOS).</li>
+          <li>PUEDES RESERVAR TU CUPO CON $20 Y PUEDES IR HACIENDO ABONOS POCO A POCO. <strong>LA MATRÍCULA Y PENSIÓN DEBEN ESTAR PAGADAS HASTA EL DÍA DE INICIO.</strong></li>
+          <li><strong>LOS VALORES ABONADOS NO SON REEMBOLSABLES.</strong></li>
+        </ul>
+      </div>
+    </section>
   </template>
   <a class="skip" href="#pensum">Ir al pénsum</a>
   <header class="wrap header">
