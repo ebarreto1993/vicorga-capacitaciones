@@ -1,191 +1,187 @@
 'use strict';
 
-const coursePhotos = {
-  'maestria-belleza': 'assets/images/belleza.jpeg',
-  unas: 'assets/images/uñas.jpeg',
-  lashista: 'assets/images/lashista.jpeg',
-  barberia: 'assets/images/barberia.jpeg',
-  maquillaje: 'assets/images/maquillaje.jpeg',
-  micropigmentacion: 'assets/images/micropigmentacion.jpeg',
-  cosmiatria: 'assets/photos/cosmetologia.jpg',
-  tatuajes: 'assets/photos/tatuajes.jpg'
-};
-
-const beautyModulePhotos = [
-  coursePhotos.unas, coursePhotos.cosmiatria, coursePhotos.maquillaje,
-  coursePhotos.lashista, coursePhotos['maestria-belleza'],
-  coursePhotos['maestria-belleza'], coursePhotos['maestria-belleza'],
-  coursePhotos.cosmiatria, coursePhotos.barberia, coursePhotos['maestria-belleza']
-];
-
 const requestedCourse = new URLSearchParams(location.search).get('carrera');
-const courseId = requestedCourse === 'cosmetologia' ? 'cosmiatria' : requestedCourse;
-const courseKey = Object.hasOwn(carreras, courseId) ? courseId : 'maquillaje';
+const legacyCourse = requestedCourse === 'cosmetologia' ? 'cosmiatria' : requestedCourse;
+const courseKey = Object.hasOwn(carreras, legacyCourse) ? legacyCourse : 'maquillaje';
 const course = carreras[courseKey];
-const get = id => document.getElementById(id);
+const magazine = revistas[courseKey];
+const content = document.getElementById('magazine-content');
+const watermarkPhoto = 'assets/images/modulo_uñas/vc_transparencia.png';
+
+function cloneTemplate(id) {
+  return document.getElementById(id).content.firstElementChild.cloneNode(true);
+}
+
+function addItems(list, items) {
+  items.forEach(text => {
+    const item = document.createElement('li');
+    item.textContent = text;
+    list.append(item);
+  });
+}
+
+function addWatermark(page) {
+  const image = document.createElement('img');
+  image.className = 'magazine-page-watermark';
+  image.src = watermarkPhoto;
+  image.alt = '';
+  image.loading = 'lazy';
+  page.append(image);
+}
+
+function createPage(id, title, layout) {
+  const page = cloneTemplate('magazine-page-template');
+  page.id = id;
+  if (layout.clase) page.classList.add(layout.clase);
+  page.setAttribute('aria-labelledby', id + '-title');
+  const heading = page.querySelector('h2');
+  heading.id = id + '-title';
+  heading.textContent = title;
+  page.querySelector('.magazine-page-photo').src = layout.imagen;
+  if (layout.marcaAgua) addWatermark(page);
+  if (layout.segundaImagen) {
+    const secondImage = page.querySelector('.magazine-page-photo').cloneNode();
+    secondImage.classList.add('magazine-page-photo-second');
+    secondImage.src = layout.segundaImagen;
+    page.append(secondImage);
+  }
+  return page;
+}
+
+function addLoopVideo(copy, source, poster, id) {
+  const frame = document.createElement('div');
+  frame.className = 'magazine-video-circle';
+  const video = document.createElement('video');
+  video.id = id;
+  video.src = source;
+  video.poster = poster;
+  video.autoplay = true;
+  video.defaultMuted = true;
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
+  video.preload = 'metadata';
+  video.setAttribute('aria-label', 'Demostración práctica de ' + course.nombre);
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'magazine-video-toggle';
+  toggle.setAttribute('aria-controls', id);
+  toggle.textContent = 'Pausar video';
+  video.addEventListener('play', () => { toggle.textContent = 'Pausar video'; });
+  video.addEventListener('pause', () => { toggle.textContent = 'Reproducir video'; });
+  function play() {
+    video.play().catch(() => { toggle.textContent = 'Reproducir video'; });
+  }
+  toggle.addEventListener('click', () => {
+    if (video.paused) play();
+    else video.pause();
+  });
+  frame.append(video);
+  copy.append(frame, toggle);
+  play();
+}
 
 document.title = course.nombre + ' · Vicorga Capacitaciones';
-get('course-title').textContent = course.nombre;
-get('course-description').textContent = course.descripcion;
-get('module-count').textContent = course.modulos.length + ' módulos';
-get('course-image').src = coursePhotos[courseKey];
-get('course-image').alt = 'Formación en ' + course.nombre;
-get('formation-image').src = coursePhotos[courseKey];
-get('formation-image').alt = 'Práctica de ' + course.nombre;
-get('duration').textContent = course.duracion;
+const cover = cloneTemplate(magazine.portada.plantilla || 'magazine-cover-template');
+if (!magazine.portada.plantilla) {
+  cover.querySelector('h1').textContent = course.nombre;
+  cover.querySelector('.magazine-cover-photo').src = magazine.portada.imagen;
+  cover.querySelector('.magazine-cover-description').textContent = course.descripcion;
+  cover.querySelector('.magazine-cover-duration').textContent = course.duracion;
+}
+content.append(cover);
 
-if (courseKey === 'unas') {
-  document.body.classList.add('nails-magazine');
-  const cover = get('nails-cover-template').content.cloneNode(true);
-  document.querySelector('.catalog-cover').replaceWith(cover);
-  const back = document.createElement('a');
-  back.href = 'index.html#cursos';
-  back.textContent = '← Carreras';
-  document.querySelector('.catalog-nav .wrap').prepend(back);
+const pages = document.createElement('div');
+pages.id = 'pensum';
+content.append(pages);
+
+if (magazine.introduccion) {
+  const intro = magazine.introduccion;
+  const page = createPage('presentacion', intro.titulo, {
+    imagen: intro.imagen,
+    clase: 'nails-audience',
+    marcaAgua: intro.marcaAgua
+  });
+  const text = document.createElement('p');
+  text.textContent = intro.texto;
+  page.querySelector('.magazine-page-copy').append(text);
+  pages.append(page);
 }
 
 course.modulos.forEach((module, index) => {
-  const card = document.createElement('article');
-  card.className = 'module-card';
-  card.id = 'modulo-' + module.numero;
-  const titleId = card.id + '-title';
-  card.setAttribute('aria-labelledby', titleId);
-  const image = document.createElement('img');
-  image.src = courseKey === 'maestria-belleza' ? beautyModulePhotos[index] : coursePhotos[courseKey];
-  image.alt = '';
-  image.loading = 'lazy';
-  // Vary the framing while keeping the academy's actual photographs.
-  image.style.objectPosition = ['center 30%', 'center 50%', 'center 65%'][index % 3];
-  const number = document.createElement('p');
-  number.className = 'module-number';
-  number.textContent = 'MÓDULO ' + module.numero;
-  const title = document.createElement('h3');
-  title.id = titleId;
-  title.textContent = module.nombre;
-  const list = document.createElement('ul');
-  list.className = 'module-topics';
-  module.temas.forEach(topic => {
-    const item = document.createElement('li');
-    item.textContent = topic;
-    list.append(item);
-  });
-  card.append(image, number, title, list);
-  get('modules').append(card);
-  const option = document.createElement('option');
-  option.value = card.id;
-  option.textContent = module.numero + ' · ' + module.nombre;
-  get('module-select').append(option);
+  const layout = {
+    imagen: magazine.portada.imagen,
+    clase: index % 2 === 0 ? 'page-text-left' : '',
+    ...magazine.modulos?.[index]
+  };
+  const page = createPage('modulo-' + module.numero, 'MÓDULO ' + Number(module.numero), layout);
+  const copy = page.querySelector('.magazine-page-copy');
+  if (!magazine.portada.plantilla) {
+    const name = document.createElement('p');
+    name.className = 'magazine-module-name';
+    name.textContent = module.nombre;
+    copy.append(name);
+  }
+  const topics = document.createElement('ol');
+  addItems(topics, module.temas);
+  copy.append(topics);
+  pages.append(page);
+  if (layout.video) addLoopVideo(copy, layout.video, layout.imagen, 'video-modulo-' + module.numero);
 });
 
-if (courseKey === 'unas') {
-  get('modules').replaceChildren();
-  get('pensum').id = 'modulos-siguientes';
-  get('modulos-siguientes').hidden = true;
-  get('formacion').hidden = true;
-  document.querySelector('.catalog-nav a[href="#formacion"]').remove();
-  const pages = get('nails-pages-template').content.cloneNode(true);
-  pages.querySelector('.nails-pages').id = 'pensum';
-  document.querySelector('.nails-cover').after(pages);
-  const main = document.querySelector('main');
-  main.before(document.querySelector('.catalog-nav'));
-
-  const originalInvestment = get('inversion');
-  originalInvestment.id = 'pagos';
-  originalInvestment.removeAttribute('aria-labelledby');
-  originalInvestment.setAttribute('aria-label', 'Datos de pago e inscripción');
-  originalInvestment.querySelector('.section-heading').hidden = true;
-  originalInvestment.querySelector('.investment').hidden = true;
-  originalInvestment.querySelector('.date-row').remove();
-  originalInvestment.querySelector('.bank-details').append(get('request-info'));
-  const investmentPage = get('nails-investment-template').content.cloneNode(true);
-  course.incluye.forEach(text => {
-    const item = document.createElement('li');
-    item.textContent = text.toLocaleUpperCase('es');
-    investmentPage.querySelector('#nails-investment-includes').append(item);
+if (magazine.examen) {
+  const exam = document.createElement('section');
+  exam.className = 'magazine-page nails-exam';
+  exam.setAttribute('aria-labelledby', 'exam-title');
+  magazine.examen.imagenes.forEach((photo, index) => {
+    const image = document.createElement('img');
+    image.className = 'magazine-page-photo';
+    if (index > 0) image.classList.add('magazine-page-photo-second');
+    image.src = photo;
+    image.alt = magazine.examen.descripciones[index];
+    image.loading = 'lazy';
+    exam.append(image);
   });
-  originalInvestment.before(investmentPage);
-
-  const moduleVideo = get('nails-module-video');
-  const videoToggle = document.querySelector('.nails-video-toggle');
-  moduleVideo.muted = true;
-  moduleVideo.play().catch(() => {
-    videoToggle.textContent = 'Reproducir video';
-  });
-  moduleVideo.addEventListener('play', () => {
-    videoToggle.textContent = 'Pausar video';
-  });
-  moduleVideo.addEventListener('pause', () => {
-    videoToggle.textContent = 'Reproducir video';
-  });
-  videoToggle.addEventListener('click', () => {
-    if (moduleVideo.paused) {
-      moduleVideo.play().catch(() => {
-        videoToggle.textContent = 'Reproducir video';
-      });
-    } else {
-      moduleVideo.pause();
-    }
-  });
+  const heading = document.createElement('h2');
+  heading.id = 'exam-title';
+  heading.textContent = 'EXAMEN FINAL';
+  exam.append(heading);
+  pages.append(exam);
 }
 
-get('module-select').addEventListener('change', event => {
-  const target = get(event.target.value);
-  if (target) {
-    target.tabIndex = -1;
-    target.focus({ preventScroll: true });
-    location.hash = target.id;
-  }
-});
-
-course.incluye.forEach(text => {
-  const item = document.createElement('li');
-  item.textContent = text;
-  get('includes').append(item);
-});
-
-function addPrice(amount, label) {
-  const option = document.createElement('div');
-  option.className = 'price-option';
-  const value = document.createElement('p');
-  value.className = 'price-value';
-  value.textContent = '$' + amount;
-  const period = document.createElement('small');
-  period.textContent = ' / mes';
-  value.append(period);
-  option.append(value);
-  if (label) {
-    const caption = document.createElement('span');
-    caption.className = 'price-label';
-    caption.textContent = label;
-    option.append(caption);
-  }
-  get('price').append(option);
+if (course.videoId) {
+  const videoSection = document.createElement('section');
+  videoSection.className = 'magazine-course-video';
+  videoSection.setAttribute('aria-label', 'Video de ' + course.nombre);
+  const player = document.createElement('iframe');
+  player.title = 'Video de ' + course.nombre;
+  player.src = 'https://www.youtube-nocookie.com/embed/' + course.videoId;
+  player.loading = 'lazy';
+  player.allowFullscreen = true;
+  player.referrerPolicy = 'strict-origin-when-cross-origin';
+  videoSection.append(player);
+  content.append(videoSection);
 }
 
-addPrice(course.mensualidad, course.mensualidadEntreSemana ? 'Sábados intensivos' : '');
+const investment = cloneTemplate('magazine-investment-template');
+investment.querySelector('.magazine-page-photo').src = magazine.imagenInversion || magazine.portada.imagen;
+investment.querySelector('.investment-duration').textContent =
+  'NUESTRA CARRERA TIENE UNA DURACIÓN DE ' + course.duracion.toLocaleUpperCase('es');
+const values = ['MATRÍCULA: $' + course.matricula];
 if (course.mensualidadEntreSemana) {
-  addPrice(course.mensualidadEntreSemana, 'Dos veces a la semana intensivo');
+  values.push('MENSUALIDAD: $' + course.mensualidad + ' (SÁBADOS INTENSIVOS)');
+  values.push('MENSUALIDAD: $' + course.mensualidadEntreSemana + ' (DOS VECES A LA SEMANA INTENSIVO)');
+} else {
+  values.push('MENSUALIDAD: $' + course.mensualidad);
 }
-const enrollment = document.createElement('p');
-enrollment.className = 'enrollment';
-enrollment.textContent = 'Matrícula: $' + course.matricula;
-get('price').append(enrollment);
+addItems(investment.querySelector('.investment-values'), values);
+addItems(investment.querySelector('.investment-includes'), course.incluye.map(text => text.toLocaleUpperCase('es')));
+investment.querySelector('.exam-note').textContent =
+  magazine.notaExamen || 'EXAMEN FINAL OBLIGATORIO PARA RECIBIR TU CERTIFICACIÓN.';
+content.append(investment);
 
 document.querySelectorAll('[data-contact]').forEach(link => {
-  const message = link.hasAttribute('data-dates')
-    ? 'Hola, quisiera consultar las próximas fechas y horarios de ' + course.nombre + '.'
-    : 'Hola, me interesa la carrera de ' + course.nombre + '. Quisiera información sobre el pénsum, horarios, inversión y cupos.';
-  link.href = 'https://wa.me/593969124761?text=' + encodeURIComponent(message);
+  link.href = 'https://wa.me/593969124761?text=' + encodeURIComponent(
+    'Hola, me interesa la carrera de ' + course.nombre + '. Quisiera información sobre el pénsum, horarios, inversión y cupos.'
+  );
 });
-
-if (/^[a-zA-Z0-9_-]{11}$/.test(course.videoId) && !course.videoId.startsWith('dummy')) {
-  const video = document.createElement('iframe');
-  video.title = 'Video de ' + course.nombre;
-  video.src = 'https://www.youtube-nocookie.com/embed/' + course.videoId;
-  video.loading = 'lazy';
-  video.allowFullscreen = true;
-  video.referrerPolicy = 'strict-origin-when-cross-origin';
-  get('course-video').append(video);
-  get('course-video').hidden = false;
-  get('formation-visual').classList.add('has-video');
-}

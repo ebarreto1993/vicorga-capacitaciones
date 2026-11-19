@@ -6,15 +6,14 @@ body, button, select, input, textarea {
 }
 h1, h2, h3,
 .close h2, .closing h2,
-.module-card h3, .bank-details h3,
+.bank-details h3,
 .card-content h3, .footer-grid h3 {
   font-family: 'Gelasio', Georgia, serif;
   font-weight: 500;
 }
 em { font-family: inherit; font-weight: inherit; }
-.button, .eyebrow, .badge, summary, dt,
+.button, .eyebrow, .badge, dt,
 .filters button, .date, .next-list strong, .values strong,
-.price-value, .price-value small, .price-label,
 .hero-photo p, .hero-photo p em {
   font-family: 'Caladea', Georgia, serif;
   font-weight: 400;

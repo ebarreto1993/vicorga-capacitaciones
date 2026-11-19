@@ -1,4 +1,4 @@
-// Datos de las 8 carreras de Vicorga Academy
+// Datos de las ocho carreras de Vicorga Capacitaciones.
 const carreras = {
     "cosmiatria": {
         nombre: "Cosmiatría",
@@ -6,20 +6,16 @@ const carreras = {
         duracion: "6 meses (dos veces por semana) o 12 meses (solo sábados)",
         videoId: "6HDYJQtG69Y",
         modulos: [
-            { numero: "01", nombre: "Fundamentos de Cosmetología", icono: "fas fa-flask", imagen: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?w=600", temas: ["Célula y piel", "Biotipos cutáneos", "Lesiones elementales", "Dermis y epidermis"] },
-            { numero: "02", nombre: "Tratamientos Faciales", icono: "fas fa-face-smile", imagen: "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?w=600", temas: ["Higiene facial", "Exfoliación", "Hidratación profunda", "Masaje facial"] },
-            { numero: "03", nombre: "Cosmetología Aplicada", icono: "fas fa-vial", imagen: "https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?w=600", temas: ["Productos cosméticos", "Fórmulas y principios", "Manipulación de principios activos", "Prácticas en pacientes reales"] },
-            { numero: "04", nombre: "Cosmiatría", icono: "fas fa-wand-magic-sparkles", imagen: "https://images.pexels.com/photos/3945682/pexels-photo-3945682.jpeg?w=600", temas: ["Técnicas no invasivas", "Electroestética", "Radiofrecuencia", "Fotoenvejecimiento"] },
-            { numero: "05", nombre: "Dermocosmiatría", icono: "fas fa-microscope", imagen: "https://images.pexels.com/photos/3807516/pexels-photo-3807516.jpeg?w=600", temas: ["Dermatología básica", "Patologías de piel", "Tratamiento de acné", "Hiperpigmentación"] }
+            {"numero":"01","nombre":"Fundamentos de Cosmetología","temas":["Célula y piel","Biotipos cutáneos","Lesiones elementales","Dermis y epidermis"]},
+            {"numero":"02","nombre":"Tratamientos Faciales","temas":["Higiene facial","Exfoliación","Hidratación profunda","Masaje facial"]},
+            {"numero":"03","nombre":"Cosmetología Aplicada","temas":["Productos cosméticos","Fórmulas y principios","Manipulación de principios activos","Prácticas en pacientes reales"]},
+            {"numero":"04","nombre":"Cosmiatría","temas":["Técnicas no invasivas","Electroestética","Radiofrecuencia","Fotoenvejecimiento"]},
+            {"numero":"05","nombre":"Dermocosmiatría","temas":["Dermatología básica","Patologías de piel","Tratamiento de acné","Hiperpigmentación"]}
         ],
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["30% de los materiales para las clases", "Uniforme de la academia", "Mochila de la academia", "Certificación de la academia"],
-        horarios: [
-            "Martes y Jueves 29 de septiembre 9:00 AM - 4:00 PM",
-            "Sábados 3 de octubre 9:00 AM - 4:00 PM"
-        ]
+        incluye: ["30% de los materiales para las clases","Uniforme de la academia","Mochila de la academia","Certificación de la academia"]
     },
     "maestria-belleza": {
         nombre: "Maestra en Belleza",
@@ -27,47 +23,36 @@ const carreras = {
         duracion: "5 meses (2 veces por semana) o 10 meses (sábados)",
         videoId: "sV3_Bk5__3A",
         modulos: [
-            { numero: "01", nombre: "Manicura y Pedicura", icono: "fas fa-hand-sparkles", imagen: "https://images.pexels.com/photos/3997386/pexels-photo-3997386.jpeg?w=600", temas: ["Manicura Rusa", "Acrygel y Gel", "Diseños 3D", "Acrílico full cover"] },
-            { numero: "02", nombre: "Maquillaje I - Skin Care", icono: "fas fa-spa", imagen: "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?w=600", temas: ["Cuidado de la piel", "Biotipos cutáneos", "Hidratación avanzada", "Corriente galvánica"] },
-            { numero: "03", nombre: "Maquillaje II", icono: "fas fa-eye", imagen: "https://images.pexels.com/photos/2688992/pexels-photo-2688992.jpeg?w=600", temas: ["Diseño de cejas", "Maquillaje de novia", "Maquillaje artístico", "Aplicación de pestañas"] },
-            { numero: "04", nombre: "Lashes and Brows", icono: "fas fa-feather", imagen: "https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?w=600", temas: ["Lifting y tinturado", "Laminado de pestañas", "Técnica clásica", "Teoría de pestañas"] },
-            { numero: "05", nombre: "Peinados", icono: "fas fa-wind", imagen: "https://images.pexels.com/photos/3966514/pexels-photo-3966514.jpeg?w=600", temas: ["Tipos de trenzas", "Peinados para eventos", "Peinado de novia", "Ondas y volúmenes"] },
-            { numero: "06", nombre: "Cortes de Dama", icono: "fas fa-scissors", imagen: "https://images.pexels.com/photos/3962275/pexels-photo-3962275.jpeg?w=600", temas: ["Corte sólido 0° y 45°", "Cortes semirredondo", "Melena Bob", "Degrafilado con navaja"] },
-            { numero: "07", nombre: "Tratamientos Capilares", icono: "fas fa-wand-magic-sparkles", imagen: "https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?w=600", temas: ["Tratamiento de células madre", "Botox capilar", "Queratina", "Tricología capilar"] },
-            { numero: "08", nombre: "Tratamientos Faciales", icono: "fas fa-face-smile", imagen: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?w=600", temas: ["Marco teórico", "Exfoliación avanzada", "Hidratación profunda", "Fototerapia"] },
-            { numero: "09", nombre: "Barbería", icono: "fas fa-razor", imagen: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?w=600", temas: ["Historia de la barbería", "Taper fade", "Corte mohicano", "Ritual de la barba"] },
-            { numero: "10", nombre: "Colorimetría", icono: "fas fa-palette", imagen: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?w=600", temas: ["Teoría del color", "Tabla del 12", "Cubrimiento de canas", "Balayage y rayitos"] }
+            {"numero":"01","nombre":"Manicura y Pedicura","temas":["Manicura Rusa","Acrygel y Gel","Diseños 3D","Acrílico full cover"]},
+            {"numero":"02","nombre":"Maquillaje I - Skin Care","temas":["Cuidado de la piel","Biotipos cutáneos","Hidratación avanzada","Corriente galvánica"]},
+            {"numero":"03","nombre":"Maquillaje II","temas":["Diseño de cejas","Maquillaje de novia","Maquillaje artístico","Aplicación de pestañas"]},
+            {"numero":"04","nombre":"Lashes and Brows","temas":["Lifting y tinturado","Laminado de pestañas","Técnica clásica","Teoría de pestañas"]},
+            {"numero":"05","nombre":"Peinados","temas":["Tipos de trenzas","Peinados para eventos","Peinado de novia","Ondas y volúmenes"]},
+            {"numero":"06","nombre":"Cortes de Dama","temas":["Corte sólido 0° y 45°","Cortes semirredondo","Melena Bob","Degrafilado con navaja"]},
+            {"numero":"07","nombre":"Tratamientos Capilares","temas":["Tratamiento de células madre","Botox capilar","Queratina","Tricología capilar"]},
+            {"numero":"08","nombre":"Tratamientos Faciales","temas":["Marco teórico","Exfoliación avanzada","Hidratación profunda","Fototerapia"]},
+            {"numero":"09","nombre":"Barbería","temas":["Historia de la barbería","Taper fade","Corte mohicano","Ritual de la barba"]},
+            {"numero":"10","nombre":"Colorimetría","temas":["Teoría del color","Tabla del 12","Cubrimiento de canas","Balayage y rayitos"]}
         ],
         matricula: 80,
         mensualidad: 120,
         mensualidadEntreSemana: 190,
-        incluye: ["Uniforme de la academia", "Mochila", "30% de los materiales para las clases", "Certificación de la academia"],
-        horarios: [
-            "Martes y Jueves 15 de octubre 9:00 AM - 4:00 PM",
-            "Sábados 18 de octubre 9:00 AM - 4:00 PM",
-            "Lunes y Miércoles 13 de octubre 6:00 PM - 9:00 PM"
-        ]
+        incluye: ["Uniforme de la academia","Mochila","30% de los materiales para las clases","Certificación de la academia"]
     },
-        "unas": {
+    "unas": {
         nombre: "Técnica profesional en uñas",
         descripcion: "Maestra en taller de manicura y pedicura. Domina todas las técnicas profesionales de diseño y aplicación. Duración: 5 meses.",
         duracion: "5 meses (2 veces por semana, en horario matutino o vespertino, o sábados intensivos, 1 vez por semana)",
-        videoId: "dummyId003",
         modulos: [
-            { numero: "01", nombre: "Manicura Rusa", icono: "fas fa-hand-sparkles", imagen: "https://images.pexels.com/photos/3997386/pexels-photo-3997386.jpeg?w=600", temas: ["Técnica de manicura rusa", "Herramientas especializadas", "Cuidado de cutículas", "Diseños básicos"] },
-            { numero: "02", nombre: "Técnicas Acrílico", icono: "fas fa-palette", imagen: "https://images.pexels.com/photos/3997387/pexels-photo-3997387.jpeg?w=600", temas: ["Acrígel básico", "Acrígel encapsulado", "Acrílico full cover", "Reparación y mantenimiento"] },
-            { numero: "03", nombre: "Técnicas Gel", icono: "fas fa-lightbulb", imagen: "https://images.pexels.com/photos/3997388/pexels-photo-3997388.jpeg?w=600", temas: ["Gel básico", "Gel encapsulado", "Gel builder", "Diseños en gel"] },
-            { numero: "04", nombre: "Diseños y Decoración", icono: "fas fa-sparkles", imagen: "https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg?w=600", temas: ["Diseños 3D", "Nail art", "Técnicas de degradado", "Aplicación de brillos y pedrería"] },
-            { numero: "05", nombre: "Pedicura Profesional", icono: "fas fa-shoe-prints", imagen: "https://images.pexels.com/photos/3997390/pexels-photo-3997390.jpeg?w=600", temas: ["Pedicura higienista", "Exfoliación de pies", "Masaje y reflexología", "Diseños en pedicura"] }
+            {"numero":"01","nombre":"Módulo 1","temas":["TEORÍA","ANATOMÍA DE LAS UÑAS","USO DEL DRILL Y SUS BROCAS","ÁNGULOS Y VELOCIDADES","MANICURA PRO/ MANICURA RUSA","CREACIÓN DEL BOLSILLO PERFECTO","CORTE CORRECTO SOBRE PIEL","BIOSEGURIDAD – CORRECTA ESTERILIZACIÓN DE HERRAMIENTAS.","TÉCNICA DE LIMADO SOBRE UÑAS NATURALES","ESMALTADO PERFECTO EN GEL","TÉCNICA DE BALANCE PERFECTO (NIVELACIÓN) DE LA UÑA NATURAL CON BASE RUBBER. “BLICK PERFECTO”","ENCAPSULADO EN SEMIPERMANENTE","MARMOLEADO EN SEMIPERMANENTE","DIFUMINADOS","DISEÑOS A MANO ALZADA."]},
+            {"numero":"02","nombre":"Módulo 2","temas":["SISTEMA DE SOFT GEL BÁSICAS Y ENCAPSULADAS","POLYGEL CONOCIMIENTO DEL PRODUCTO","ALARGAMIENTO DE UÑA CON POLYGEL","POLYGEL BABY BOOMER","POLYGEL PERFECTO FRENCH","POLYGEL MOSAICO EN REVERSA","TÉCNICA DE ONE STROKE","BABY SHINE EN POLYGEL"]},
+            {"numero":"03","nombre":"Módulo 3","temas":["SISTEMA DUAL - CONOCIMIENTO DE LAS CÁPSULAS","SISTEMA DUAL - FULL COVER","SISTEMA DUAL - ENCAPSULADAS","TÉCNICA BABY GLITTER","TÉCNICA BABY BOOMER","TÉCNICA OMBRÉ","TÉCNICA DE REVERSA BÁSICA Y ENCAPSULADAS.","DUAL SANDWICH"]},
+            {"numero":"04","nombre":"Módulo 4","temas":["ACRÍLICO - CONOCIMIENTO DEL PRODUCTO Y CONTROL DE PERLAS","TÉCNICA FULL COVER","TÉCNICA BABY SHINE","TÉCNICA BABY GLITTER","TÉCNICA NOT POLISH","TÉCNICA REVERSA BÁSICA Y DOBLE REVERSA","TÉCNICA DE 3D FLORES Y ROSAS","4 ESTRUCTURAS DE SALÓN Y SUS ÁNGULOS DE LIMADO"]},
+            {"numero":"05","nombre":"Módulo 5","temas":["ESTRUCTURAS ESCULPIDAS","POSICIONAMIENTO DEL MOLDE","ÁNGULOS DE ENCASTRE Y CORTE","ESTRUCTURAS DE POLYGEL ESCULPIDAS","ESTRUCTURAS DE GEL DE CONSTRUCCIÓN ESCULPIDAS - TÉCNICA DE HILO","ESTRUCTURAS DE ACRÍLICO ESCULPIDAS","PEDICURA ESTÉTICA - SIN CORTES","ELIMINACIÓN DE LATERALES - CALLOS","USO DEL PODODISK","ASEPSIA Y BIOSEGURIDAD","RECONSTRUCCIÓN DE UÑAS CON POLYGEL","ESTRUCTURA DE FANTASÍA PARA SU EXAMEN FINAL."]}
         ],
         matricula: 80,
         mensualidad: 150,
-        incluye: ["Drill y lámparas para prácticas", "30% de los materiales para las clases", "Uniforme de la academia", "Mochila de la academia", "Certificación de la academia"],
-        horarios: [
-            "Lunes y Miércoles 30 de septiembre 9:00 AM - 12:00 PM",
-            "Martes y Jueves 1 de octubre 9:00 AM - 12:00 PM",
-            "Sábados 4 de octubre 9:00 AM - 4:00 PM"
-        ]
+        incluye: ["Drill y lámparas para prácticas","30% de los materiales para las clases","Uniforme de la academia","Mochila de la academia","Certificación de la academia"]
     },
     "lashista": {
         nombre: "Lashista",
@@ -75,16 +60,13 @@ const carreras = {
         duracion: "3 meses (1 vez por semana, en horario matutino o vespertino)",
         videoId: "IkzzymNarfE",
         modulos: [
-            { numero: "01", nombre: "Fundamentos de Lashista", icono: "fas fa-eye", imagen: "https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?w=600", temas: ["Anatomía del párpado", "Tipos de pestañas naturales", "Herramientas profesionales", "Seguridad e higiene"] },
-            { numero: "02", nombre: "Técnica de Extensiones", icono: "fas fa-feather", imagen: "https://images.pexels.com/photos/5128221/pexels-photo-5128221.jpeg?w=600", temas: ["Técnica clásica", "Técnica volumen ruso", "Aplicación de extensiones", "Retoque y mantenimiento"] },
-            { numero: "03", nombre: "Diseño y Especialización", icono: "fas fa-sparkles", imagen: "https://images.pexels.com/photos/5128222/pexels-photo-5128222.jpeg?w=600", temas: ["Diseño de mirada", "Diferentes estilos de lashes", "Lashes para eventos", "Prácticas en modelos reales"] }
+            {"numero":"01","nombre":"Fundamentos de Lashista","temas":["Anatomía del párpado","Tipos de pestañas naturales","Herramientas profesionales","Seguridad e higiene"]},
+            {"numero":"02","nombre":"Técnica de Extensiones","temas":["Técnica clásica","Técnica volumen ruso","Aplicación de extensiones","Retoque y mantenimiento"]},
+            {"numero":"03","nombre":"Diseño y Especialización","temas":["Diseño de mirada","Diferentes estilos de lashes","Lashes para eventos","Prácticas en modelos reales"]}
         ],
         matricula: 80,
         mensualidad: 150,
-        incluye: ["Uniforme de la academia", "Mochila de la academia", "30% de los materiales para las clases", "Certificación de la academia"],
-        horarios: [
-            "Jueves 24 de septiembre 9:00 AM - 12:00 PM"
-        ]
+        incluye: ["Uniforme de la academia","Mochila de la academia","30% de los materiales para las clases","Certificación de la academia"]
     },
     "micropigmentacion": {
         nombre: "Micropigmentación",
@@ -92,37 +74,30 @@ const carreras = {
         duracion: "6 meses (1 vez por semana, en horario matutino o vespertino)",
         videoId: "vXYwpOcHC-w",
         modulos: [
-            { numero: "01", nombre: "Fundamentos de Micropigmentación", icono: "fas fa-pen", imagen: "https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?w=600", temas: ["Historia de la micropigmentación", "Técnicas básicas", "Equipos y herramientas", "Seguridad e higiene"] },
-            { numero: "02", nombre: "Diseño de Cejas", icono: "fas fa-wand-magic-sparkles", imagen: "https://images.pexels.com/photos/5069433/pexels-photo-5069433.jpeg?w=600", temas: ["Análisis facial", "Formas de cejas", "Diseño personalizado", "Técnica de aplicación"] },
-            { numero: "03", nombre: "Perfilado de Labios", icono: "fas fa-heart", imagen: "https://images.pexels.com/photos/5069434/pexels-photo-5069434.jpeg?w=600", temas: ["Teoría de labios", "Formas y proporciones", "Técnica de perfilado", "Correcciones y ajustes"] },
-            { numero: "04", nombre: "Delineado de Ojos", icono: "fas fa-eye", imagen: "https://images.pexels.com/photos/5069435/pexels-photo-5069435.jpeg?w=600", temas: ["Anatomía del ojo", "Tipos de delineado", "Técnica de aplicación", "Efectos y estilos"] },
-            { numero: "05", nombre: "Pigmentos y Cuidados", icono: "fas fa-vial", imagen: "https://images.pexels.com/photos/5069436/pexels-photo-5069436.jpeg?w=600", temas: ["Selección de pigmentos", "Cuidados post-procedimiento", "Retoque y mantenimiento", "Prácticas en modelos reales"] }
+            {"numero":"01","nombre":"Fundamentos de Micropigmentación","temas":["Historia de la micropigmentación","Técnicas básicas","Equipos y herramientas","Seguridad e higiene"]},
+            {"numero":"02","nombre":"Diseño de Cejas","temas":["Análisis facial","Formas de cejas","Diseño personalizado","Técnica de aplicación"]},
+            {"numero":"03","nombre":"Perfilado de Labios","temas":["Teoría de labios","Formas y proporciones","Técnica de perfilado","Correcciones y ajustes"]},
+            {"numero":"04","nombre":"Delineado de Ojos","temas":["Anatomía del ojo","Tipos de delineado","Técnica de aplicación","Efectos y estilos"]},
+            {"numero":"05","nombre":"Pigmentos y Cuidados","temas":["Selección de pigmentos","Cuidados post-procedimiento","Retoque y mantenimiento","Prácticas en modelos reales"]}
         ],
         matricula: 80,
         mensualidad: 150,
-        incluye: ["Uniforme de la academia", "Mochila de la academia", "30% de los materiales para las clases", "Certificación de la academia"],
-        horarios: [
-            "Viernes 8 de enero 9:00 AM - 12:00 PM",
-            "Viernes 8 de enero 2:00 PM - 5:00 PM"
-        ]
+        incluye: ["Uniforme de la academia","Mochila de la academia","30% de los materiales para las clases","Certificación de la academia"]
     },
-        "maquillaje": {
+    "maquillaje": {
         nombre: "Maquillaje",
         descripcion: "Titúlate como maquilladora profesional en tan solo 4 meses. Domina técnicas de maquillaje artístico, de novia, y peinado profesional. Alto rendimiento.",
         duracion: "4 meses (una vez por semana)",
         videoId: "ccu2RzYMCLI",
         modulos: [
-            { numero: "01", nombre: "Fundamentos de Maquillaje", icono: "fas fa-palette", imagen: "https://images.pexels.com/photos/2688992/pexels-photo-2688992.jpeg?w=600", temas: ["Teoría del color", "Biotipos de piel", "Preparación de la piel", "Herramientas y brochas"] },
-            { numero: "02", nombre: "Maquillaje de Día y Noche", icono: "fas fa-sun", imagen: "https://images.pexels.com/photos/2689008/pexels-photo-2689008.jpeg?w=600", temas: ["Maquillaje natural", "Maquillaje de noche", "Contouring básico", "Técnicas de iluminación"] },
-            { numero: "03", nombre: "Maquillaje Artístico", icono: "fas fa-wand-magic-sparkles", imagen: "https://images.pexels.com/photos/2688993/pexels-photo-2688993.jpeg?w=600", temas: ["Maquillaje temático", "Body art", "Efectos especiales", "Fantasía y creatividad"] },
-            { numero: "04", nombre: "Maquillaje Profesional", icono: "fas fa-star", imagen: "https://images.pexels.com/photos/2688994/pexels-photo-2688994.jpeg?w=600", temas: ["Maquillaje de novia", "Maquillaje para eventos", "Maquillaje televisivo", "Prácticas en modelos reales"] }
+            {"numero":"01","nombre":"Fundamentos de Maquillaje","temas":["Teoría del color","Biotipos de piel","Preparación de la piel","Herramientas y brochas"]},
+            {"numero":"02","nombre":"Maquillaje de Día y Noche","temas":["Maquillaje natural","Maquillaje de noche","Contouring básico","Técnicas de iluminación"]},
+            {"numero":"03","nombre":"Maquillaje Artístico","temas":["Maquillaje temático","Body art","Efectos especiales","Fantasía y creatividad"]},
+            {"numero":"04","nombre":"Maquillaje Profesional","temas":["Maquillaje de novia","Maquillaje para eventos","Maquillaje televisivo","Prácticas en modelos reales"]}
         ],
         matricula: 80,
         mensualidad: 150,
-        incluye: ["Uniforme de la academia", "30% de los materiales para las clases", "Mochila de la academia", "Certificación de la academia"],
-        horarios: [
-            "Martes 1 de septiembre 9:00 AM - 4:00 PM"
-        ]
+        incluye: ["Uniforme de la academia","30% de los materiales para las clases","Mochila de la academia","Certificación de la academia"]
     },
     "barberia": {
         nombre: "Barbería",
@@ -130,40 +105,30 @@ const carreras = {
         duracion: "3 meses (lunes y miércoles) o 4 meses (sábados)",
         videoId: "FaFkNU3nGTk",
         modulos: [
-            { numero: "01", nombre: "Historia y Fundamentos de Barbería", icono: "fas fa-book", imagen: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?w=600", temas: ["Historia de la barbería", "Técnicas clásicas", "Herramientas profesionales", "Seguridad e higiene"] },
-            { numero: "02", nombre: "Cortes Clásicos", icono: "fas fa-scissors", imagen: "https://images.pexels.com/photos/1813273/pexels-photo-1813273.jpeg?w=600", temas: ["Corte sólido 0° y 45°", "Taper fade", "Mohicano", "Skin fade"] },
-            { numero: "03", nombre: "Rituals de Barba", icono: "fas fa-razor", imagen: "https://images.pexels.com/photos/1813274/pexels-photo-1813274.jpeg?w=600", temas: ["Afeitado clásico", "Ritual de barba completo", "Cuidado de la barba", "Productos especializados"] },
-            { numero: "04", nombre: "Cortes Modernos", icono: "fas fa-wand-magic-sparkles", imagen: "https://images.pexels.com/photos/1813275/pexels-photo-1813275.jpeg?w=600", temas: ["Cortes actuales", "Diseños personalizados", "Líneas y detalles", "Prácticas en clientes reales"] }
+            {"numero":"01","nombre":"Historia y Fundamentos de Barbería","temas":["Historia de la barbería","Técnicas clásicas","Herramientas profesionales","Seguridad e higiene"]},
+            {"numero":"02","nombre":"Cortes Clásicos","temas":["Corte sólido 0° y 45°","Taper fade","Mohicano","Skin fade"]},
+            {"numero":"03","nombre":"Rituals de Barba","temas":["Afeitado clásico","Ritual de barba completo","Cuidado de la barba","Productos especializados"]},
+            {"numero":"04","nombre":"Cortes Modernos","temas":["Cortes actuales","Diseños personalizados","Líneas y detalles","Prácticas en clientes reales"]}
         ],
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["Máquina de cortar cabello", "Uniforme de la academia", "Mochila de la academia", "30% de los materiales para las clases", "Certificación de la academia"],
-        horarios: [
-            "Sábados 29 de agosto 9:00 AM - 4:00 PM (6 meses)",
-            "Lunes y Miércoles 28 de septiembre 9:00 AM - 4:00 PM (3 meses)"
-        ]
+        incluye: ["Máquina de cortar cabello","Uniforme de la academia","Mochila de la academia","30% de los materiales para las clases","Certificación de la academia"]
     },
     "tatuajes": {
         nombre: "Tatuajes",
         descripcion: "Aprende técnicas de tatuaje profesional, higiene, diseño y arte corporal. Conviértete en tatuador certificado con los más altos estándares de seguridad.",
         duracion: "6 meses",
-        videoId: "dummyId008",
         modulos: [
-            { numero: "01", nombre: "Fundamentos de Tatuaje", icono: "fas fa-book", imagen: "https://images.pexels.com/photos/2183131/pexels-photo-2183131.jpeg?w=600", temas: ["Historia del tatuaje", "Anatomía de la piel", "Teoría del color", "Equipos y herramientas"] },
-            { numero: "02", nombre: "Técnicas de Tatuaje", icono: "fas fa-pen", imagen: "https://images.pexels.com/photos/2183132/pexels-photo-2183132.jpeg?w=600", temas: ["Técnica de línea", "Técnica de sombreado", "Técnica de relleno", "Blending y degradado"] },
-            { numero: "03", nombre: "Diseño y Artística", icono: "fas fa-palette", imagen: "https://images.pexels.com/photos/2183133/pexels-photo-2183133.jpeg?w=600", temas: ["Diseño de tatuajes", "Estilos tatuajes", "Proporciones y composición", "Adaptación al cuerpo"] },
-            { numero: "04", nombre: "Higiene y Seguridad", icono: "fas fa-shield", imagen: "https://images.pexels.com/photos/2183134/pexels-photo-2183134.jpeg?w=600", temas: ["Esterilización de equipos", "Protocolos de higiene", "Prevención de infecciones", "Normativas legales"] },
-            { numero: "05", nombre: "Prácticas Profesionales", icono: "fas fa-star", imagen: "https://images.pexels.com/photos/2183135/pexels-photo-2183135.jpeg?w=600", temas: ["Prácticas en modelos", "Atención al cliente", "Cuidados post-tatuaje", "Portafolio profesional"] }
+            {"numero":"01","nombre":"Fundamentos de Tatuaje","temas":["Historia del tatuaje","Anatomía de la piel","Teoría del color","Equipos y herramientas"]},
+            {"numero":"02","nombre":"Técnicas de Tatuaje","temas":["Técnica de línea","Técnica de sombreado","Técnica de relleno","Blending y degradado"]},
+            {"numero":"03","nombre":"Diseño y Artística","temas":["Diseño de tatuajes","Estilos tatuajes","Proporciones y composición","Adaptación al cuerpo"]},
+            {"numero":"04","nombre":"Higiene y Seguridad","temas":["Esterilización de equipos","Protocolos de higiene","Prevención de infecciones","Normativas legales"]},
+            {"numero":"05","nombre":"Prácticas Profesionales","temas":["Prácticas en modelos","Atención al cliente","Cuidados post-tatuaje","Portafolio profesional"]}
         ],
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["Equipos básicos para prácticas", "Uniforme de la academia", "Mochila de la academia", "30% de los materiales para las clases", "Certificación de la academia"],
-        horarios: [
-            "Martes y Jueves 3 de octubre 9:00 AM - 5:00 PM",
-            "Viernes 11 de octubre 1:00 PM - 8:00 PM",
-            "Sábados 5 de octubre 10:00 AM - 6:00 PM"
-        ]
+        incluye: ["Equipos básicos para prácticas","Uniforme de la academia","Mochila de la academia","30% de los materiales para las clases","Certificación de la academia"]
     }
 };

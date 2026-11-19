@@ -16,11 +16,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400&amp;family=Gelasio:ital,wght@0,500;1,500&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/catalogo.css">
   <link rel="stylesheet" href="css/portada-unas.css">
-  <link rel="stylesheet" href="css/revista-unas.css">
+  <link rel="stylesheet" href="css/revista.css">
   <script src="js/datos-carreras.js" defer></script>
+  <script src="js/datos-revistas.js" defer></script>
   <script src="js/catalogo.js" defer></script>
 <link rel="stylesheet" href="css/tipografia.css"></head>
-<body>
+<body class="magazine">
+  <a class="skip" href="#pensum">Ir al pénsum</a>
+  <nav class="catalog-nav" aria-label="Secciones de la carrera">
+    <div class="wrap"><a href="index.html#cursos">← Carreras</a><a href="#pensum">Pénsum</a><a href="#inversion">Inversión y horarios</a><a href="#ubicacion">Ubicación</a></div>
+  </nav>
+  <main>
+    <div id="magazine-content"></div>
+    <noscript><p class="wrap">Activa JavaScript para consultar el pénsum. También puedes escribirnos al <a href="https://wa.me/593969124761">096 912 4761</a>.</p></noscript>
+    <section class="wrap investment-section" id="pagos" aria-label="Datos de pago e inscripción">
+      <section class="bank-details"><h3>Datos para transferencia</h3><p>Cuenta de ahorros a nombre de Joselyn Zuelen Pineda Cordova<br>Cédula: 0152089298</p><dl><div><dt>Banco Pichincha</dt><dd>Cuenta de ahorros<br>2100197919</dd></div><div><dt>Banco Austro</dt><dd>Cuenta de ahorros<br>0200485416</dd></div><div><dt>Cooperativa Azuayo</dt><dd>Cuenta de ahorros<br>2656300</dd></div><div><dt>Banco Guayaquil</dt><dd>Cuenta de ahorros<br>23362869</dd></div></dl><h3>Condiciones de inscripción</h3><p>Reserva tu cupo con $20. La matrícula y la pensión deben estar pagadas hasta el día de inicio. <strong>Los valores abonados no son reembolsables.</strong> Para recibir la certificación debes rendir el examen final.</p><a class="button full" data-contact href="https://wa.me/593969124761" target="_blank" rel="noopener">Solicitar información ↗</a></section>
+    </section>
+    <section class="wrap location" id="ubicacion" aria-labelledby="location-title"><div class="location-card"><div class="location-info"><p class="eyebrow">TE ESPERAMOS EN NUESTRO NUEVO LOCAL</p><h2 id="location-title">Tu próximo paso<br>empieza <em>aquí.</em></h2><span class="line"></span><address><strong>Av. Guapondelig y Gustavo Lemus</strong><span>Cuenca, Ecuador</span></address><div class="location-contact"><a href="tel:+593969124761">Llámanos <strong>096 912 4761 ↗</strong></a><a href="mailto:v.capacitacion2027@gmail.com">Escríbenos <strong>v.capacitacion2027@gmail.com ↗</strong></a></div><a class="button" href="https://maps.app.goo.gl/Atcrpauhwo8GaFm76" target="_blank" rel="noopener">Cómo llegar ↗</a></div><div class="location-map"><iframe title="Mapa del nuevo local de Vicorga Capacitaciones, Av. Guapondelig y Gustavo Lemus, Cuenca" src="https://www.google.com/maps?q=-2.9013704,-78.991932&amp;z=18&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><a class="map-label" href="https://maps.app.goo.gl/Atcrpauhwo8GaFm76" target="_blank" rel="noopener">Ver ubicación en Google Maps ↗</a></div></div></section>
+    <section class="closing"><div class="wrap"><h2>Tu próximo paso<br><em>empieza aquí.</em></h2><a class="button" href="https://wa.me/593969124761" data-contact target="_blank" rel="noopener">Consultar fechas y horarios ↗</a></div></section>
+  </main>
+  <footer class="wrap" id="contacto"><div class="footer-grid"><a class="brand" href="index.html"><img src="assets/images/logo_vicorga.png" alt="Vicorga Capacitaciones"></a><div><h3>Cursos</h3><a href="curso.html?carrera=maestria-belleza">Maestra en Belleza</a><a href="curso.html?carrera=unas">Técnica profesional en uñas</a><a href="curso.html?carrera=lashista">Lashista</a><a href="curso.html?carrera=barberia">Barbería</a><a href="curso.html?carrera=maquillaje">Maquillaje</a><a href="curso.html?carrera=micropigmentacion">Micropigmentación</a><a href="curso.html?carrera=tatuajes">Tatuajes</a><a href="curso.html?carrera=cosmiatria">Cosmiatría</a></div><div><h3>La academia</h3><a href="index.html#academia">Nuestra propuesta</a></div><div><h3>Contacto</h3><a href="https://wa.me/593969124761">096 912 4761</a><a href="mailto:v.capacitacion2027@gmail.com">v.capacitacion2027@gmail.com</a><p>Av. Guapondelig y Gustavo Lemus<br>Cuenca, Ecuador</p></div></div><div class="footer-bottom"><span>© 2026 Vicorga Capacitaciones</span><div><a href="https://www.instagram.com/vicorga.academy/">Instagram ↗</a> <a href="https://www.facebook.com/VicorgaAcademy">Facebook ↗</a></div><span>Fotografías ilustrativas · Pexels / Unsplash</span></div></footer>
   <template id="nails-cover-template">
     <section class="nails-cover" aria-labelledby="course-title">
       <img class="nails-cover-photo" src="assets/images/modulo_uñas/m1/m1.jpeg" alt="" fetchpriority="high">
@@ -37,181 +52,43 @@
       </div>
     </section>
   </template>
-  <template id="nails-pages-template">
-    <div class="nails-pages">
-      <section class="nails-page nails-audience" aria-labelledby="nails-audience-title">
-        <img class="nails-page-photo" src="assets/images/modulo_uñas/m2/m2.jpeg" alt="" loading="lazy">
-        <img class="nails-page-watermark" src="assets/images/modulo_uñas/vc_transparencia.png" alt="" loading="lazy">
-        <div class="nails-page-copy">
-          <h2 id="nails-audience-title">¿A QUIÉNES VA DIRIGIDA ESTA CARRERA?</h2>
-          <p>ESTA CARRERA ES IDEAL PARA TODAS AQUELLAS PERSONAS QUE DESEEN INGRESAR AL MUNDO DE LAS UÑAS, EMPEZAMOS DESDE 0, POR LO TANTO NO NECESITAS TENER CONOCIMIENTO PREVIO. MI META ES ENSEÑARTE NUEVAS TÉCNICAS PARA LOGRAR RESULTADOS EXCELENTES.</p>
-        </div>
-      </section>
-      <section class="nails-page nails-module-one" id="modulo-01" aria-labelledby="nails-module-one-title">
-        <img class="nails-page-photo" src="assets/images/modulo_uñas/m3/m3.jpeg" alt="" loading="lazy">
-        <div class="nails-page-copy">
-          <h2 id="nails-module-one-title">MÓDULO 1</h2>
-          <ol>
-            <li>TEORÍA</li>
-            <li>ANATOMÍA DE LAS UÑAS</li>
-            <li>USO DEL DRILL Y SUS BROCAS</li>
-            <li>ÁNGULOS Y VELOCIDADES</li>
-            <li>MANICURA PRO/ MANICURA RUSA</li>
-            <li>CREACIÓN DEL BOLSILLO PERFECTO</li>
-            <li>CORTE CORRECTO SOBRE PIEL</li>
-            <li>BIOSEGURIDAD – CORRECTA ESTERILIZACIÓN DE HERRAMIENTAS.</li>
-            <li>TÉCNICA DE LIMADO SOBRE UÑAS NATURALES</li>
-            <li>ESMALTADO PERFECTO EN GEL</li>
-            <li>TÉCNICA DE BALANCE PERFECTO (NIVELACIÓN) DE LA UÑA NATURAL CON BASE RUBBER. “BLICK PERFECTO”</li>
-            <li>ENCAPSULADO EN SEMIPERMANENTE</li>
-            <li>MARMOLEADO EN SEMIPERMANENTE</li>
-            <li>DIFUMINADOS</li>
-            <li>DISEÑOS A MANO ALZADA.</li>
-          </ol>
-        </div>
-      </section>
-      <section class="nails-page nails-module-two" id="modulo-02" aria-labelledby="nails-module-two-title">
-        <img class="nails-page-photo" src="assets/images/modulo_uñas/m4/m4.jpeg" alt="" loading="lazy">
-        <div class="nails-page-copy">
-          <h2 id="nails-module-two-title">MÓDULO 2</h2>
-          <ol>
-            <li>SISTEMA DE SOFT GEL BÁSICAS Y ENCAPSULADAS</li>
-            <li>POLYGEL CONOCIMIENTO DEL PRODUCTO</li>
-            <li>ALARGAMIENTO DE UÑA CON POLYGEL</li>
-            <li>POLYGEL BABY BOOMER</li>
-            <li>POLYGEL PERFECTO FRENCH</li>
-            <li>POLYGEL MOSAICO EN REVERSA</li>
-            <li>TÉCNICA DE ONE STROKE</li>
-            <li>BABY SHINE EN POLYGEL</li>
-          </ol>
-          <div class="nails-video-circle">
-            <video id="nails-module-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/modulo_uñas/m4/m4.jpeg" aria-label="Demostración de técnicas del módulo 2" src="assets/images/modulo_uñas/m4/m4_video.mp4"></video>
-          </div>
-          <button type="button" class="nails-video-toggle" aria-controls="nails-module-video">Pausar video</button>
-        </div>
-      </section>
 
-      <section class="nails-page nails-module-three" id="modulo-03" aria-labelledby="nails-module-three-title">
-        <img class="nails-page-photo" src="assets/images/modulo_uñas/m5/m5.jpeg" alt="" loading="lazy">
-        <img class="nails-page-watermark" src="assets/images/modulo_uñas/vc_transparencia.png" alt="" loading="lazy">
-        <div class="nails-page-copy"><h2 id="nails-module-three-title">MÓDULO 3</h2><ol>
-          <li>SISTEMA DUAL - CONOCIMIENTO DE LAS CÁPSULAS</li>
-          <li>SISTEMA DUAL - FULL COVER</li>
-          <li>SISTEMA DUAL - ENCAPSULADAS</li>
-          <li>TÉCNICA BABY GLITTER</li>
-          <li>TÉCNICA BABY BOOMER</li>
-          <li>TÉCNICA OMBRÉ</li>
-          <li>TÉCNICA DE REVERSA BÁSICA Y ENCAPSULADAS.</li>
-          <li>DUAL SANDWICH</li>
-        </ol></div>
-      </section>
-
-      <section class="nails-page nails-module-four" id="modulo-04" aria-labelledby="nails-module-four-title">
-        <img class="nails-page-photo" src="assets/images/modulo_uñas/m6/m6.jpeg" alt="" loading="lazy">
-        <img class="nails-page-watermark" src="assets/images/modulo_uñas/vc_transparencia.png" alt="" loading="lazy">
-        <div class="nails-page-copy"><h2 id="nails-module-four-title">MÓDULO 4</h2><ol>
-          <li>ACRÍLICO - CONOCIMIENTO DEL PRODUCTO Y CONTROL DE PERLAS</li>
-          <li>TÉCNICA FULL COVER</li>
-          <li>TÉCNICA BABY SHINE</li>
-          <li>TÉCNICA BABY GLITTER</li>
-          <li>TÉCNICA NOT POLISH</li>
-          <li>TÉCNICA REVERSA BÁSICA Y DOBLE REVERSA</li>
-          <li>TÉCNICA DE 3D FLORES Y ROSAS</li>
-          <li>4 ESTRUCTURAS DE SALÓN Y SUS ÁNGULOS DE LIMADO</li>
-        </ol></div>
-      </section>
-
-      <section class="nails-page nails-module-five" id="modulo-05" aria-labelledby="nails-module-five-title">
-        <img class="nails-page-photo" src="assets/images/modulo_uñas/m7/m7_2.jpeg" alt="" loading="lazy">
-        <img class="nails-page-photo nails-page-photo-second" src="assets/images/modulo_uñas/m7/m7.jpeg" alt="" loading="lazy">
-        <div class="nails-page-copy"><h2 id="nails-module-five-title">MÓDULO 5</h2><ol>
-          <li>ESTRUCTURAS ESCULPIDAS</li>
-          <li>POSICIONAMIENTO DEL MOLDE</li>
-          <li>ÁNGULOS DE ENCASTRE Y CORTE</li>
-          <li>ESTRUCTURAS DE POLYGEL ESCULPIDAS</li>
-          <li>ESTRUCTURAS DE GEL DE CONSTRUCCIÓN ESCULPIDAS - TÉCNICA DE HILO</li>
-          <li>ESTRUCTURAS DE ACRÍLICO ESCULPIDAS</li>
-          <li>PEDICURA ESTÉTICA - SIN CORTES</li>
-          <li>ELIMINACIÓN DE LATERALES - CALLOS</li>
-          <li>USO DEL PODODISK</li>
-          <li>ASEPSIA Y BIOSEGURIDAD</li>
-          <li>RECONSTRUCCIÓN DE UÑAS CON POLYGEL</li>
-          <li>ESTRUCTURA DE FANTASÍA PARA SU EXAMEN FINAL.</li>
-        </ol></div>
-      </section>
-
-      <section class="nails-page nails-exam" aria-labelledby="nails-exam-title">
-        <img class="nails-page-photo" src="assets/images/modulo_uñas/m8/m8_2.jpeg" alt="Trabajo de fantasía con uñas decoradas para el examen final" loading="lazy">
-        <img class="nails-page-photo nails-page-photo-second" src="assets/images/modulo_uñas/m8/m8.jpeg" alt="Estudiante presentando su trabajo de uñas" loading="lazy">
-        <h2 id="nails-exam-title">EXAMEN FINAL</h2>
-      </section>
-
-    </div>
+  <template id="magazine-cover-template">
+    <section class="magazine-cover" aria-labelledby="course-title">
+      <img class="magazine-cover-photo" alt="" fetchpriority="high">
+      <img class="magazine-cover-mark" src="assets/images/modulo_uñas/vc_transparencia.png" alt="">
+      <div class="magazine-cover-copy">
+        <p class="eyebrow">VICORGA CAPACITACIONES · CUENCA</p>
+        <h1 id="course-title"></h1>
+        <p class="magazine-cover-description"></p>
+        <p class="magazine-cover-duration"></p>
+        <a class="button" href="#pensum">Ver el pénsum ↓</a>
+      </div>
+    </section>
   </template>
-
-  <template id="nails-investment-template">
-    <section class="nails-page nails-investment" id="inversion" aria-labelledby="nails-investment-title">
-      <img class="nails-page-photo" src="assets/images/modulo_uñas/m9/m9.jpeg" alt="" loading="lazy">
-      <div class="nails-page-copy">
-        <h2 id="nails-investment-title">INVERSIÓN TOTAL</h2>
-        <p>NUESTRA CARRERA TIENE UNA DURACIÓN DE 5 MESES</p>
-        <ul class="nails-investment-values"><li>MATRÍCULA: $80</li><li>MENSUALIDAD: $150</li></ul>
-        <p>INCLUYE:</p>
-        <ul id="nails-investment-includes"></ul>
+  <template id="magazine-page-template">
+    <section class="magazine-page">
+      <img class="magazine-page-photo" alt="" loading="lazy">
+      <div class="magazine-page-copy"><h2></h2></div>
+    </section>
+  </template>
+  <template id="magazine-investment-template">
+    <section class="magazine-page magazine-investment" id="inversion" aria-labelledby="investment-title">
+      <img class="magazine-page-photo" alt="" loading="lazy">
+      <div class="magazine-page-copy">
+        <h2 id="investment-title">INVERSIÓN TOTAL</h2>
+        <p class="investment-duration"></p>
+        <ul class="investment-values"></ul>
+        <p>INCLUYE:</p><ul class="investment-includes"></ul>
         <p>NOTAS:</p>
         <ul>
-          <li>EXAMEN FINAL OBLIGATORIO PARA RECIBIR TU CERTIFICACIÓN (SESIÓN DE FOTOS).</li>
+          <li class="exam-note"></li>
           <li>PUEDES RESERVAR TU CUPO CON $20 Y PUEDES IR HACIENDO ABONOS POCO A POCO. <strong>LA MATRÍCULA Y PENSIÓN DEBEN ESTAR PAGADAS HASTA EL DÍA DE INICIO.</strong></li>
           <li><strong>LOS VALORES ABONADOS NO SON REEMBOLSABLES.</strong></li>
         </ul>
       </div>
     </section>
   </template>
-  <a class="skip" href="#pensum">Ir al pénsum</a>
-  <header class="wrap header">
-    <a class="brand" href="index.html" aria-label="Vicorga Capacitaciones, inicio"><img src="assets/images/logo_vicorga.png" alt="Vicorga Capacitaciones" width="1536" height="1024"></a>
-    <a class="back-link" href="index.html#cursos">← Todas las carreras</a>
-    <a class="button header-contact" href="https://wa.me/593969124761" data-contact target="_blank" rel="noopener">Consultar por WhatsApp ↗</a>
-  </header>
-  <main>
-    <section class="catalog-cover" aria-labelledby="course-title">
-      <img id="course-image" class="cover-image" src="assets/images/maquillaje.jpeg" alt="" fetchpriority="high">
-      <div class="wrap cover-content">
-        <p class="eyebrow">VICORGA CAPACITACIONES · CUENCA</p>
-        <h1 id="course-title">Pénsum de la carrera</h1>
-        <p id="course-description" class="cover-description"></p>
-        <div class="cover-actions"><a class="button" href="#pensum">Ver el pénsum <span aria-hidden="true">↓</span></a><span id="module-count"></span><span>Presencial</span></div>
-      </div>
-    </section>
-    <nav class="catalog-nav" aria-label="Secciones de la carrera">
-      <div class="wrap"><a href="#pensum">Pénsum</a><a href="#formacion">Tu formación</a><a href="#inversion">Inversión y horarios</a><a href="#ubicacion">Ubicación</a></div>
-    </nav>
-    <section class="wrap curriculum" id="pensum" aria-labelledby="pensum-title">
-      <div class="section-heading"><div><p class="eyebrow">TU PLAN DE ESTUDIOS</p><h2 id="pensum-title">El pénsum<span class="gold">.</span></h2></div><a class="text-link" href="#inversion">Consultar inversión ↗</a></div>
-      <div class="module-jump"><label for="module-select">Ir al módulo</label><select id="module-select"><option value="">Selecciona un módulo</option></select></div>
-      <div class="catalog-grid" id="modules"></div>
-      <noscript><p>Activa JavaScript para consultar el pénsum y los valores de cada carrera. También puedes escribirnos al <a href="https://wa.me/593969124761">096 912 4761</a>.</p></noscript>
-    </section>
-    <section class="formation" id="formacion" aria-labelledby="includes-title"><div class="wrap formation-grid">
-      <div class="formation-info"><p class="eyebrow">TU EXPERIENCIA EN VICORGA</p><h2 id="includes-title">Tu formación<br> <em>incluye.</em></h2><ul id="includes" class="included-list"></ul><div class="requirements"><h3>Prepara tu inscripción</h3><p>Cédula de identidad, 2 fotografías tamaño carnet y carnet de votación si eres mayor de edad.</p><a class="text-link" href="https://wa.me/593969124761">Confirmar requisitos ↗</a></div></div>
-      <div class="formation-visual" id="formation-visual"><img id="formation-image" src="assets/images/maquillaje.jpeg" alt="" loading="lazy"><div id="course-video" hidden></div></div>
-    </div></section>
-    <section class="wrap investment-section" id="inversion" aria-labelledby="investment-title">
-      <div class="section-heading"><div><p class="eyebrow">DA EL SIGUIENTE PASO</p><h2 id="investment-title">Inversión y horarios<span class="gold">.</span></h2></div></div>
-      <div class="investment-grid">
-        <div class="investment">
-          <div id="price" class="price"></div>
-          <dl class="course-facts"><div><dt>Duración y horarios</dt><dd id="duration"></dd></div><div><dt>Modalidad</dt><dd>Presencial · Cuenca</dd></div><div class="date-row"><dt>Próxima fecha</dt><dd><a class="button whatsapp" href="https://wa.me/593969124761" data-contact data-dates target="_blank" rel="noopener">WhatsApp ↗</a></dd></div></dl>
-          <a class="button full" id="request-info" href="https://wa.me/593969124761" data-contact target="_blank" rel="noopener">Solicitar información ↗</a>
-          <p class="aside-note">Consulta cupos, horarios y formas de pago.</p>
-        </div>
-        <section class="bank-details"><h3>Datos para transferencia</h3><p>Cuenta de ahorros a nombre de Joselyn Zuelen Pineda Cordova<br>Cédula: 0152089298</p><dl><div><dt>Banco Pichincha</dt><dd>Cuenta de ahorros<br>2100197919</dd></div><div><dt>Banco Austro</dt><dd>Cuenta de ahorros<br>0200485416</dd></div><div><dt>Cooperativa Azuayo</dt><dd>Cuenta de ahorros<br>2656300</dd></div><div><dt>Banco Guayaquil</dt><dd>Cuenta de ahorros<br>23362869</dd></div></dl><h3>Condiciones de inscripción</h3><p>Reserva tu cupo con $20. La matrícula y la pensión deben estar pagadas hasta el día de inicio. <strong>Los valores abonados no son reembolsables.</strong> Para recibir la certificación debes rendir el examen final.</p></section>
-      </div>
-    </section>
-    <section class="wrap faq-section"><section class="faq" id="preguntas"><p class="eyebrow">RESOLVEMOS TUS DUDAS</p><h2>Preguntas frecuentes</h2><details><summary>¿Necesito experiencia previa?</summary><p>No necesitas experiencia previa. Cada módulo empieza desde cero.</p></details><details><summary>¿Qué materiales debo llevar?</summary><p>Los materiales varían según la carrera que elijas, ya que cada programa tiene sus propias herramientas y equipos de práctica. ¡Pero no te preocupes! En tu <strong>clase de bienvenida</strong> recibirás la lista completa y detallada de todo lo que necesitas adquirir, junto con los materiales que se utilizan durante el curso. Así sabrás exactamente qué comprar, sin gastos innecesarios.</p></details><details><summary>¿Cómo reservo mi cupo?</summary><p>Puedes reservar tu cupo con un abono anticipado de $20. Puedes hacerlo por transferencia bancaria, por depósito o directamente en la academia.</p></details></section></section>
-    <section class="wrap location" id="ubicacion" aria-labelledby="location-title"><div class="location-card"><div class="location-info"><p class="eyebrow">TE ESPERAMOS EN NUESTRO NUEVO LOCAL</p><h2 id="location-title">Tu próximo paso<br>empieza <em>aquí.</em></h2><span class="line"></span><address><strong>Av. Guapondelig y Gustavo Lemus</strong><span>Cuenca, Ecuador</span></address><div class="location-contact"><a href="tel:+593969124761">Llámanos <strong>096 912 4761 ↗</strong></a><a href="mailto:v.capacitacion2027@gmail.com">Escríbenos <strong>v.capacitacion2027@gmail.com ↗</strong></a></div><a class="button" href="https://maps.app.goo.gl/Atcrpauhwo8GaFm76" target="_blank" rel="noopener">Cómo llegar ↗</a></div><div class="location-map"><iframe title="Mapa del nuevo local de Vicorga Capacitaciones, Av. Guapondelig y Gustavo Lemus, Cuenca" src="https://www.google.com/maps?q=-2.9013704,-78.991932&amp;z=18&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><a class="map-label" href="https://maps.app.goo.gl/Atcrpauhwo8GaFm76" target="_blank" rel="noopener">Ver ubicación en Google Maps ↗</a></div></div></section>
-    <section class="closing"><div class="wrap"><h2>Tu próximo paso<br><em>empieza aquí.</em></h2><a class="button" href="https://wa.me/593969124761" data-contact target="_blank" rel="noopener">Consultar fechas y horarios ↗</a></div></section>
-  </main>
-  <footer class="wrap" id="contacto"><div class="footer-grid"><a class="brand" href="index.html"><img src="assets/images/logo_vicorga.png" alt="Vicorga Capacitaciones"></a><div><h3>Cursos</h3><a href="curso.html?carrera=maestria-belleza">Maestra en Belleza</a><a href="curso.html?carrera=unas">Técnica profesional en uñas</a><a href="curso.html?carrera=lashista">Lashista</a><a href="curso.html?carrera=barberia">Barbería</a><a href="curso.html?carrera=maquillaje">Maquillaje</a><a href="curso.html?carrera=micropigmentacion">Micropigmentación</a><a href="curso.html?carrera=tatuajes">Tatuajes</a><a href="curso.html?carrera=cosmiatria">Cosmiatría</a></div><div><h3>La academia</h3><a href="index.html#academia">Nuestra propuesta</a><a href="#preguntas">Preguntas frecuentes</a></div><div><h3>Contacto</h3><a href="https://wa.me/593969124761">096 912 4761</a><a href="mailto:v.capacitacion2027@gmail.com">v.capacitacion2027@gmail.com</a><p>Av. Guapondelig y Gustavo Lemus<br>Cuenca, Ecuador</p></div></div><div class="footer-bottom"><span>© 2026 Vicorga Capacitaciones</span><div><a href="https://www.instagram.com/vicorga.academy/">Instagram ↗</a> <a href="https://www.facebook.com/VicorgaAcademy">Facebook ↗</a></div><span>Fotografías ilustrativas · Pexels / Unsplash</span></div></footer>
+
 </body>
 </html>

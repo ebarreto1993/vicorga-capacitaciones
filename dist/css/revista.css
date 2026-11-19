@@ -1,0 +1,178 @@
+.magazine { background: #efeeeb; }
+.magazine main { background: white; }
+.magazine .nails-cover { height: min(calc(100svh - 58px), 70.7vw); }
+@media(min-width:601px) {
+  .magazine main,
+  .magazine > .catalog-nav { width: min(1440px, 92%); margin-inline: auto; }
+}
+.magazine > .catalog-nav { top: 0; }
+.magazine > .catalog-nav .wrap { width: 90%; }
+.magazine .bank-details { max-width: 850px; margin-inline: auto; }
+.magazine-cover {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: min(70.7vw, calc(100svh - 60px));
+  container-type: inline-size;
+  background: white;
+}
+.magazine-cover-photo { position: absolute; left: 0; top: 0; width: 55%; height: 100%; z-index: -3; object-position: center 30%; }
+.magazine-cover::before { content: ''; position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, transparent 20%, #ffffffb0 38%, white 52%); }
+.magazine-cover::after { content: ''; position: absolute; top: 3.75%; inset-inline: 0; height: 4px; background: #cfaa6a; }
+.magazine-cover-mark { position: absolute; right: -10%; bottom: -5%; width: 48%; z-index: -1; opacity: .12; filter: grayscale(1); }
+.magazine-cover-copy { width: 49%; margin-left: 48%; padding: 12% 3% 9%; }
+.magazine-cover-copy .eyebrow { color: var(--gold-ink); }
+.magazine-cover-copy h1 { font-size: clamp(38px, 5cqw, 72px); letter-spacing: -.03em; }
+.magazine-cover-description { margin-top: 24px; font-size: clamp(18px, 1.8cqw, 25px); }
+.magazine-cover-duration { margin-top: 20px; font-size: clamp(16px, 1.5cqw, 22px); }
+.magazine-cover-copy .button { margin-top: 26px; }
+.page-text-left .magazine-page-photo { left: auto; right: 0; width: 49%; }
+.page-text-left::before { background: linear-gradient(90deg, white 42%, #ffffffef 50%, transparent 72%); }
+.page-text-left .magazine-page-copy { margin-left: 0; width: 58%; }
+.magazine-module-name { margin-bottom: 24px; }
+.magazine-course-video { padding: 40px 5%; background: #f5f3ef; }
+.magazine-course-video iframe { display: block; width: min(100%, 320px); aspect-ratio: 9 / 16; border: 0; margin-inline: auto; }
+.magazine-page {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #fff;
+  color: #000;
+  min-height: min(70.7vw, 100svh);
+  container-type: inline-size;
+  scroll-margin-top: 60px;
+}
+.magazine-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, transparent 23%, #ffffffb0 35%, #fff 44%);
+}
+.magazine-page::after {
+  content: '';
+  position: absolute;
+  top: 3.75%;
+  inset-inline: 0;
+  height: 4px;
+  background: #cfaa6a;
+}
+.magazine-page-photo {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 46%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.magazine-page-watermark {
+  position: absolute;
+  z-index: -1;
+  width: 48%;
+  right: -11%;
+  bottom: -6%;
+  filter: grayscale(1);
+  opacity: .16;
+}
+.magazine-page-copy {
+  width: 62%;
+  margin-left: 36%;
+  padding: 6% 3% 5%;
+}
+.magazine-page h2 {
+  font: 500 clamp(27px, 3.7cqw, 57px)/1.18 'Gelasio', Georgia, serif;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0 0 4%;
+}
+.magazine-page p, .magazine-page ol {
+  font: 400 clamp(16px, 2.1cqw, 30px)/1.48 'Caladea', Georgia, serif;
+}
+.magazine-page ol { margin: 0; padding-left: 1.3em; }
+.magazine-page li { padding-left: 0; }
+.nails-audience .magazine-page-photo { object-position: center 58%; }
+.nails-audience .magazine-page-copy { padding-top: 9%; }
+.nails-audience p { text-align: center; margin-top: 13%; }
+.nails-module-one .magazine-page-photo { left: auto; right: 0; width: 49%; object-position: 40% center; }
+.nails-module-one::before { background: linear-gradient(90deg, white 42%, #ffffffef 50%, #ffffff00 72%); }
+.nails-module-one .magazine-page-copy { margin-left: 0; width: 58%; padding: 5.5% 2.7% 3%; }
+.nails-module-one h2 { margin-bottom: 4%; }
+.nails-module-one ol { font-size: clamp(16px, 1.9cqw, 28px); line-height: 1.42; }
+.nails-module-two .magazine-page-copy { padding-top: 6%; }
+.nails-module-two .magazine-page-photo { object-position: 35% center; }
+.magazine-video-circle {
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  width: min(28cqw, 360px);
+  aspect-ratio: 1;
+  margin: 1% 1% 0 auto;
+  border-radius: 50%;
+  border: 8px solid #bd8623;
+  background: #bd8623;
+  padding: 0;
+}
+.magazine-video-circle video { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.magazine-video-toggle { display: block; margin: 8px 4% 0 auto; min-height: 44px; padding: 6px 14px; border: 1px solid #b8a27a; background: white; color: black; cursor: pointer; }
+.nails-module-three .magazine-page-photo,
+.magazine-investment .magazine-page-photo { left: auto; right: 0; width: 53%; }
+.nails-module-three::before { background: linear-gradient(90deg, white 39%, #ffffffe6 49%, transparent 72%); }
+.nails-module-three .magazine-page-copy { margin-left: 0; width: 59%; }
+.nails-module-three .magazine-page-watermark { left: -13%; right: auto; }
+.nails-module-three ol { margin-top: 14%; }
+.nails-module-four ol { margin-top: 12%; }
+.nails-module-five .magazine-page-photo { width: 41%; mask-image: linear-gradient(90deg, black 65%, transparent); }
+.nails-module-five .magazine-page-photo-second { left: auto; right: 0; width: 43%; mask-image: linear-gradient(90deg, transparent, black 35%); }
+.nails-module-five::before { background: linear-gradient(90deg, #ffffff00 10%, #ffffffd9 31%, white 47%, #ffffffc7 60%, #ffffff11 92%); }
+.nails-module-five .magazine-page-copy { width: 61%; margin-left: 24%; padding-top: 9%; }
+.nails-module-five ol { font-size: clamp(16px, 1.9cqw, 28px); }
+.nails-exam { min-height: min(70.7vw, 100svh); background: #b75d8b; }
+.nails-exam::before { display: none; }
+.nails-exam .magazine-page-photo { width: 50%; object-position: center 55%; }
+.nails-exam .magazine-page-photo-second { left: 50%; object-position: center 40%; }
+.nails-exam h2 { color: white; position: relative; padding-top: 5%; text-shadow: 0 2px 6px #53213c88; }
+.magazine-investment::before { background: linear-gradient(90deg, white 38%, #ffffffed 51%, #ffffff19 78%); }
+.magazine-investment .magazine-page-copy { margin-left: 0; width: 73%; padding: 4.8% 2.5% 3%; }
+.magazine-investment h2 { white-space: nowrap; margin-bottom: 5%; }
+.magazine-investment p, .magazine-investment ul { font: 400 clamp(16px, 1.8cqw, 26px)/1.45 'Caladea', Georgia, serif; margin: 0 0 .5em; }
+.magazine-investment ul { padding-left: 1.05em; }
+.magazine-investment strong { font-weight: 700; }
+@media(max-width:600px) {
+  .magazine-cover { padding-top: 230px; min-height: 0; }
+  .magazine-cover-photo { width: 100%; height: 300px; }
+  .magazine-cover::before { background: linear-gradient(180deg, transparent 100px, #ffffff22 170px, white 290px); }
+  .magazine-cover-copy { width: 100%; margin-left: 0; padding: 25px 6% 40px; }
+  .magazine-cover-copy h1 { font-size: 39px; }
+  .page-text-left .magazine-page-photo { left: 0; right: auto; width: 100%; height: 300px; }
+  .page-text-left::before { background: linear-gradient(180deg, transparent 100px, #ffffff22 170px, white 290px); }
+  .page-text-left .magazine-page-copy { width: 100%; margin-left: 0; padding: 25px 6% 40px; }
+  .magazine .nails-cover { height: auto; }
+  .magazine > .catalog-nav .wrap { width: 100%; }
+  .magazine-page { min-height: 0; padding-top: 230px; }
+  .magazine-page-photo, .nails-module-one .magazine-page-photo { top: 0; left: 0; width: 100%; height: 300px; object-position: center 40%; }
+  .nails-audience .magazine-page-photo { object-position: center 45%; }
+  .magazine-page::before, .nails-module-one::before { background: linear-gradient(180deg, transparent 100px, #ffffff22 170px, white 290px); }
+  .magazine-page::after { top: 16px; height: 2px; }
+  .magazine-page-copy, .nails-audience .magazine-page-copy, .nails-module-one .magazine-page-copy, .nails-module-two .magazine-page-copy { width: 100%; margin-left: 0; padding: 25px 6% 40px; }
+  .magazine-page h2 { font-size: 28px; margin-bottom: 24px; }
+  .magazine-page p, .magazine-page ol, .nails-module-one ol { font-size: 18px; line-height: 1.55; }
+  .nails-audience p { margin-top: 0; }
+  .magazine-page li + li { margin-top: 5px; }
+  .magazine-page-watermark { width: 80%; right: -15%; bottom: -4%; opacity: .08; }
+  .magazine-video-circle { width: min(70vw, 280px); margin: 24px auto 0; }
+  .magazine-video-toggle { margin-inline: auto; }
+  .nails-module-three .magazine-page-photo,
+  .magazine-investment .magazine-page-photo { top: 0; left: 0; width: 100%; height: 300px; }
+  .nails-module-three::before, .nails-module-five::before, .magazine-investment::before { background: linear-gradient(180deg, transparent 100px, #ffffff22 170px, white 290px); }
+  .nails-module-three .magazine-page-copy, .nails-module-five .magazine-page-copy,
+  .magazine-investment .magazine-page-copy { width: 100%; margin-left: 0; padding: 25px 6% 40px; }
+  .nails-module-three ol, .nails-module-four ol { margin-top: 0; }
+  .nails-module-five .magazine-page-photo { width: 50%; }
+  .nails-module-five .magazine-page-photo-second { left: 50%; width: 50%; }
+  .nails-module-five ol, .magazine-investment p, .magazine-investment ul { font-size: 18px; line-height: 1.55; }
+  .magazine-investment h2 { white-space: normal; }
+  .nails-exam { min-height: 540px; padding-top: 0; }
+  .nails-exam .magazine-page-photo, .nails-exam .magazine-page-photo-second { height: 100%; }
+  .nails-exam h2 { padding: 35px 12px 0; }
+}
