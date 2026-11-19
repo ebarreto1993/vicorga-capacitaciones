@@ -214,6 +214,7 @@
 .beauty-lashes .magazine-page-copy { position: relative; z-index: 1; width: 58%; padding-top: 8%; }
 .beauty-faciales .magazine-page-copy { position: static; }
 .beauty-cortes ol { font-size: clamp(16px, 1.8cqw, 26px); line-height: 1.45; }
+.beauty-cortes .magazine-page-watermark { left: -12%; right: auto; }
 .beauty-capilares .magazine-page-photo,
 .beauty-maquillaje .magazine-page-photo { width: 48%; }
 .beauty-capilares .magazine-page-copy,
