@@ -77,6 +77,28 @@ course.modulos.forEach((module, index) => {
   get('module-select').append(option);
 });
 
+if (courseKey === 'unas') {
+  get('modulo-01').remove();
+  get('modulo-02').remove();
+  get('pensum').id = 'modulos-siguientes';
+  get('pensum-title').textContent = 'Módulos 3 a 5';
+  const pages = get('nails-pages-template').content.cloneNode(true);
+  pages.querySelector('.nails-pages').id = 'pensum';
+  document.querySelector('.catalog-nav').after(pages);
+  get('module-select').options[1].textContent = '01 · Módulo 1';
+  get('module-select').options[2].textContent = '02 · Módulo 2';
+  const videoDialog = document.querySelector('.nails-video-dialog');
+  const moduleVideo = videoDialog.querySelector('video');
+  document.querySelector('.nails-video-trigger').addEventListener('click', () => {
+    videoDialog.showModal();
+    moduleVideo.play().catch(() => {
+      // Native controls remain available if the browser requires another tap.
+    });
+  });
+  document.querySelector('.nails-video-close').addEventListener('click', () => videoDialog.close());
+  videoDialog.addEventListener('close', () => moduleVideo.pause());
+}
+
 get('module-select').addEventListener('change', event => {
   const target = get(event.target.value);
   if (target) {

@@ -1,0 +1,105 @@
+.nails-page {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #fff;
+  color: #000;
+  min-height: min(70.7vw, 100svh);
+  container-type: inline-size;
+  scroll-margin-top: 60px;
+}
+.nails-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, transparent 23%, #ffffffb0 35%, #fff 44%);
+}
+.nails-page::after {
+  content: '';
+  position: absolute;
+  top: 3.75%;
+  inset-inline: 0;
+  height: 4px;
+  background: #cfaa6a;
+}
+.nails-page-photo {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 46%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.nails-page-watermark {
+  position: absolute;
+  z-index: -1;
+  width: 48%;
+  right: -11%;
+  bottom: -6%;
+  filter: grayscale(1);
+  opacity: .16;
+}
+.nails-page-copy {
+  width: 62%;
+  margin-left: 36%;
+  padding: 6% 3% 5%;
+}
+.nails-page h2 {
+  font: 500 clamp(27px, 3.7cqw, 57px)/1.18 'Gelasio', Georgia, serif;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0 0 4%;
+}
+.nails-page p, .nails-page ol {
+  font: 400 clamp(16px, 2.1cqw, 30px)/1.48 'Caladea', Georgia, serif;
+}
+.nails-page ol { margin: 0; padding-left: 1.3em; }
+.nails-page li { padding-left: 0; }
+.nails-audience .nails-page-photo { object-position: center 58%; }
+.nails-audience .nails-page-copy { padding-top: 9%; }
+.nails-audience p { text-align: center; margin-top: 13%; }
+.nails-module-one .nails-page-photo { left: auto; right: 0; width: 49%; object-position: 40% center; }
+.nails-module-one::before { background: linear-gradient(90deg, white 42%, #ffffffef 50%, #ffffff00 72%); }
+.nails-module-one .nails-page-copy { margin-left: 0; width: 58%; padding: 5.5% 2.7% 3%; }
+.nails-module-one h2 { margin-bottom: 4%; }
+.nails-module-one ol { font-size: clamp(16px, 1.9cqw, 28px); line-height: 1.42; }
+.nails-module-two .nails-page-copy { padding-top: 6%; }
+.nails-module-two .nails-page-photo { object-position: 35% center; }
+.nails-video-trigger {
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  width: min(28cqw, 360px);
+  aspect-ratio: 1;
+  margin: 1% 1% 0 auto;
+  border-radius: 50%;
+  border: 8px solid #bd8623;
+  background: #bd8623;
+  cursor: pointer;
+  padding: 0;
+}
+.nails-video-trigger img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.nails-video-trigger span { position: relative; display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: #fff; color: #000; font-size: 23px; padding-left: 4px; transition: transform .18s; }
+.nails-video-trigger:hover span { transform: scale(1.08); }
+.nails-video-dialog { width: min(90vw, 620px); max-height: 94svh; padding: 18px; border: 1px solid #cfaa6a; color: #000; background: #fff; }
+.nails-video-dialog::backdrop { background: #000c; }
+.nails-video-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 15px; }
+.nails-video-heading h2 { font-size: 24px; margin: 0; }
+.nails-video-close { background: white; border: 1px solid #ccc; color: black; width: 44px; height: 44px; cursor: pointer; font-size: 30px; }
+.nails-video-dialog video { display: block; width: 100%; max-height: 76svh; background: #000; }
+@media(max-width:600px) {
+  .nails-page { min-height: 0; padding-top: 230px; }
+  .nails-page-photo, .nails-module-one .nails-page-photo { top: 0; left: 0; width: 100%; height: 300px; object-position: center 40%; }
+  .nails-audience .nails-page-photo { object-position: center 45%; }
+  .nails-page::before, .nails-module-one::before { background: linear-gradient(180deg, transparent 100px, #ffffff22 170px, white 290px); }
+  .nails-page::after { top: 16px; height: 2px; }
+  .nails-page-copy, .nails-audience .nails-page-copy, .nails-module-one .nails-page-copy, .nails-module-two .nails-page-copy { width: 100%; margin-left: 0; padding: 25px 6% 40px; }
+  .nails-page h2 { font-size: 28px; margin-bottom: 24px; }
+  .nails-page p, .nails-page ol, .nails-module-one ol { font-size: 18px; line-height: 1.55; }
+  .nails-audience p { margin-top: 0; }
+  .nails-page li + li { margin-top: 5px; }
+  .nails-page-watermark { width: 80%; right: -15%; bottom: -4%; opacity: .08; }
+  .nails-video-trigger { width: min(70vw, 280px); margin: 24px auto 0; }
+}
