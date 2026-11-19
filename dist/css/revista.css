@@ -167,15 +167,23 @@
 .beauty-about .magazine-page-photo { width: 46%; object-position: center 35%; }
 .beauty-about .magazine-page-copy { padding-top: 9%; }
 .beauty-about p { margin-top: 14%; text-align: center; }
-.beauty-audience .magazine-page-photo { width: 47%; object-position: center 44%; }
+.beauty-audience .magazine-page-photo {
+  z-index: 0;
+  width: 47%;
+  object-position: center 44%;
+  -webkit-mask-image: linear-gradient(270deg, #000 64%, transparent 100%);
+  mask-image: linear-gradient(270deg, #000 64%, transparent 100%);
+}
+.beauty-audience .magazine-page-copy { position: relative; z-index: 1; }
 .beauty-audience .magazine-page-copy { padding-top: 8%; }
 .beauty-audience p { margin-top: 10%; text-align: center; }
 .beauty-audience .magazine-page-watermark { left: -12%; right: auto; }
 .beauty-peinados .magazine-page-video {
   width: 47%;
   object-position: center;
-  -webkit-mask-image: linear-gradient(90deg, #000 58%, transparent 100%);
-  mask-image: linear-gradient(90deg, #000 58%, transparent 100%);
+  transform: scaleX(-1);
+  -webkit-mask-image: linear-gradient(270deg, #000 58%, transparent 100%);
+  mask-image: linear-gradient(270deg, #000 58%, transparent 100%);
 }
 .beauty-peinados::before { background: linear-gradient(90deg, transparent 21%, #ffffffd9 38%, #fff 48%); }
 .beauty-peinados .magazine-page-copy { width: 59%; margin-left: 40%; padding: 5.5% 4% 4%; }
@@ -354,7 +362,13 @@
   .magazine-page p, .magazine-page ol, .nails-module-one ol { font-size: 18px; line-height: 1.55; }
   .nails-audience p { margin-top: 0; }
   .beauty-about .magazine-page-photo,
-  .beauty-audience .magazine-page-photo { width: 100%; object-position: center 38%; }
+  .beauty-audience .magazine-page-photo {
+    z-index: -2;
+    width: 100%;
+    object-position: center 38%;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
   .beauty-about .magazine-page-copy,
   .beauty-audience .magazine-page-copy { padding-top: 25px; }
   .beauty-about p, .beauty-audience p { margin-top: 0; }
