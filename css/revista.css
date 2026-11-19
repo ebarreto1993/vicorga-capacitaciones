@@ -138,6 +138,13 @@
 .magazine-investment p, .magazine-investment ul { font: 400 clamp(16px, 1.8cqw, 26px)/1.45 'Caladea', Georgia, serif; margin: 0 0 .5em; }
 .magazine-investment ul { padding-left: 1.05em; }
 .magazine-investment strong { font-weight: 700; }
+/* Fade the photo itself so its rectangular edge never shows through the overlay. */
+.nails-module-one .magazine-page-photo,
+.nails-module-three .magazine-page-photo,
+.magazine-investment .magazine-page-photo {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 42%);
+  mask-image: linear-gradient(90deg, transparent, #000 42%);
+}
 @media(max-width:600px) {
   .magazine-cover { padding-top: 230px; min-height: 0; }
   .magazine-cover-photo { width: 100%; height: 300px; }
@@ -172,6 +179,12 @@
   .nails-module-five .magazine-page-photo-second { left: 50%; width: 50%; }
   .nails-module-five ol, .magazine-investment p, .magazine-investment ul { font-size: 18px; line-height: 1.55; }
   .magazine-investment h2 { white-space: normal; }
+  .nails-module-one .magazine-page-photo,
+  .nails-module-three .magazine-page-photo,
+  .magazine-investment .magazine-page-photo {
+    -webkit-mask-image: linear-gradient(180deg, #000 48%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 48%, transparent 100%);
+  }
   .nails-exam { min-height: 540px; padding-top: 0; }
   .nails-exam .magazine-page-photo, .nails-exam .magazine-page-photo-second { height: 100%; }
   .nails-exam h2 { padding: 35px 12px 0; }
