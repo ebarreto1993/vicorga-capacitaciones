@@ -62,18 +62,26 @@ const revistas = {
         "marcaAgua": true
       },
       {
-        "imagen": "assets/images/belleza.jpeg"
+        "videoFondo": "assets/images/modulo_belleza/m10/m10.mp4",
+        "segundaImagen": "assets/images/modulo_belleza/m10/m10.jpeg",
+        "clase": "beauty-manicure",
+        "titulo": "MANICURA PEDICURA"
       },
       {
-        "imagen": "assets/photos/cosmetologia.jpg"
+        "videoFondo": "assets/images/modulo_belleza/m11/m10_video.mp4",
+        "poster": "assets/images/modulo_belleza/m11/m11.jpeg",
+        "clase": "beauty-barberia page-text-left",
+        "titulo": "BARBERÍA",
+        "marcaAgua": true
       },
       {
-        "imagen": "assets/images/barberia.jpeg"
-      },
-      {
-        "imagen": "assets/images/belleza.jpeg"
+        "imagen": "assets/images/modulo_belleza/m12/m12.jpeg",
+        "video": "assets/images/modulo_belleza/m12/m12_video.mp4",
+        "clase": "beauty-colorimetria",
+        "titulo": "COLORIMETRÍA"
       }
-    ]
+    ],
+    "imagenInversion": "assets/images/modulo_belleza/m13/m13.jpeg"
   },
   "unas": {
     "portada": {

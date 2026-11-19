@@ -19,7 +19,7 @@ const carreras = {
     },
     "maestria-belleza": {
         nombre: "Maestra en Belleza",
-        descripcion: "Programa integral de formación profesional con 10 módulos especializados. Conviértete en un estilista experto dominando todas las áreas de la belleza, desde barbería hasta colorimetría.",
+        descripcion: "Programa integral de formación profesional con 9 módulos especializados. Conviértete en un estilista experto dominando todas las áreas de la belleza, desde barbería hasta colorimetría.",
         duracion: "5 meses (2 veces por semana) o 10 meses (sábados)",
         videoId: "sV3_Bk5__3A",
         modulos: [
@@ -29,10 +29,9 @@ const carreras = {
             {"numero":"04","nombre":"Tratamientos Faciales","temas":["Célula / piel","Lesiones elementales primarias y secundarias","Biotipos y fototipos cutáneos","Conceptos básicos de hidratación","Radicales libres","Productos y principios hidratantes","Corriente ionizable galvánica (prácticas en pacientes reales)"]},
             {"numero":"05","nombre":"Maquillaje","temas":["Diseño de cejas","Tipos de depilación","Colocación de pestañas individuales y tira","Lifting de pestañas","Preparación y limpieza de piel","Uso de productos y herramientas","Maquillaje de día y noche","Maquillaje de novia","Maquillaje artístico"]},
             {"numero":"06","nombre":"Lashes and Brows","temas":["Lifting y tinturado de pestañas","Laminado de pestañas más tinturado","Teoría de pestañas","Técnica clásica en maniquí","Técnica clásica en modelo"]},
-            {"numero":"07","nombre":"Tratamientos Capilares","temas":["Tratamiento de células madre","Botox capilar","Queratina","Tricología capilar"]},
-            {"numero":"08","nombre":"Tratamientos Faciales","temas":["Marco teórico","Exfoliación avanzada","Hidratación profunda","Fototerapia"]},
-            {"numero":"09","nombre":"Barbería","temas":["Historia de la barbería","Taper fade","Corte mohicano","Ritual de la barba"]},
-            {"numero":"10","nombre":"Colorimetría","temas":["Teoría del color","Tabla del 12","Cubrimiento de canas","Balayage y rayitos"]}
+            {"numero":"07","nombre":"Manicura y pedicura","temas":["Manicura rusa","Esmaltado perfecto","Diseños a mano alzada","Acrygel básica y encapsulada","Gel básica y encapsulada","Acrílico full cover","Baby boomer","Diseños 3D","Pedicura"]},
+            {"numero":"08","nombre":"Barbería","temas":["Historia de la barbería","Manejo y uso de las herramientas","Corte comb over","Teoría del taper fade","Blow out – taper fade","Corte mohicano","Corte normal alza #2","Corte alza #1","Corte alza #0.5","Corte mid-fade #0","Skin fade / navaja","Corte a tijera","Ritual de la barba"]},
+            {"numero":"09","nombre":"Colorimetría","temas":["Marco teórico de colorimetría","Formulaciones y leyes del color","Creación de colores: tabla del 12","Cubrimiento de canas","Tono sobre tono","Rayitos y marmoleado","Balayage"]}
         ],
         matricula: 80,
         mensualidad: 120,
