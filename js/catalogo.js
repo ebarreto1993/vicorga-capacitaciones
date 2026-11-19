@@ -85,7 +85,9 @@ if (courseKey === 'unas') {
   document.querySelector('.catalog-nav a[href="#formacion"]').remove();
   const pages = get('nails-pages-template').content.cloneNode(true);
   pages.querySelector('.nails-pages').id = 'pensum';
-  document.querySelector('.catalog-nav').after(pages);
+  document.querySelector('.nails-cover').after(pages);
+  const main = document.querySelector('main');
+  main.before(document.querySelector('.catalog-nav'));
 
   const originalInvestment = get('inversion');
   originalInvestment.id = 'pagos';
