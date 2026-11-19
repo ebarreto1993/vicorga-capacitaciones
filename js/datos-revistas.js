@@ -32,19 +32,34 @@ const revistas = {
         "titulo": "PEINADOS"
       },
       {
-        "imagen": "assets/photos/cosmetologia.jpg"
+        "imagen": "assets/images/modulo_belleza/m5/m5.jpeg",
+        "clase": "beauty-cortes page-text-left",
+        "titulo": "CORTES",
+        "marcaAgua": true
       },
       {
-        "imagen": "assets/images/maquillaje.jpeg"
+        "imagen": "assets/images/modulo_belleza/m6/m6.jpeg",
+        "video": "assets/images/modulo_belleza/m6/m6_video.mp4",
+        "clase": "beauty-capilares",
+        "titulo": "TRATAMIENTOS CAPILARES"
       },
       {
-        "imagen": "assets/images/lashista.jpeg"
+        "imagen": "assets/images/modulo_belleza/m7/m7.jpeg",
+        "video": "assets/images/modulo_belleza/m7/m7_video.mp4",
+        "clase": "beauty-faciales page-text-left",
+        "titulo": "TRATAMIENTOS FACIALES"
       },
       {
-        "imagen": "assets/images/belleza.jpeg"
+        "imagen": "assets/images/modulo_belleza/m8/m8.jpeg",
+        "clase": "beauty-maquillaje",
+        "titulo": "MAQUILLAJE",
+        "marcaAgua": true
       },
       {
-        "imagen": "assets/images/belleza.jpeg"
+        "videoFondo": "assets/images/modulo_belleza/m9/m9.mp4",
+        "clase": "beauty-lashes page-text-left",
+        "titulo": "LASHES AND BROWS",
+        "marcaAgua": true
       },
       {
         "imagen": "assets/images/belleza.jpeg"

@@ -201,6 +201,44 @@
   object-position: center 25%;
   box-shadow: 0 8px 28px #0002;
 }
+.beauty-cortes .magazine-page-photo,
+.beauty-faciales .magazine-page-photo,
+.beauty-lashes .magazine-page-video { z-index: 0; width: 52%; }
+.beauty-cortes .magazine-page-photo,
+.beauty-faciales .magazine-page-photo {
+  -webkit-mask-image: linear-gradient(270deg, #000 62%, transparent 100%);
+  mask-image: linear-gradient(270deg, #000 62%, transparent 100%);
+}
+.beauty-cortes .magazine-page-copy,
+.beauty-faciales .magazine-page-copy,
+.beauty-lashes .magazine-page-copy { position: relative; z-index: 1; width: 58%; padding-top: 8%; }
+.beauty-faciales .magazine-page-copy { position: static; }
+.beauty-cortes ol { font-size: clamp(16px, 1.8cqw, 26px); line-height: 1.45; }
+.beauty-capilares .magazine-page-photo,
+.beauty-maquillaje .magazine-page-photo { width: 48%; }
+.beauty-capilares .magazine-page-copy,
+.beauty-maquillaje .magazine-page-copy { width: 59%; margin-left: 41%; padding-top: 8%; }
+.beauty-capilares ol,
+.beauty-faciales ol,
+.beauty-maquillaje ol,
+.beauty-lashes ol { font-size: clamp(16px, 1.75cqw, 25px); line-height: 1.42; }
+.beauty-capilares .magazine-video-circle,
+.beauty-faciales .magazine-video-circle {
+  position: absolute;
+  width: min(24cqw, 320px);
+  margin: 0;
+  box-shadow: 0 8px 28px #0002;
+}
+.beauty-capilares .magazine-video-circle { right: 2.5%; bottom: 2.5%; }
+.beauty-faciales .magazine-video-circle { left: 3%; bottom: 2.5%; }
+.beauty-lashes .magazine-page-video {
+  left: auto;
+  right: 0;
+  object-position: center;
+  -webkit-mask-image: linear-gradient(270deg, #000 62%, transparent 100%);
+  mask-image: linear-gradient(270deg, #000 62%, transparent 100%);
+}
+.beauty-lashes .magazine-page-watermark { left: -12%; right: auto; }
 .nails-module-one .magazine-page-photo { left: auto; right: 0; width: 49%; object-position: 40% center; }
 .nails-module-one::before { background: linear-gradient(90deg, white 42%, #ffffffef 50%, #ffffff00 72%); }
 .nails-module-one .magazine-page-copy { margin-left: 0; width: 58%; padding: 5.5% 2.7% 3%; }
@@ -378,6 +416,30 @@
   .beauty-peinados .magazine-page-copy { width: 100%; margin: 0; padding: 28px 6% 230px; }
   .beauty-peinados ol { max-width: none; font-size: 18px; line-height: 1.45; }
   .beauty-peinados .magazine-page-photo-second { right: 50%; bottom: 34px; transform: translateX(50%); width: 170px; height: 170px; }
+  .beauty-cortes .magazine-page-photo,
+  .beauty-capilares .magazine-page-photo,
+  .beauty-faciales .magazine-page-photo,
+  .beauty-maquillaje .magazine-page-photo,
+  .beauty-lashes .magazine-page-video {
+    z-index: -2;
+    width: 100%;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .beauty-cortes .magazine-page-copy,
+  .beauty-capilares .magazine-page-copy,
+  .beauty-faciales .magazine-page-copy,
+  .beauty-maquillaje .magazine-page-copy,
+  .beauty-lashes .magazine-page-copy { width: 100%; margin: 0; padding: 28px 6% 40px; }
+  .beauty-cortes ol,
+  .beauty-capilares ol,
+  .beauty-faciales ol,
+  .beauty-maquillaje ol,
+  .beauty-lashes ol { font-size: 18px; line-height: 1.45; }
+  .beauty-capilares,
+  .beauty-faciales { padding-bottom: 215px; }
+  .beauty-capilares .magazine-video-circle,
+  .beauty-faciales .magazine-video-circle { left: 50%; right: auto; bottom: 28px; width: 170px; transform: translateX(-50%); }
   .magazine-page li + li { margin-top: 5px; }
   .magazine-page-watermark { width: 80%; right: -15%; bottom: -4%; opacity: .08; }
   .magazine-video-circle { width: min(70vw, 280px); margin: 24px auto 0; }
