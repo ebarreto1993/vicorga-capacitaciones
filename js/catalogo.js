@@ -29,6 +29,39 @@ function addWatermark(page) {
   page.append(image);
 }
 
+function addMediaBubbles(page, items, id) {
+  if (!items?.length) return;
+  const group = document.createElement('div');
+  group.className = 'magazine-media-bubbles';
+  items.forEach((item, index) => {
+    const frame = document.createElement('div');
+    frame.className = 'magazine-media-bubble' + (item.clase ? ' ' + item.clase : '');
+    let media;
+    if (item.video) {
+      media = document.createElement('video');
+      media.src = item.video;
+      if (item.poster) media.poster = item.poster;
+      media.autoplay = true;
+      media.defaultMuted = true;
+      media.muted = true;
+      media.loop = true;
+      media.playsInline = true;
+      media.preload = 'metadata';
+      media.setAttribute('aria-label', 'Demostración práctica de ' + course.nombre);
+    } else {
+      media = document.createElement('img');
+      media.src = item.imagen;
+      media.alt = '';
+      media.loading = 'lazy';
+    }
+    media.id = id + '-media-' + (index + 1);
+    frame.append(media);
+    group.append(frame);
+    if (media instanceof HTMLVideoElement) media.play().catch(() => {});
+  });
+  page.append(group);
+}
+
 function createPage(id, title, layout) {
   const page = cloneTemplate('magazine-page-template');
   page.id = id;
@@ -64,6 +97,7 @@ function createPage(id, title, layout) {
     secondImage.loading = 'lazy';
     page.append(secondImage);
   }
+  addMediaBubbles(page, layout.burbujas, id);
   return page;
 }
 
@@ -177,7 +211,24 @@ if (course.videoId && !magazine.ocultarVideoExterno) {
 }
 
 const investment = cloneTemplate('magazine-investment-template');
-investment.querySelector('.magazine-page-photo').src = magazine.imagenInversion || magazine.portada.imagen;
+const investmentPhoto = investment.querySelector('.magazine-page-photo');
+if (magazine.videoInversion) {
+  const investmentVideo = document.createElement('video');
+  investmentVideo.className = investmentPhoto.className + ' magazine-page-video';
+  investmentVideo.src = magazine.videoInversion;
+  if (magazine.imagenInversion) investmentVideo.poster = magazine.imagenInversion;
+  investmentVideo.autoplay = true;
+  investmentVideo.defaultMuted = true;
+  investmentVideo.muted = true;
+  investmentVideo.loop = true;
+  investmentVideo.playsInline = true;
+  investmentVideo.preload = 'metadata';
+  investmentVideo.setAttribute('aria-label', 'Instalaciones de ' + course.nombre);
+  investmentPhoto.replaceWith(investmentVideo);
+  investmentVideo.play().catch(() => {});
+} else {
+  investmentPhoto.src = magazine.imagenInversion || magazine.portada.imagen;
+}
 investment.querySelector('.investment-duration').textContent =
   'NUESTRA CARRERA TIENE UNA DURACIÓN DE ' + course.duracion.toLocaleUpperCase('es');
 const values = ['MATRÍCULA: $' + course.matricula];

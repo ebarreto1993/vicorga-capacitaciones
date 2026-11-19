@@ -10,7 +10,7 @@ const revistas = {
       {
         "id": "conocenos",
         "titulo": "CONÓCENOS",
-        "texto": "SOMOS UNA INSTITUCIÓN DE CAPACITACIÓN EN EL ÁREA DE LA BELLEZA, COMPROMETIDA CON EL DESARROLLO CONSTANTE EN LA FORMACIÓN DE FUTUROS PROFESIONALES Y EMPRESARIOS; SIENDO RECONOCIDOS CON MÁS DE 4 AÑOS EN EL MERCADO, POR NUESTRA EXCELENCIA Y CALIDAD EN LOS PROCESOS DE APRENDIZAJE COMO UNA INSTITUCIÓN LÍDER EN EL AMPLIO MUNDO DE LA BELLEZA.",
+        "texto": "SOMOS UNA INSTITUCIÓN DE CAPACITACIÓN EN EL ÁREA DE LA BELLEZA, COMPROMETIDA CON EL DESARROLLO CONSTANTE EN LA FORMACIÓN DE FUTUROS PROFESIONALES Y EMPRESARIOS; SIENDO RECONOCIDOS CON MÁS DE 7 AÑOS EN EL MERCADO, POR NUESTRA EXCELENCIA Y CALIDAD EN LOS PROCESOS DE APRENDIZAJE COMO UNA INSTITUCIÓN LÍDER EN EL AMPLIO MUNDO DE LA BELLEZA.",
         "imagen": "assets/images/modulo_belleza/m2/m2.jpeg",
         "clase": "beauty-about",
         "marcaAgua": true
@@ -27,7 +27,10 @@ const revistas = {
     "modulos": [
       {
         "videoFondo": "assets/images/modulo_belleza/m4/m4_video.mp4",
-        "segundaImagen": "assets/images/modulo_belleza/m4/m4_2.jpeg",
+        "burbujas": [
+          {"imagen": "assets/images/modulo_belleza/m4/m4_2.jpeg"},
+          {"imagen": "assets/images/modulo_belleza/m4/m4_3.jpeg"}
+        ],
         "clase": "beauty-peinados",
         "titulo": "PEINADOS"
       },
@@ -38,19 +41,27 @@ const revistas = {
         "marcaAgua": true
       },
       {
-        "imagen": "assets/images/modulo_belleza/m6/m6.jpeg",
-        "video": "assets/images/modulo_belleza/m6/m6_video.mp4",
+        "videoFondo": "assets/images/modulo_belleza/m6/m6_video.mp4",
+        "poster": "assets/images/modulo_belleza/m6/m6.jpeg",
+        "burbujas": [
+          {"imagen": "assets/images/modulo_belleza/m6/m6.jpeg"},
+          {"imagen": "assets/images/modulo_belleza/m6/m6_2.jpeg"}
+        ],
         "clase": "beauty-capilares",
         "titulo": "TRATAMIENTOS CAPILARES"
       },
       {
-        "imagen": "assets/images/modulo_belleza/m7/m7.jpeg",
-        "video": "assets/images/modulo_belleza/m7/m7_video.mp4",
+        "videoFondo": "assets/images/modulo_belleza/m7/m7_video.mp4",
+        "poster": "assets/images/modulo_belleza/m7/m7.jpeg",
+        "burbujas": [
+          {"imagen": "assets/images/modulo_belleza/m7/m7.jpeg"},
+          {"imagen": "assets/images/modulo_belleza/m7/m7_2.jpeg"}
+        ],
         "clase": "beauty-faciales page-text-left",
         "titulo": "TRATAMIENTOS FACIALES"
       },
       {
-        "imagen": "assets/images/modulo_belleza/m8/m8.jpeg",
+        "videoFondo": "assets/images/modulo_belleza/m8/m8.mp4",
         "clase": "beauty-maquillaje",
         "titulo": "MAQUILLAJE",
         "marcaAgua": true
@@ -63,25 +74,31 @@ const revistas = {
       },
       {
         "videoFondo": "assets/images/modulo_belleza/m10/m10.mp4",
-        "segundaImagen": "assets/images/modulo_belleza/m10/m10.jpeg",
+        "burbujas": [
+          {"video": "assets/images/modulo_belleza/m10/m10.mp4"},
+          {"video": "assets/images/modulo_belleza/m10/m10_2.mp4", "clase": "manicure-mobile-video"}
+        ],
         "clase": "beauty-manicure",
-        "titulo": "MANICURA PEDICURA"
+        "titulo": "MANICURA / PEDICURA"
       },
       {
         "videoFondo": "assets/images/modulo_belleza/m11/m10_video.mp4",
-        "poster": "assets/images/modulo_belleza/m11/m11.jpeg",
         "clase": "beauty-barberia page-text-left",
         "titulo": "BARBERÍA",
         "marcaAgua": true
       },
       {
-        "imagen": "assets/images/modulo_belleza/m12/m12.jpeg",
-        "video": "assets/images/modulo_belleza/m12/m12_video.mp4",
+        "videoFondo": "assets/images/modulo_belleza/m12/m12_video.mp4",
+        "poster": "assets/images/modulo_belleza/m12/m12.jpeg",
+        "burbujas": [
+          {"imagen": "assets/images/modulo_belleza/m12/m12.jpeg"},
+          {"imagen": "assets/images/modulo_belleza/m12/m12_2.jpeg"}
+        ],
         "clase": "beauty-colorimetria",
         "titulo": "COLORIMETRÍA"
       }
     ],
-    "imagenInversion": "assets/images/modulo_belleza/m13/m13.jpeg"
+    "videoInversion": "assets/images/modulo_belleza/m13/m13.mp4"
   },
   "unas": {
     "portada": {

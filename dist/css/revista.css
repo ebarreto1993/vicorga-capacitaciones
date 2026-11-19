@@ -266,7 +266,12 @@
   box-shadow: 0 8px 28px #0002;
 }
 .beauty-manicure .magazine-page-copy { padding-bottom: 20%; }
-.beauty-barberia .magazine-page-video { width: 51%; z-index: 0; }
+.beauty-barberia .magazine-page-video {
+  width: 51%;
+  z-index: 0;
+  -webkit-mask-image: linear-gradient(270deg, #000 64%, transparent 100%);
+  mask-image: linear-gradient(270deg, #000 64%, transparent 100%);
+}
 .beauty-barberia .magazine-page-watermark { left: -12%; right: auto; }
 .beauty-colorimetria { padding-bottom: 14%; }
 .beauty-colorimetria .magazine-video-circle {
@@ -274,6 +279,49 @@
   right: 2.5%;
   bottom: 3%;
   width: min(24cqw, 320px);
+}
+.beauty-peinados .magazine-page-copy,
+.beauty-capilares .magazine-page-copy,
+.beauty-maquillaje .magazine-page-copy,
+.beauty-manicure .magazine-page-copy,
+.beauty-colorimetria .magazine-page-copy { text-align: center; }
+.beauty-peinados ol,
+.beauty-capilares ol,
+.beauty-maquillaje ol,
+.beauty-manicure ol,
+.beauty-colorimetria ol {
+  width: fit-content;
+  max-width: 92%;
+  margin-inline: auto;
+  text-align: left;
+}
+.magazine-media-bubbles {
+  position: absolute;
+  right: 2.5%;
+  bottom: 2.5%;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+}
+.beauty-faciales .magazine-media-bubbles { left: 2.5%; right: auto; }
+.magazine-media-bubble {
+  position: relative;
+  overflow: hidden;
+  width: min(20cqw, 280px);
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #eee;
+  box-shadow: 0 12px 34px #0003;
+}
+.magazine-media-bubble img,
+.magazine-media-bubble video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .nails-module-one .magazine-page-photo { left: auto; right: 0; width: 49%; object-position: 40% center; }
 .nails-module-one::before { background: linear-gradient(90deg, white 42%, #ffffffef 50%, #ffffff00 72%); }
@@ -297,7 +345,8 @@
 }
 .magazine-video-circle video { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
 .nails-module-three .magazine-page-photo,
-.magazine-investment .magazine-page-photo { left: auto; right: 0; width: 53%; }
+.magazine-investment .magazine-page-photo,
+.magazine-investment .magazine-page-video { left: auto; right: 0; width: 53%; }
 .nails-module-three::before { background: linear-gradient(90deg, white 39%, #ffffffe6 49%, transparent 72%); }
 .nails-module-three .magazine-page-copy { margin-left: 0; width: 59%; }
 .nails-module-three .magazine-page-watermark { left: -13%; right: auto; }
@@ -543,6 +592,37 @@
     bottom: 28px;
     width: 170px;
     transform: translateX(-50%);
+  }
+  .beauty-peinados .magazine-page-copy,
+  .beauty-capilares .magazine-page-copy,
+  .beauty-faciales .magazine-page-copy,
+  .beauty-manicure .magazine-page-copy,
+  .beauty-colorimetria .magazine-page-copy { padding-bottom: 40px; }
+  .beauty-capilares,
+  .beauty-faciales,
+  .beauty-colorimetria { padding-bottom: 0; }
+  .magazine-media-bubbles,
+  .beauty-faciales .magazine-media-bubbles {
+    position: relative;
+    inset: auto;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 0 4% 38px;
+  }
+  .magazine-media-bubble { width: min(43vw, 190px); }
+  .beauty-manicure .magazine-media-bubbles {
+    display: block;
+    padding: 0;
+  }
+  .beauty-manicure .magazine-media-bubble:not(.manicure-mobile-video) { display: none; }
+  .beauty-manicure .manicure-mobile-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 28%, #000 100%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 28%, #000 100%);
   }
   .nails-exam { min-height: 540px; padding-top: 0; }
   .nails-exam .magazine-page-photo, .nails-exam .magazine-page-photo-second { height: 100%; }
