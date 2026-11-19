@@ -6,7 +6,6 @@ body, button, select, input, textarea {
 }
 h1, h2, h3,
 .close h2, .closing h2,
-.bank-details h3,
 .card-content h3, .footer-grid h3 {
   font-family: 'Gelasio', Georgia, serif;
   font-weight: 500;

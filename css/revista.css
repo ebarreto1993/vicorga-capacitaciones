@@ -7,7 +7,6 @@
 }
 .magazine > .catalog-nav { top: 0; }
 .magazine > .catalog-nav .wrap { width: 90%; }
-.magazine .bank-details { max-width: 850px; margin-inline: auto; }
 .magazine-cover {
   position: relative;
   isolation: isolate;
@@ -137,6 +136,84 @@
 .magazine-investment p, .magazine-investment ul { font: 400 clamp(16px, 1.8cqw, 26px)/1.45 'Caladea', Georgia, serif; margin: 0 0 .5em; }
 .magazine-investment ul { padding-left: 1.05em; }
 .magazine-investment strong { font-weight: 700; }
+.magazine-payment {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: min(70.7vw, 100svh);
+  background: #fff;
+  color: #111;
+  container-type: inline-size;
+  scroll-margin-top: 60px;
+}
+.magazine-payment::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, transparent 22%, #ffffffc7 39%, #fff 49%);
+}
+.magazine-payment::after {
+  content: '';
+  position: absolute;
+  top: 3.75%;
+  inset-inline: 0;
+  height: 4px;
+  background: #cfaa6a;
+}
+.magazine-payment-photo {
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: -2;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.magazine-payment-copy {
+  width: 58%;
+  margin-left: 42%;
+  padding: 6% 5% 4%;
+  text-align: center;
+}
+.magazine-payment h2 {
+  margin: 0 0 2%;
+  font: 500 clamp(30px, 4cqw, 58px)/1.1 'Gelasio', Georgia, serif;
+}
+.payment-intro {
+  max-width: 620px;
+  margin: 0 auto 3%;
+  font: 400 clamp(16px, 1.7cqw, 24px)/1.35 'Caladea', Georgia, serif;
+}
+.payment-accounts { max-width: 610px; margin-inline: auto; }
+.payment-account {
+  display: grid;
+  grid-template-columns: minmax(150px, 1.25fr) minmax(150px, .9fr);
+  align-items: center;
+  gap: 28px;
+  min-height: 88px;
+  border-bottom: 2px solid #cfaa6a;
+  padding: 12px 8px;
+}
+.payment-account img { display: block; width: 100%; height: 50px; object-fit: contain; }
+.payment-account:nth-child(3) img { height: 60px; }
+.payment-account p { margin: 0; text-align: left; font: 400 clamp(15px, 1.45cqw, 21px)/1.16 'Caladea', Georgia, serif; }
+.payment-owner { margin: 3% 0 2%; font: 400 clamp(15px, 1.45cqw, 21px)/1.35 'Caladea', Georgia, serif; }
+.payment-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 12px 24px;
+  background: #128c4a;
+  color: #fff;
+  border: 2px solid #128c4a;
+  font: 700 17px 'Caladea', Georgia, serif;
+  transition: transform .18s ease, background-color .18s ease;
+}
+.payment-whatsapp:hover { background: #0b713a; transform: translateY(-2px); }
+.payment-whatsapp:active { transform: translateY(0); }
 /* Fade the photo itself so its rectangular edge never shows through the overlay. */
 .nails-module-one .magazine-page-photo,
 .nails-module-three .magazine-page-photo,
@@ -177,6 +254,19 @@
   .nails-module-five .magazine-page-photo-second { left: 50%; width: 50%; }
   .nails-module-five ol, .magazine-investment p, .magazine-investment ul { font-size: 18px; line-height: 1.55; }
   .magazine-investment h2 { white-space: normal; }
+  .magazine-payment { min-height: 0; padding-top: 260px; }
+  .magazine-payment::before { background: linear-gradient(180deg, transparent 90px, #ffffff2e 165px, #fff 260px); }
+  .magazine-payment::after { top: 16px; height: 2px; }
+  .magazine-payment-photo { width: 100%; height: 300px; object-position: center 58%; }
+  .magazine-payment-copy { width: 100%; margin: 0; padding: 28px 6% 44px; }
+  .magazine-payment h2 { font-size: 30px; margin-bottom: 12px; }
+  .payment-intro { font-size: 17px; margin-bottom: 18px; }
+  .payment-account { grid-template-columns: minmax(125px, 1.15fr) minmax(125px, .85fr); gap: 16px; min-height: 78px; padding-inline: 0; }
+  .payment-account img { height: 42px; }
+  .payment-account:nth-child(3) img { height: 50px; }
+  .payment-account p, .payment-owner { font-size: 16px; }
+  .payment-owner { margin-block: 24px 18px; }
+  .payment-whatsapp { width: 100%; }
   .nails-module-one .magazine-page-photo,
   .nails-module-three .magazine-page-photo,
   .magazine-investment .magazine-page-photo {
