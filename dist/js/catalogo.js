@@ -32,17 +32,36 @@ function addWatermark(page) {
 function createPage(id, title, layout) {
   const page = cloneTemplate('magazine-page-template');
   page.id = id;
-  if (layout.clase) page.classList.add(layout.clase);
+  if (layout.clase) page.classList.add(...layout.clase.split(/\s+/).filter(Boolean));
   page.setAttribute('aria-labelledby', id + '-title');
   const heading = page.querySelector('h2');
   heading.id = id + '-title';
   heading.textContent = title;
-  page.querySelector('.magazine-page-photo').src = layout.imagen;
+  const primaryImage = page.querySelector('.magazine-page-photo');
+  if (layout.videoFondo) {
+    const video = document.createElement('video');
+    video.className = primaryImage.className + ' magazine-page-video';
+    video.src = layout.videoFondo;
+    if (layout.poster) video.poster = layout.poster;
+    video.autoplay = true;
+    video.defaultMuted = true;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.preload = 'metadata';
+    video.setAttribute('aria-label', 'Demostración práctica de ' + course.nombre);
+    primaryImage.replaceWith(video);
+    video.play().catch(() => {});
+  } else {
+    primaryImage.src = layout.imagen;
+  }
   if (layout.marcaAgua) addWatermark(page);
   if (layout.segundaImagen) {
-    const secondImage = page.querySelector('.magazine-page-photo').cloneNode();
-    secondImage.classList.add('magazine-page-photo-second');
+    const secondImage = document.createElement('img');
+    secondImage.className = 'magazine-page-photo magazine-page-photo-second';
     secondImage.src = layout.segundaImagen;
+    secondImage.alt = '';
+    secondImage.loading = 'lazy';
     page.append(secondImage);
   }
   return page;
@@ -94,13 +113,21 @@ if (magazine.introduccion) {
   pages.append(page);
 }
 
+(magazine.paginasPrevias || []).forEach((intro, index) => {
+  const page = createPage(intro.id || 'presentacion-' + (index + 1), intro.titulo, intro);
+  const text = document.createElement('p');
+  text.textContent = intro.texto;
+  page.querySelector('.magazine-page-copy').append(text);
+  pages.append(page);
+});
+
 course.modulos.forEach((module, index) => {
   const layout = {
     imagen: magazine.portada.imagen,
     clase: index % 2 === 0 ? 'page-text-left' : '',
     ...magazine.modulos?.[index]
   };
-  const page = createPage('modulo-' + module.numero, 'MÓDULO ' + Number(module.numero), layout);
+  const page = createPage('modulo-' + module.numero, layout.titulo || 'MÓDULO ' + Number(module.numero), layout);
   const copy = page.querySelector('.magazine-page-copy');
   if (!magazine.portada.plantilla) {
     const name = document.createElement('p');
@@ -135,7 +162,7 @@ if (magazine.examen) {
   pages.append(exam);
 }
 
-if (course.videoId) {
+if (course.videoId && !magazine.ocultarVideoExterno) {
   const videoSection = document.createElement('section');
   videoSection.className = 'magazine-course-video';
   videoSection.setAttribute('aria-label', 'Video de ' + course.nombre);

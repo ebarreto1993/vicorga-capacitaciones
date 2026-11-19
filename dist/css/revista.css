@@ -1,6 +1,78 @@
 .magazine { background: #efeeeb; }
 .magazine main { background: white; }
 .magazine .nails-cover { height: min(calc(100svh - 58px), 70.7vw); }
+.beauty-cover {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  height: min(calc(100svh - 58px), 70.7vw);
+  min-height: 640px;
+  background: #fff;
+  color: #000;
+  container-type: inline-size;
+}
+.beauty-cover::after {
+  content: '';
+  position: absolute;
+  top: 3.75%;
+  inset-inline: 0;
+  height: 4px;
+  background: #cfaa6a;
+}
+.beauty-cover-photo {
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: -3;
+  width: 58%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 54%;
+  -webkit-mask-image: linear-gradient(90deg, #000 58%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 58%, transparent 100%);
+}
+.beauty-cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(90deg, transparent 28%, #ffffffa8 45%, #fff 57%);
+}
+.beauty-cover-mark {
+  position: absolute;
+  z-index: -1;
+  top: -16%;
+  right: -9%;
+  width: 48%;
+  opacity: .13;
+  filter: grayscale(1);
+}
+.beauty-cover-heading {
+  position: absolute;
+  right: 4%;
+  top: 40%;
+  width: 57%;
+  text-align: center;
+}
+.beauty-cover-heading h1 {
+  margin: 0;
+  max-width: none;
+  font: 500 clamp(42px, 5.5cqw, 82px)/1.06 'Gelasio', Georgia, serif;
+  letter-spacing: -.025em;
+}
+.beauty-cover-heading p {
+  margin: 3% 0 0;
+  font: 400 clamp(22px, 3.3cqw, 48px)/1.15 'Caladea', Georgia, serif;
+}
+.beauty-cover-edition {
+  position: absolute;
+  right: 10%;
+  bottom: 8%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.beauty-cover-edition p { margin: 0; font: 500 clamp(22px, 3cqw, 43px)/1 'Gelasio', Georgia, serif; }
+.beauty-cover-edition img { width: clamp(48px, 6cqw, 86px); }
 @media(min-width:601px) {
   .magazine main,
   .magazine > .catalog-nav { width: min(1440px, 92%); margin-inline: auto; }
@@ -92,6 +164,35 @@
 .nails-audience .magazine-page-photo { object-position: center 58%; }
 .nails-audience .magazine-page-copy { padding-top: 9%; }
 .nails-audience p { text-align: center; margin-top: 13%; }
+.beauty-about .magazine-page-photo { width: 46%; object-position: center 35%; }
+.beauty-about .magazine-page-copy { padding-top: 9%; }
+.beauty-about p { margin-top: 14%; text-align: center; }
+.beauty-audience .magazine-page-photo { width: 47%; object-position: center 44%; }
+.beauty-audience .magazine-page-copy { padding-top: 8%; }
+.beauty-audience p { margin-top: 10%; text-align: center; }
+.beauty-audience .magazine-page-watermark { left: -12%; right: auto; }
+.beauty-peinados .magazine-page-video {
+  width: 47%;
+  object-position: center;
+  -webkit-mask-image: linear-gradient(90deg, #000 58%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 58%, transparent 100%);
+}
+.beauty-peinados::before { background: linear-gradient(90deg, transparent 21%, #ffffffd9 38%, #fff 48%); }
+.beauty-peinados .magazine-page-copy { width: 59%; margin-left: 40%; padding: 5.5% 4% 4%; }
+.beauty-peinados ol { max-width: 80%; list-style: disc; font-size: clamp(16px, 1.68cqw, 24px); line-height: 1.35; }
+.beauty-peinados .magazine-page-photo-second {
+  left: auto;
+  right: 2.5%;
+  top: auto;
+  bottom: 3%;
+  z-index: 0;
+  width: min(22cqw, 310px);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-position: center 25%;
+  box-shadow: 0 8px 28px #0002;
+}
 .nails-module-one .magazine-page-photo { left: auto; right: 0; width: 49%; object-position: 40% center; }
 .nails-module-one::before { background: linear-gradient(90deg, white 42%, #ffffffef 50%, #ffffff00 72%); }
 .nails-module-one .magazine-page-copy { margin-left: 0; width: 58%; padding: 5.5% 2.7% 3%; }
@@ -231,6 +332,17 @@
   .page-text-left::before { background: linear-gradient(180deg, transparent 100px, #ffffff22 170px, white 290px); }
   .page-text-left .magazine-page-copy { width: 100%; margin-left: 0; padding: 25px 6% 40px; }
   .magazine .nails-cover { height: auto; }
+  .beauty-cover { height: auto; min-height: 650px; padding-top: 300px; }
+  .beauty-cover-photo { width: 100%; height: 360px; object-position: center 48%; -webkit-mask-image: linear-gradient(180deg, #000 45%, transparent 100%); mask-image: linear-gradient(180deg, #000 45%, transparent 100%); }
+  .beauty-cover::before { background: linear-gradient(180deg, transparent 100px, #ffffff33 205px, #fff 340px); }
+  .beauty-cover::after { top: 16px; height: 2px; }
+  .beauty-cover-mark { top: auto; right: -24%; bottom: -8%; width: 92%; opacity: .08; }
+  .beauty-cover-heading { position: relative; inset: auto; width: 100%; padding: 28px 6% 120px; }
+  .beauty-cover-heading h1 { font-size: 38px; }
+  .beauty-cover-heading p { font-size: 23px; }
+  .beauty-cover-edition { right: 6%; bottom: 36px; gap: 14px; }
+  .beauty-cover-edition p { font-size: 24px; }
+  .beauty-cover-edition img { width: 52px; }
   .magazine > .catalog-nav .wrap { width: 100%; }
   .magazine-page { min-height: 0; padding-top: 230px; }
   .magazine-page-photo, .nails-module-one .magazine-page-photo { top: 0; left: 0; width: 100%; height: 300px; object-position: center 40%; }
@@ -241,6 +353,17 @@
   .magazine-page h2 { font-size: 28px; margin-bottom: 24px; }
   .magazine-page p, .magazine-page ol, .nails-module-one ol { font-size: 18px; line-height: 1.55; }
   .nails-audience p { margin-top: 0; }
+  .beauty-about .magazine-page-photo,
+  .beauty-audience .magazine-page-photo { width: 100%; object-position: center 38%; }
+  .beauty-about .magazine-page-copy,
+  .beauty-audience .magazine-page-copy { padding-top: 25px; }
+  .beauty-about p, .beauty-audience p { margin-top: 0; }
+  .beauty-peinados { padding-top: 260px; }
+  .beauty-peinados .magazine-page-video { width: 100%; height: 320px; -webkit-mask-image: linear-gradient(180deg, #000 45%, transparent 100%); mask-image: linear-gradient(180deg, #000 45%, transparent 100%); }
+  .beauty-peinados::before { background: linear-gradient(180deg, transparent 90px, #ffffff26 165px, #fff 300px); }
+  .beauty-peinados .magazine-page-copy { width: 100%; margin: 0; padding: 28px 6% 230px; }
+  .beauty-peinados ol { max-width: none; font-size: 18px; line-height: 1.45; }
+  .beauty-peinados .magazine-page-photo-second { right: 50%; bottom: 34px; transform: translateX(50%); width: 170px; height: 170px; }
   .magazine-page li + li { margin-top: 5px; }
   .magazine-page-watermark { width: 80%; right: -15%; bottom: -4%; opacity: .08; }
   .magazine-video-circle { width: min(70vw, 280px); margin: 24px auto 0; }

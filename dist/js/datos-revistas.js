@@ -1,12 +1,35 @@
 // Configuración visual de cada revista. Los contenidos del pénsum están en datos-carreras.js.
 const revistas = {
   "maestria-belleza": {
+    "ocultarVideoExterno": true,
     "portada": {
-      "imagen": "assets/images/belleza.jpeg"
+      "plantilla": "beauty-cover-template",
+      "imagen": "assets/images/modulo_belleza/m1/m1.jpeg"
     },
+    "paginasPrevias": [
+      {
+        "id": "conocenos",
+        "titulo": "CONÓCENOS",
+        "texto": "SOMOS UNA INSTITUCIÓN DE CAPACITACIÓN EN EL ÁREA DE LA BELLEZA, COMPROMETIDA CON EL DESARROLLO CONSTANTE EN LA FORMACIÓN DE FUTUROS PROFESIONALES Y EMPRESARIOS; SIENDO RECONOCIDOS CON MÁS DE 4 AÑOS EN EL MERCADO, POR NUESTRA EXCELENCIA Y CALIDAD EN LOS PROCESOS DE APRENDIZAJE COMO UNA INSTITUCIÓN LÍDER EN EL AMPLIO MUNDO DE LA BELLEZA.",
+        "imagen": "assets/images/modulo_belleza/m2/m2.jpeg",
+        "clase": "beauty-about",
+        "marcaAgua": true
+      },
+      {
+        "id": "dirigido-a",
+        "titulo": "¿A QUIÉNES VA DIRIGIDA ESTA CARRERA?",
+        "texto": "A PERSONAS CON CERO CONOCIMIENTO QUE DESEAN APRENDER Y EMPRENDER. ESTA CARRERA TE AYUDA A CREAR TU TÉCNICA Y DESARROLLARTE EN LAS DIFERENTES ÁREAS DE BELLEZA, CONVIRTIÉNDOTE EN UN ESTILISTA PROFESIONAL PARA EXPLORAR TODO TU POTENCIAL Y COMENZAR A TRABAJAR.",
+        "imagen": "assets/images/modulo_belleza/m3/m3.jpeg",
+        "clase": "beauty-audience page-text-left",
+        "marcaAgua": true
+      }
+    ],
     "modulos": [
       {
-        "imagen": "assets/images/uñas.jpeg"
+        "videoFondo": "assets/images/modulo_belleza/m4/m4_video.mp4",
+        "segundaImagen": "assets/images/modulo_belleza/m4/m4_2.jpeg",
+        "clase": "beauty-peinados",
+        "titulo": "PEINADOS"
       },
       {
         "imagen": "assets/photos/cosmetologia.jpg"
