@@ -62,23 +62,9 @@ function addLoopVideo(copy, source, poster, id) {
   video.playsInline = true;
   video.preload = 'metadata';
   video.setAttribute('aria-label', 'Demostración práctica de ' + course.nombre);
-  const toggle = document.createElement('button');
-  toggle.type = 'button';
-  toggle.className = 'magazine-video-toggle';
-  toggle.setAttribute('aria-controls', id);
-  toggle.textContent = 'Pausar video';
-  video.addEventListener('play', () => { toggle.textContent = 'Pausar video'; });
-  video.addEventListener('pause', () => { toggle.textContent = 'Reproducir video'; });
-  function play() {
-    video.play().catch(() => { toggle.textContent = 'Reproducir video'; });
-  }
-  toggle.addEventListener('click', () => {
-    if (video.paused) play();
-    else video.pause();
-  });
   frame.append(video);
-  copy.append(frame, toggle);
-  play();
+  copy.append(frame);
+  video.play().catch(() => {});
 }
 
 document.title = course.nombre + ' · Vicorga Capacitaciones';
