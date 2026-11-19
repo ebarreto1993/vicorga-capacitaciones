@@ -98,7 +98,21 @@ const revistas = {
         "titulo": "COLORIMETRÍA"
       }
     ],
-    "videoInversion": "assets/images/modulo_belleza/m13/m13.mp4"
+    "videoInversion": "assets/images/modulo_belleza/m13/m13.mp4",
+    "inversionProgramas": [
+      {
+        "titulo": "CARRERA 10 MESES",
+        "horarios": ["SÁBADOS INTENSIVOS (1 VEZ POR SEMANA) · 09:00 A. M. – 04:00 P. M."],
+        "valores": ["MATRÍCULA: $80", "MENSUALIDAD: $120"]
+      },
+      {
+        "titulo": "CARRERA 5 MESES",
+        "horarios": [
+          "LUNES Y MIÉRCOLES (2 VECES POR SEMANA) · 09:00 A. M. – 04:00 P. M.",
+          "MARTES Y JUEVES (2 VECES POR SEMANA) · 09:00 A. M. – 04:00 P. M."
+        ]
+      }
+    ]
   },
   "unas": {
     "portada": {

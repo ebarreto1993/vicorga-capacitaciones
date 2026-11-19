@@ -229,16 +229,41 @@ if (magazine.videoInversion) {
 } else {
   investmentPhoto.src = magazine.imagenInversion || magazine.portada.imagen;
 }
-investment.querySelector('.investment-duration').textContent =
-  'NUESTRA CARRERA TIENE UNA DURACIÓN DE ' + course.duracion.toLocaleUpperCase('es');
-const values = ['MATRÍCULA: $' + course.matricula];
-if (course.mensualidadEntreSemana) {
-  values.push('MENSUALIDAD: $' + course.mensualidad + ' (SÁBADOS INTENSIVOS)');
-  values.push('MENSUALIDAD: $' + course.mensualidadEntreSemana + ' (DOS VECES A LA SEMANA INTENSIVO)');
+const duration = investment.querySelector('.investment-duration');
+const valuesList = investment.querySelector('.investment-values');
+if (magazine.inversionProgramas) {
+  const programs = document.createElement('div');
+  programs.className = 'investment-programs';
+  magazine.inversionProgramas.forEach(program => {
+    const block = document.createElement('section');
+    block.className = 'investment-program';
+    const title = document.createElement('h3');
+    title.textContent = program.titulo;
+    block.append(title);
+    const schedule = document.createElement('ul');
+    addItems(schedule, program.horarios);
+    block.append(schedule);
+    if (program.valores) {
+      const values = document.createElement('ul');
+      values.className = 'investment-program-values';
+      addItems(values, program.valores);
+      block.append(values);
+    }
+    programs.append(block);
+  });
+  duration.replaceWith(programs);
+  valuesList.remove();
 } else {
-  values.push('MENSUALIDAD: $' + course.mensualidad);
+  duration.textContent = 'NUESTRA CARRERA TIENE UNA DURACIÓN DE ' + course.duracion.toLocaleUpperCase('es');
+  const values = ['MATRÍCULA: $' + course.matricula];
+  if (course.mensualidadEntreSemana) {
+    values.push('MENSUALIDAD: $' + course.mensualidad + ' (SÁBADOS INTENSIVOS)');
+    values.push('MENSUALIDAD: $' + course.mensualidadEntreSemana + ' (DOS VECES A LA SEMANA INTENSIVO)');
+  } else {
+    values.push('MENSUALIDAD: $' + course.mensualidad);
+  }
+  addItems(valuesList, values);
 }
-addItems(investment.querySelector('.investment-values'), values);
 addItems(investment.querySelector('.investment-includes'), course.incluye.map(text => text.toLocaleUpperCase('es')));
 investment.querySelector('.exam-note').textContent =
   magazine.notaExamen || 'EXAMEN FINAL OBLIGATORIO PARA RECIBIR TU CERTIFICACIÓN.';
