@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const siteUrl = 'https://vcapacitaciones.vercel.app';
 const courses = {
-  'maestria-belleza': {
+  'maestra-belleza': {
     title: 'Maestra en Belleza',
     description: 'Carrera profesional integral de belleza: peinados, cortes, tratamientos, maquillaje, uñas, barbería y colorimetría.',
     image: 'assets/images/belleza.jpeg', width: 2714, height: 3618
@@ -56,6 +56,8 @@ function addFavicon(html) {
 }
 
 function replaceCourseLinks(html) {
+  html = html.replaceAll('curso.html?carrera=maestria-belleza', 'maestra-belleza.html');
+  html = html.replaceAll('maestria-belleza.html', 'maestra-belleza.html');
   for (const slug of Object.keys(courses)) {
     html = html.replaceAll(`curso.html?carrera=${slug}`, staticLink(slug));
   }
@@ -65,21 +67,21 @@ function replaceCourseLinks(html) {
 function coursePage(template, slug, course) {
   const title = `${course.title} · Vicorga Capacitaciones`;
   const url = `${siteUrl}/${slug}.html`;
-  const image = new URL(course.image, `${siteUrl}/`).href;
+  const image = `${siteUrl}/assets/images/logo_para_redes.jpg`;
   let html = addFavicon(replaceCourseLinks(template));
   html = html.replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${escapeAttribute(course.description)}">`);
   html = html.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${escapeAttribute(title)}">`);
   html = html.replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${escapeAttribute(course.description)}">`);
   html = html.replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${image}">`);
   html = html.replace(/<meta property="og:image:secure_url" content="[^"]*">/, `<meta property="og:image:secure_url" content="${image}">`);
-  html = html.replace(/<meta property="og:image:width" content="[^"]*">/, `<meta property="og:image:width" content="${course.width}">`);
-  html = html.replace(/<meta property="og:image:height" content="[^"]*">/, `<meta property="og:image:height" content="${course.height}">`);
-  html = html.replace(/<meta property="og:image:alt" content="[^"]*">/, `<meta property="og:image:alt" content="${escapeAttribute(course.title)} · Vicorga Capacitaciones">`);
+  html = html.replace(/<meta property="og:image:width" content="[^"]*">/, '<meta property="og:image:width" content="2048">');
+  html = html.replace(/<meta property="og:image:height" content="[^"]*">/, '<meta property="og:image:height" content="2048">');
+  html = html.replace(/<meta property="og:image:alt" content="[^"]*">/, '<meta property="og:image:alt" content="Logo de Vicorga Capacitaciones sobre fondo negro">');
   html = html.replace('<meta name="twitter:card"', `<meta property="og:url" content="${url}">\n  <link rel="canonical" href="${url}">\n  <meta name="twitter:card"`);
   html = html.replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${escapeAttribute(title)}">`);
   html = html.replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${escapeAttribute(course.description)}">`);
   html = html.replace(/<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${image}">`);
-  html = html.replace(/<meta name="twitter:image:alt" content="[^"]*">/, `<meta name="twitter:image:alt" content="${escapeAttribute(course.title)} · Vicorga Capacitaciones">`);
+  html = html.replace(/<meta name="twitter:image:alt" content="[^"]*">/, '<meta name="twitter:image:alt" content="Logo de Vicorga Capacitaciones sobre fondo negro">');
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
   return html;
 }

@@ -2,7 +2,8 @@
 
 const pageCourse = decodeURIComponent(location.pathname.split('/').pop() || '').replace(/\.html$/i, '');
 const requestedCourse = new URLSearchParams(location.search).get('carrera') || pageCourse;
-const legacyCourse = requestedCourse === 'cosmetologia' ? 'cosmiatria' : requestedCourse;
+const courseAliases = { cosmetologia: 'cosmiatria', 'maestra-belleza': 'maestria-belleza' };
+const legacyCourse = courseAliases[requestedCourse] || requestedCourse;
 const courseKey = Object.hasOwn(carreras, legacyCourse) ? legacyCourse : 'maquillaje';
 const course = carreras[courseKey];
 const magazine = revistas[courseKey];
