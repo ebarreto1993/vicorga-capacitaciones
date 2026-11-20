@@ -110,7 +110,8 @@ const revistas = {
         "horarios": [
           "LUNES Y MIÉRCOLES (2 VECES POR SEMANA) · 09:00 A. M. – 04:00 P. M.",
           "MARTES Y JUEVES (2 VECES POR SEMANA) · 09:00 A. M. – 04:00 P. M."
-        ]
+        ],
+        "valores": ["MATRÍCULA: $80", "MENSUALIDAD: $190"]
       }
     ]
   },

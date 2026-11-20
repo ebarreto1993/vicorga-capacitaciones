@@ -477,9 +477,18 @@
   .beauty-cover-heading { position: relative; inset: auto; width: 100%; padding: 28px 6% 120px; }
   .beauty-cover-heading h1 { font-size: 38px; }
   .beauty-cover-heading p { font-size: 23px; }
-  .beauty-cover-edition { right: 6%; bottom: 36px; gap: 14px; }
-  .beauty-cover-edition p { font-size: 24px; }
-  .beauty-cover-edition img { width: 52px; }
+  .beauty-cover-edition {
+    left: 50%;
+    right: auto;
+    bottom: 28px;
+    flex-direction: column;
+    gap: 8px;
+    width: max-content;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+  .beauty-cover-edition p { font-size: 30px; }
+  .beauty-cover-edition img { order: -1; width: 150px; }
   .magazine > .catalog-nav .wrap { width: 100%; }
   .magazine-page { min-height: 0; padding-top: 230px; }
   .magazine-page-photo, .nails-module-one .magazine-page-photo { top: 0; left: 0; width: 100%; height: 300px; object-position: center 40%; }
