@@ -186,7 +186,7 @@
   mask-image: linear-gradient(270deg, #000 58%, transparent 100%);
 }
 .beauty-peinados { min-height: min(76cqw, 1000px); }
-.beauty-peinados .magazine-media-bubbles { top: 60%; bottom: auto; }
+.beauty-peinados .magazine-media-bubbles { top: 65%; bottom: auto; }
 .beauty-peinados::before { background: linear-gradient(90deg, transparent 21%, #ffffffd9 38%, #fff 48%); }
 .beauty-peinados .magazine-page-copy { width: 59%; margin-left: 40%; padding: 5.5% 4% 4%; }
 .beauty-peinados ol { max-width: 80%; list-style: disc; font-size: clamp(16px, 1.68cqw, 24px); line-height: 1.35; }
