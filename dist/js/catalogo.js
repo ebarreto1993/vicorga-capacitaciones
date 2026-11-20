@@ -1,6 +1,7 @@
 'use strict';
 
-const requestedCourse = new URLSearchParams(location.search).get('carrera');
+const pageCourse = decodeURIComponent(location.pathname.split('/').pop() || '').replace(/\.html$/i, '');
+const requestedCourse = new URLSearchParams(location.search).get('carrera') || pageCourse;
 const legacyCourse = requestedCourse === 'cosmetologia' ? 'cosmiatria' : requestedCourse;
 const courseKey = Object.hasOwn(carreras, legacyCourse) ? legacyCourse : 'maquillaje';
 const course = carreras[courseKey];
