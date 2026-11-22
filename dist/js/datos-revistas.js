@@ -208,9 +208,9 @@ const revistas = {
       {"imagen":"assets/images/modulo_cosmiatria/m8/m8.jpeg","clase":"cosmiatria-module","marcaAgua":true},
       {"imagen":"assets/images/modulo_cosmiatria/m9/m9.jpeg","clase":"cosmiatria-module page-text-left","marcaAgua":true},
       {"imagen":"assets/images/modulo_cosmiatria/m10/m10.jpeg","clase":"cosmiatria-module","marcaAgua":true},
-      {"imagen":"assets/images/modulo_cosmiatria/m10/m10.jpeg","clase":"cosmiatria-module page-text-left","marcaAgua":true},
+      {"imagen":"assets/images/modulo_cosmiatria/m11/m11.jpg","clase":"cosmiatria-module page-text-left","marcaAgua":true},
       {"imagen":"assets/images/modulo_cosmiatria/m12/m12.jpeg","clase":"cosmiatria-module","marcaAgua":true},
-      {"imagen":"assets/images/modulo_cosmiatria/m13/m13-still.jpg","clase":"cosmiatria-module page-text-left","marcaAgua":true},
+      {"videoFondo":"assets/images/modulo_cosmiatria/m13/m13.mp4","clase":"cosmiatria-module page-text-left","marcaAgua":true,"permitirVideo":true},
       {"imagen":"assets/images/modulo_cosmiatria/m14/m14.jpeg","clase":"cosmiatria-module","marcaAgua":true}
     ],
     "imagenInversion": "assets/photos/cosmetologia.jpg",

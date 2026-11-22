@@ -78,7 +78,7 @@ function createPage(id, title, layout) {
   if (layout.sinImagen) {
     primaryImage.remove();
     page.classList.add('magazine-page-code');
-  } else if (layout.videoFondo && COURSE_VIDEOS_ENABLED) {
+  } else if (layout.videoFondo && (COURSE_VIDEOS_ENABLED || layout.permitirVideo)) {
     const video = document.createElement('video');
     video.className = primaryImage.className + ' magazine-page-video';
     video.src = layout.videoFondo;
