@@ -2,20 +2,27 @@
 const carreras = {
     "cosmiatria": {
         nombre: "Cosmiatría",
-        descripcion: "Especialización en ciencias cosméticas y tratamientos estéticos avanzados. Conviértete en una experta en cosmetología, cosmiatría y dermocosmiatría.",
-        duracion: "6 meses (dos veces por semana) o 12 meses (solo sábados)",
+        descripcion: "Formación profesional en cosmetología, cosmiatría y dermocosmiatría, con protocolos, aparatología avanzada y prácticas en pacientes reales.",
+        duracion: "6 meses (2 veces por semana, intensivo) o 12 meses (1 vez por semana)",
         videoId: "6HDYJQtG69Y",
         modulos: [
-            {"numero":"01","nombre":"Fundamentos de Cosmetología","temas":["Célula y piel","Biotipos cutáneos","Lesiones elementales","Dermis y epidermis"]},
-            {"numero":"02","nombre":"Tratamientos Faciales","temas":["Higiene facial","Exfoliación","Hidratación profunda","Masaje facial"]},
-            {"numero":"03","nombre":"Cosmetología Aplicada","temas":["Productos cosméticos","Fórmulas y principios","Manipulación de principios activos","Prácticas en pacientes reales"]},
-            {"numero":"04","nombre":"Cosmiatría","temas":["Técnicas no invasivas","Electroestética","Radiofrecuencia","Fotoenvejecimiento"]},
-            {"numero":"05","nombre":"Dermocosmiatría","temas":["Dermatología básica","Patologías de piel","Tratamiento de acné","Hiperpigmentación"]}
+            {"numero":"01","nombre":"Enfoque Cosmetológico","temas":["Anatomía y fisiología del tejido tegumentario","Anamnesis: biotipos y fototipos","Características visuales y táctiles de las tipologías cutáneas","Aparatología: alta frecuencia, analizador microscópico de piel, vapor y ozonoterapia","Prácticas de limpieza profunda en pacientes"]},
+            {"numero":"02","nombre":"Hidratación","temas":["Conceptos básicos de hidratación y humectación de la piel","Factores desencadenantes de la deshidratación","Radicales libres y apoptosis celular","Productos y principios activos hidratantes y humectantes","Corriente ionizable","Prácticas en pacientes reales"]},
+            {"numero":"03","nombre":"Envejecimiento Cutáneo","temas":["Involución de la piel","Factores desencadenantes","Características de las pieles involutivas","Estrés oxidativo","Protocolo y controversias de las manifestaciones de la piel","Contraindicaciones y ventajas","Radiofrecuencia monopolar, bipolar y tripolar","Prácticas en pacientes reales para efecto lifting"]},
+            {"numero":"04","nombre":"Peeling","temas":["Fundamentos básicos de la renovación celular","Técnicas de exfoliación físicas, químicas y mecánicas","Uso de alfa-hidroxiácidos","Uso de beta-hidroxiácidos","Contraindicaciones, ventajas y factores del procedimiento","Protocolo","Práctica en pacientes"]},
+            {"numero":"05","nombre":"Despigmentación Facial","temas":["Trastornos pigmentarios","Proceso de la melanogénesis","Tipos de melanina","Factores influyentes en la pigmentación","Discromías por pigmento melánico","Protocolo de actuación","Indicaciones según la pigmentación","Contraindicaciones previas al diagnóstico inicial","Práctica en paciente adecuado"]},
+            {"numero":"06","nombre":"Acné","temas":["Alteraciones de la glándula sebácea","Mecanismo de producción del sebo","Unidad pilosebácea","Etiología","Clasificación de los grados de acné","Tratamiento específico","Protocolo de actuación","Práctica en pacientes con manifestaciones propias de acné"]},
+            {"numero":"07","nombre":"Actualización de Peeling y Técnicas de Aparatología","temas":["Técnica de dermaplaning","Técnica en electrocauterio","Bioestimulación facial con Dermapen","Actualización de peeling químico"]},
+            {"numero":"08","nombre":"Corporal: Electroestética Avanzada","temas":["Introducción a la estética corporal","Aparato locomotor","Factores desencadenantes de la obesidad","Definición de obesidad y sobrepeso","Apertura de canales","Drenaje linfático en decúbito prono y decúbito supino","Maniobras de masaje reductor","Maderoterapia","Mecanismo de aparatologías combinadas","Modelación de cintura y glúteos","Termoterapia, vacumterapia y gimnasia pasiva","Cavitación y radiofrecuencia corporal"]},
+            {"numero":"09","nombre":"Inyectoterapia, Sueroterapia y Mesoterapia","temas":["Inyectología y sueroterapia","Mesoterapia facial y principios activos de uso facial","Tratamientos antiedad, antiacné, reafirmantes y despigmentantes","Corrección de ojeras y líneas de expresión","Técnicas de aplicación facial","Manejo y uso de enzimas recombinantes","Mesoterapia corporal y principios activos de uso corporal","Tratamientos lipolítico, reafirmante y de regeneración dérmica","Uso correcto de los anestésicos en mesoterapia"]},
+            {"numero":"10","nombre":"Plasma Rico en Plaquetas (P.R.P.)","temas":["Exámenes de laboratorio e interpretación de resultados","Análisis de hemograma completo y perfil hormonal","Identificación de paciente patológico","Plasma rico en plaquetas y su mecanismo de acción","Canalización de vena para toma de muestra","Tratamientos de rejuvenecimiento y regeneración dérmica","Manejo de la centrífuga","Activación de los factores de crecimiento","Técnicas de aplicación y contraindicaciones","Anamnesis"]},
+            {"numero":"11","nombre":"Aparatología de Avanzada","temas":["Ultrasonido, cavitación y ultracavitación: tipos, usos y manejo","Presoterapia: contraindicaciones y mecanismos de acción","Radiofrecuencia: tipos, usos y manejo","Criolipólisis: contraindicaciones, usos y manejo","HIFU portátil y profesional: contraindicaciones, usos y manejo","Luz pulsada intensa (IPL): tratamientos, contraindicaciones y mecanismos de acción","Picosecond: uso y manejo","Emsculpt: uso y manejo"]},
+            {"numero":"12","nombre":"Uso y Manejo de Peptonas Facial y Corporal","temas":["Mecanismo de acción y uso médico-estético de las peptonas","Rejuvenecimiento facial con peptonas","Reafirmación y tonificación de glúteos","Anatomía y estimulación del músculo glúteo","Uso adecuado de peptonas en hipertrofia muscular","Vías de administración"]}
         ],
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["30% de los materiales para las clases","Uniforme de la academia","Mochila de la academia","Certificación de la academia"]
+        incluye: ["Uniforme completo","Mochila","30% de los materiales, excepto principios activos y herramientas personales","Aparatología de última generación para todas las prácticas en clase: láser, Picosecond, HIFU, carboxia, entre otras"]
     },
     "maestria-belleza": {
         nombre: "Maestra en Belleza",

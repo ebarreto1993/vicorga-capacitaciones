@@ -185,9 +185,47 @@ const revistas = {
     }
   },
   "cosmiatria": {
+    "ocultarVideoExterno": true,
     "portada": {
-      "imagen": "assets/photos/cosmetologia.jpg"
-    }
+      "imagen": "assets/images/modulo_cosmiatria/m1/m1.jpg"
+    },
+    "paginasPrevias": [
+      {
+        "id": "dirigido-a",
+        "titulo": "¿A QUIÉNES VA DIRIGIDA ESTA CARRERA?",
+        "texto": "ESTA CARRERA ESTÁ DIRIGIDA PRINCIPALMENTE A MUJERES QUE QUIERAN EMPRENDER EN SU PROPIO NEGOCIO: INDEPENDIENTES, EMPODERADAS Y CON EL DESEO DE CONOCER Y APRENDER LOS BENEFICIOS DE ESTA RAMA DE LA BELLEZA, PARA AYUDAR A QUE SUS CLIENTES LUZCAN UNA PIEL MÁS JOVEN Y SALUDABLE. TE INVITAMOS A RECORRER JUNTO A NOSOTROS ESTE APASIONANTE MUNDO DE LA ESTÉTICA.",
+        "imagen": "assets/images/modulo_cosmiatria/m2/m2.jpg",
+        "clase": "page-text-left",
+        "marcaAgua": true
+      }
+    ],
+    "modulos": [
+      {"imagen":"assets/images/modulo_cosmiatria/m3/m3.jpg","clase":"page-text-left"},
+      {"imagen":"assets/images/modulo_cosmiatria/m4/m4.jpg"},
+      {"imagen":"assets/images/modulo_cosmiatria/m5/m5.jpg","clase":"page-text-left"},
+      {"imagen":"assets/images/modulo_cosmiatria/m6/m6.jpg"},
+      {"imagen":"assets/images/modulo_cosmiatria/m7/m7.jpg","clase":"page-text-left"},
+      {"imagen":"assets/images/modulo_cosmiatria/m8/m8.jpg"},
+      {"imagen":"assets/images/modulo_cosmiatria/m9/m9.jpg","clase":"page-text-left"},
+      {"imagen":"assets/images/modulo_cosmiatria/m10/m10.jpg"},
+      {"imagen":"assets/images/modulo_cosmiatria/m11/m11.jpg","clase":"page-text-left"},
+      {"imagen":"assets/images/modulo_cosmiatria/m12/m12.jpg"},
+      {"imagen":"assets/images/modulo_cosmiatria/m13/m13.jpg","clase":"page-text-left"},
+      {"imagen":"assets/images/modulo_cosmiatria/m14/m14.jpg"}
+    ],
+    "imagenInversion": "assets/photos/cosmetologia.jpg",
+    "inversionProgramas": [
+      {
+        "titulo": "CARRERA 6 MESES",
+        "horarios": ["2 VECES POR SEMANA, INTENSIVO · 09:00 A. M. – 04:00 P. M."],
+        "valores": ["MATRÍCULA: $80", "MENSUALIDAD: $190"]
+      },
+      {
+        "titulo": "CARRERA 12 MESES",
+        "horarios": ["1 VEZ POR SEMANA · 09:00 A. M. – 04:00 P. M."],
+        "valores": ["MATRÍCULA: $80", "MENSUALIDAD: $150"]
+      }
+    ]
   },
   "tatuajes": {
     "portada": {
