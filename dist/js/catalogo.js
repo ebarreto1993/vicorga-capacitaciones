@@ -1,5 +1,6 @@
 'use strict';
 
+const COURSE_VIDEOS_ENABLED = false;
 const pageCourse = decodeURIComponent(location.pathname.split('/').pop() || '').replace(/\.html$/i, '');
 const requestedCourse = new URLSearchParams(location.search).get('carrera') || pageCourse;
 const courseAliases = { cosmetologia: 'cosmiatria', 'maestra-belleza': 'maestria-belleza' };
@@ -36,6 +37,7 @@ function addMediaBubbles(page, items, id) {
   const group = document.createElement('div');
   group.className = 'magazine-media-bubbles';
   items.forEach((item, index) => {
+    if (item.video && !COURSE_VIDEOS_ENABLED) return;
     const frame = document.createElement('div');
     frame.className = 'magazine-media-bubble' + (item.clase ? ' ' + item.clase : '');
     let media;
@@ -73,7 +75,7 @@ function createPage(id, title, layout) {
   heading.id = id + '-title';
   heading.textContent = title;
   const primaryImage = page.querySelector('.magazine-page-photo');
-  if (layout.videoFondo) {
+  if (layout.videoFondo && COURSE_VIDEOS_ENABLED) {
     const video = document.createElement('video');
     video.className = primaryImage.className + ' magazine-page-video';
     video.src = layout.videoFondo;
@@ -104,6 +106,7 @@ function createPage(id, title, layout) {
 }
 
 function addLoopVideo(copy, source, poster, id) {
+  if (!COURSE_VIDEOS_ENABLED) return;
   const frame = document.createElement('div');
   frame.className = 'magazine-video-circle';
   const video = document.createElement('video');
@@ -198,7 +201,7 @@ if (magazine.examen) {
   pages.append(exam);
 }
 
-if (course.videoId && !magazine.ocultarVideoExterno) {
+if (COURSE_VIDEOS_ENABLED && course.videoId && !magazine.ocultarVideoExterno) {
   const videoSection = document.createElement('section');
   videoSection.className = 'magazine-course-video';
   videoSection.setAttribute('aria-label', 'Video de ' + course.nombre);
@@ -214,7 +217,7 @@ if (course.videoId && !magazine.ocultarVideoExterno) {
 
 const investment = cloneTemplate('magazine-investment-template');
 const investmentPhoto = investment.querySelector('.magazine-page-photo');
-if (magazine.videoInversion) {
+if (magazine.videoInversion && COURSE_VIDEOS_ENABLED) {
   const investmentVideo = document.createElement('video');
   investmentVideo.className = investmentPhoto.className + ' magazine-page-video';
   investmentVideo.src = magazine.videoInversion;
