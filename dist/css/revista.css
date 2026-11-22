@@ -452,6 +452,110 @@
 }
 .payment-whatsapp:hover { background: #0b713a; transform: translateY(-2px); }
 .payment-whatsapp:active { transform: translateY(0); }
+
+/* Cosmiatría: composición editorial creada únicamente con HTML y CSS. */
+.cosmiatria-cover {
+  min-height: min(70.7vw, calc(100svh - 60px));
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 16% 36%, #ffffff 0 7%, transparent 7.3%),
+    radial-gradient(circle at 16% 36%, transparent 0 16%, #d9b875 16.3% 17%, transparent 17.3%),
+    radial-gradient(circle at 16% 36%, #dfe7e1 0 28%, transparent 28.3%),
+    linear-gradient(112deg, #20312d 0 38%, #f5f1e9 38.2% 100%);
+}
+.cosmiatria-cover::before {
+  content: 'COSMIATRÍA';
+  position: absolute;
+  left: -2%;
+  bottom: 8%;
+  z-index: 0;
+  color: #ffffff18;
+  font: 700 clamp(60px, 10cqw, 150px)/.8 'Caladea', Georgia, serif;
+  letter-spacing: -.07em;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: left bottom;
+  white-space: nowrap;
+}
+.cosmiatria-cover::after { z-index: 2; }
+.cosmiatria-cover .magazine-cover-copy {
+  position: relative;
+  z-index: 1;
+  width: 56%;
+  margin-left: 41%;
+  padding: 13% 5% 8%;
+}
+.cosmiatria-cover .magazine-kicker { color: #8a6a30; }
+.cosmiatria-cover .magazine-cover-copy h1 { color: #20312d; font-size: clamp(48px, 6cqw, 88px); }
+.cosmiatria-cover .magazine-cover-description { max-width: 28em; }
+
+.cosmiatria-code-page {
+  --cos-tone: #6f8479;
+  --cos-soft: #dfe7e1;
+  min-height: min(70.7vw, 900px);
+  overflow: hidden;
+  background: #f9f6ef;
+}
+.cosmiatria-code-page::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 36%;
+  background:
+    radial-gradient(circle at 48% 36%, #fff 0 8%, transparent 8.4%),
+    radial-gradient(circle at 48% 36%, transparent 0 18%, #ffffff8c 18.4% 19.5%, transparent 20%),
+    linear-gradient(145deg, var(--cos-tone), var(--cos-soft));
+}
+.cosmiatria-code-page::after { z-index: 2; }
+.cosmiatria-code-page .magazine-page-copy {
+  position: relative;
+  z-index: 1;
+  width: 64%;
+  margin-left: 34%;
+  padding: 6% 4% 5%;
+}
+.cosmiatria-code-page h2 { color: #20312d; }
+.cosmiatria-code-page .magazine-module-name {
+  color: var(--cos-tone);
+  font: 700 clamp(20px, 2.3cqw, 32px)/1.2 'Inter', Arial, sans-serif;
+  letter-spacing: .01em;
+}
+.cosmiatria-code-page ol { font-size: clamp(15px, 1.65cqw, 24px); line-height: 1.38; }
+.cosmiatria-code-page li::marker { color: var(--cos-tone); font-weight: 700; }
+.cosmiatria-module-alt::before { left: auto; right: 0; }
+.cosmiatria-module-alt .magazine-page-copy { margin-left: 0; }
+.cosmiatria-intro {
+  min-height: min(58vw, 760px);
+  --cos-tone: #c09c58;
+  --cos-soft: #eee3cc;
+}
+.cosmiatria-intro .magazine-page-copy { padding-top: 10%; }
+.cosmiatria-intro p { max-width: 31em; font-size: clamp(18px, 2cqw, 29px); line-height: 1.55; }
+.tone-blue { --cos-tone:#627c8e; --cos-soft:#dce7ed; }
+.tone-rose { --cos-tone:#9a6e75; --cos-soft:#eadcdf; }
+.tone-amber { --cos-tone:#a9793f; --cos-soft:#eee0ca; }
+.tone-violet { --cos-tone:#756c8e; --cos-soft:#e2deea; }
+.tone-coral { --cos-tone:#a76759; --cos-soft:#edd8d2; }
+.tone-mint { --cos-tone:#568477; --cos-soft:#d7e8e2; }
+.tone-sand { --cos-tone:#8a765a; --cos-soft:#e9e0d2; }
+.tone-wine { --cos-tone:#804e5c; --cos-soft:#e6d5da; }
+.tone-gold { --cos-tone:#a38343; --cos-soft:#ede2c8; }
+.tone-slate { --cos-tone:#536a70; --cos-soft:#d7e1e3; }
+.tone-clay { --cos-tone:#936a52; --cos-soft:#e8d9ce; }
+
+@media(max-width:600px) {
+  .cosmiatria-cover { min-height: 690px; padding-top: 170px; background: linear-gradient(150deg, #20312d 0 170px, #f5f1e9 171px); }
+  .cosmiatria-cover::before { left: 6%; top: 45px; bottom: auto; transform: none; font-size: 46px; letter-spacing: -.04em; }
+  .cosmiatria-cover .magazine-cover-copy { width: 100%; margin: 0; padding: 38px 7% 46px; }
+  .cosmiatria-cover .magazine-cover-copy h1 { font-size: 46px; }
+  .cosmiatria-code-page { min-height: 0; padding-top: 145px; }
+  .cosmiatria-code-page::before { inset: 0 0 auto; width: 100%; height: 145px; }
+  .cosmiatria-code-page .magazine-page-copy,
+  .cosmiatria-module-alt .magazine-page-copy { width: 100%; margin: 0; padding: 30px 7% 44px; }
+  .cosmiatria-code-page h2 { font-size: 30px; }
+  .cosmiatria-code-page .magazine-module-name { font-size: 22px; }
+  .cosmiatria-code-page ol { font-size: 17px; line-height: 1.5; }
+  .cosmiatria-intro p { font-size: 18px; }
+}
 /* Fade the photo itself so its rectangular edge never shows through the overlay. */
 .nails-module-one .magazine-page-photo,
 .nails-module-three .magazine-page-photo,

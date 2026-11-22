@@ -75,7 +75,10 @@ function createPage(id, title, layout) {
   heading.id = id + '-title';
   heading.textContent = title;
   const primaryImage = page.querySelector('.magazine-page-photo');
-  if (layout.videoFondo && COURSE_VIDEOS_ENABLED) {
+  if (layout.sinImagen) {
+    primaryImage.remove();
+    page.classList.add('magazine-page-code');
+  } else if (layout.videoFondo && COURSE_VIDEOS_ENABLED) {
     const video = document.createElement('video');
     video.className = primaryImage.className + ' magazine-page-video';
     video.src = layout.videoFondo;
@@ -127,9 +130,16 @@ function addLoopVideo(copy, source, poster, id) {
 
 document.title = course.nombre + ' · Vicorga Capacitaciones';
 const cover = cloneTemplate(magazine.portada.plantilla || 'magazine-cover-template');
+if (magazine.portada.clase) cover.classList.add(...magazine.portada.clase.split(/\s+/).filter(Boolean));
 if (!magazine.portada.plantilla) {
   cover.querySelector('h1').textContent = course.nombre;
-  cover.querySelector('.magazine-cover-photo').src = magazine.portada.imagen;
+  if (magazine.portada.sinImagen) {
+    cover.querySelector('.magazine-cover-photo').remove();
+    cover.querySelector('.magazine-cover-mark')?.remove();
+    cover.classList.add('magazine-cover-code');
+  } else {
+    cover.querySelector('.magazine-cover-photo').src = magazine.portada.imagen;
+  }
   cover.querySelector('.magazine-cover-description').textContent = course.descripcion;
   cover.querySelector('.magazine-cover-duration').textContent = course.duracion;
 }
