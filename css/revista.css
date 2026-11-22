@@ -542,6 +542,29 @@
 .tone-slate { --cos-tone:#536a70; --cos-soft:#d7e1e3; }
 .tone-clay { --cos-tone:#936a52; --cos-soft:#e8d9ce; }
 
+/* La misma retícula fotográfica y tipografía de la revista Maestra en Belleza. */
+.cosmiatria-cover { background: #fff; color: #000; }
+.cosmiatria-cover::before { content: ''; inset: 0; top: 0; bottom: 0; left: 0; width: auto; z-index: -2; transform: none; background: linear-gradient(90deg, transparent 27%, #ffffffaa 45%, #fff 58%); }
+.cosmiatria-cover .beauty-cover-photo { width: 58%; object-position: center 53%; }
+.cosmiatria-cover .beauty-cover-heading { top: 39%; }
+.cosmiatria-cover .beauty-cover-heading h1 { color: #000; font-size: clamp(48px, 6cqw, 88px); }
+.cosmiatria-cover .beauty-cover-heading p { font-size: clamp(21px, 2.8cqw, 40px); }
+.cosmiatria-intro, .cosmiatria-module { background: #fff; color: #000; }
+.cosmiatria-intro .magazine-page-photo { width: 50%; object-position: center 38%; -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent); mask-image: linear-gradient(90deg, #000 60%, transparent); }
+.cosmiatria-intro::before { background: linear-gradient(90deg, transparent 27%, #ffffffb8 44%, white 58%); }
+.cosmiatria-intro .magazine-page-copy { width: 62%; margin-left: 36%; padding: 10% 4% 5%; text-align: center; }
+.cosmiatria-intro p { max-width: none; font-size: clamp(18px, 2.1cqw, 30px); }
+.cosmiatria-module .magazine-page-photo { width: 51%; object-position: center; -webkit-mask-image: linear-gradient(90deg, #000 58%, transparent); mask-image: linear-gradient(90deg, #000 58%, transparent); }
+.cosmiatria-module.page-text-left .magazine-page-photo { -webkit-mask-image: linear-gradient(270deg, #000 58%, transparent); mask-image: linear-gradient(270deg, #000 58%, transparent); }
+.cosmiatria-module .magazine-page-copy { width: 60%; margin-left: 39%; padding: 6% 4% 5%; }
+.cosmiatria-module.page-text-left .magazine-page-copy { width: 60%; margin-left: 0; }
+.cosmiatria-module .magazine-module-name { margin-bottom: 22px; text-align: center; font: 500 clamp(19px, 2.5cqw, 35px)/1.2 'Gelasio', Georgia, serif; }
+.cosmiatria-module ol { font-size: clamp(16px, 1.75cqw, 25px); line-height: 1.42; }
+.cosmiatria-module li::marker { color: #a47f45; }
+.cosmiatria-module .magazine-page-watermark { opacity: .1; }
+.cosmiatria-module { min-height: min(70.7vw, 100svh); }
+.cosmiatria-module .magazine-page-copy { min-height: min(70.7vw, 100svh); }
+
 @media(max-width:600px) {
   .cosmiatria-cover { min-height: 690px; padding-top: 170px; background: linear-gradient(150deg, #20312d 0 170px, #f5f1e9 171px); }
   .cosmiatria-cover::before { left: 6%; top: 45px; bottom: auto; transform: none; font-size: 46px; letter-spacing: -.04em; }
@@ -555,6 +578,16 @@
   .cosmiatria-code-page .magazine-module-name { font-size: 22px; }
   .cosmiatria-code-page ol { font-size: 17px; line-height: 1.5; }
   .cosmiatria-intro p { font-size: 18px; }
+  .cosmiatria-cover { min-height: 650px; padding-top: 300px; background: white; }
+  .cosmiatria-cover::before { background: linear-gradient(180deg, transparent 100px, #ffffff33 205px, #fff 340px); }
+  .cosmiatria-cover .beauty-cover-heading { top: 370px; }
+  .cosmiatria-cover .beauty-cover-heading h1 { font-size: 42px; }
+  .cosmiatria-cover .beauty-cover-heading p { font-size: 20px; }
+  .cosmiatria-intro, .cosmiatria-module { padding-top: 0; min-height: 0; }
+  .cosmiatria-intro .magazine-page-photo, .cosmiatria-module .magazine-page-photo, .cosmiatria-module.page-text-left .magazine-page-photo { position: relative; inset: auto; display: block; width: 100%; height: auto; max-height: 56vh; aspect-ratio: 4/3; object-fit: cover; -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent); mask-image: linear-gradient(180deg, #000 70%, transparent); }
+  .cosmiatria-intro::before, .cosmiatria-module::before, .cosmiatria-module.page-text-left::before { background: none; }
+  .cosmiatria-intro .magazine-page-copy, .cosmiatria-module .magazine-page-copy, .cosmiatria-module.page-text-left .magazine-page-copy { width: 100%; margin: 0; padding: 18px 7% 44px; }
+  .cosmiatria-module ol { font-size: 18px; }
 }
 /* Fade the photo itself so its rectangular edge never shows through the overlay. */
 .nails-module-one .magazine-page-photo,

@@ -178,7 +178,7 @@ course.modulos.forEach((module, index) => {
   };
   const page = createPage('modulo-' + module.numero, layout.titulo || 'MÓDULO ' + Number(module.numero), layout);
   const copy = page.querySelector('.magazine-page-copy');
-  if (!magazine.portada.plantilla) {
+  if (!magazine.portada.plantilla || courseKey === 'cosmiatria') {
     const name = document.createElement('p');
     name.className = 'magazine-module-name';
     name.textContent = module.nombre;

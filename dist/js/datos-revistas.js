@@ -187,31 +187,31 @@ const revistas = {
   "cosmiatria": {
     "ocultarVideoExterno": true,
     "portada": {
-      "sinImagen": true,
-      "clase": "cosmiatria-cover"
+      "plantilla": "cosmiatria-cover-template"
     },
     "paginasPrevias": [
       {
         "id": "dirigido-a",
         "titulo": "¿A QUIÉNES VA DIRIGIDA ESTA CARRERA?",
         "texto": "ESTA CARRERA ESTÁ DIRIGIDA PRINCIPALMENTE A MUJERES QUE QUIERAN EMPRENDER EN SU PROPIO NEGOCIO: INDEPENDIENTES, EMPODERADAS Y CON EL DESEO DE CONOCER Y APRENDER LOS BENEFICIOS DE ESTA RAMA DE LA BELLEZA, PARA AYUDAR A QUE SUS CLIENTES LUZCAN UNA PIEL MÁS JOVEN Y SALUDABLE. TE INVITAMOS A RECORRER JUNTO A NOSOTROS ESTE APASIONANTE MUNDO DE LA ESTÉTICA.",
-        "sinImagen": true,
-        "clase": "cosmiatria-intro cosmiatria-code-page"
+        "imagen": "assets/images/modulo_cosmiatria/m2/m2.png",
+        "clase": "cosmiatria-intro",
+        "marcaAgua": true
       }
     ],
     "modulos": [
-      {"sinImagen":true,"clase":"cosmiatria-code-page cosmiatria-module tone-sage"},
-      {"sinImagen":true,"clase":"cosmiatria-code-page cosmiatria-module cosmiatria-module-alt tone-blue"},
-      {"sinImagen":true,"clase":"cosmiatria-code-page cosmiatria-module tone-rose"},
-      {"sinImagen":true,"clase":"cosmiatria-code-page cosmiatria-module cosmiatria-module-alt tone-amber"},
-      {"sinImagen":true,"clase":"cosmiatria-code-page cosmiatria-module tone-violet"},
-      {"sinImagen":true,"clase":"cosmiatria-code-page cosmiatria-module cosmiatria-module-alt tone-coral"},
-      {"sinImagen":true,"clase":"cosmiatria-code-page cosmiatria-module tone-mint"},
-      {"sinImagen":true,"clase":"cosmiatria-code-page cosmiatria-module cosmiatria-module-alt tone-sand"},
-      {"sinImagen":true,"clase":"cosmiatria-code-page cosmiatria-module tone-wine"},
-      {"sinImagen":true,"clase":"cosmiatria-code-page cosmiatria-module cosmiatria-module-alt tone-gold"},
-      {"sinImagen":true,"clase":"cosmiatria-code-page cosmiatria-module tone-slate"},
-      {"sinImagen":true,"clase":"cosmiatria-code-page cosmiatria-module cosmiatria-module-alt tone-clay"}
+      {"imagen":"assets/images/modulo_cosmiatria/m3/m3.jpeg","clase":"cosmiatria-module page-text-left","marcaAgua":true},
+      {"imagen":"assets/images/modulo_cosmiatria/m4/m4.jpeg","clase":"cosmiatria-module","marcaAgua":true},
+      {"imagen":"assets/images/modulo_cosmiatria/m5/m5.jpeg","clase":"cosmiatria-module page-text-left","marcaAgua":true},
+      {"imagen":"assets/images/modulo_cosmiatria/m6/m6.jpeg","clase":"cosmiatria-module","marcaAgua":true},
+      {"imagen":"assets/images/modulo_cosmiatria/m7/m7.jpeg","clase":"cosmiatria-module page-text-left","marcaAgua":true},
+      {"imagen":"assets/images/modulo_cosmiatria/m8/m8.jpeg","clase":"cosmiatria-module","marcaAgua":true},
+      {"imagen":"assets/images/modulo_cosmiatria/m9/m9.jpeg","clase":"cosmiatria-module page-text-left","marcaAgua":true},
+      {"imagen":"assets/images/modulo_cosmiatria/m10/m10.jpeg","clase":"cosmiatria-module","marcaAgua":true},
+      {"imagen":"assets/images/modulo_cosmiatria/m10/m10.jpeg","clase":"cosmiatria-module page-text-left","marcaAgua":true},
+      {"imagen":"assets/images/modulo_cosmiatria/m12/m12.jpeg","clase":"cosmiatria-module","marcaAgua":true},
+      {"imagen":"assets/images/modulo_cosmiatria/m13/m13-still.jpg","clase":"cosmiatria-module page-text-left","marcaAgua":true},
+      {"imagen":"assets/images/modulo_cosmiatria/m14/m14.jpeg","clase":"cosmiatria-module","marcaAgua":true}
     ],
     "imagenInversion": "assets/photos/cosmetologia.jpg",
     "inversionProgramas": [
