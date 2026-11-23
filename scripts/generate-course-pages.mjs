@@ -17,7 +17,7 @@ const courses = {
   },
   lashista: {
     title: 'Lashista',
-    description: 'Carrera de lashista profesional: diseño de mirada, extensiones de pestañas y práctica especializada.',
+    description: 'Lash Artist: formación en cejas, lifting y extensiones de pestañas, con prácticas en modelos reales.',
     image: 'assets/images/lashista.jpeg', width: 736, height: 981
   },
   barberia: {
@@ -83,11 +83,11 @@ function coursePage(template, slug, course) {
   html = html.replace(/<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${image}">`);
   html = html.replace(/<meta name="twitter:image:alt" content="[^"]*">/, '<meta name="twitter:image:alt" content="Logo de Vicorga Capacitaciones sobre fondo negro">');
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
-  if (slug === 'barberia') {
-    html = html.replace(/css\/revista\.css\?v=[^" ]+/, 'css/revista.css?v=20261123-5');
-    html = html.replace(/js\/datos-carreras\.js\?v=[^" ]+/, 'js/datos-carreras.js?v=20261123-5');
-    html = html.replace(/js\/datos-revistas\.js\?v=[^" ]+/, 'js/datos-revistas.js?v=20261123-5');
-    html = html.replace(/js\/catalogo\.js\?v=[^" ]+/, 'js/catalogo.js?v=20261123-5');
+  if (slug === 'barberia' || slug === 'lashista') {
+    html = html.replace(/css\/revista\.css\?v=[^" ]+/, 'css/revista.css?v=20261123-6');
+    html = html.replace(/js\/datos-carreras\.js\?v=[^" ]+/, 'js/datos-carreras.js?v=20261123-6');
+    html = html.replace(/js\/datos-revistas\.js\?v=[^" ]+/, 'js/datos-revistas.js?v=20261123-6');
+    html = html.replace(/js\/catalogo\.js\?v=[^" ]+/, 'js/catalogo.js?v=20261123-6');
   }
   return html;
 }

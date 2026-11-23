@@ -12,7 +12,7 @@ const content = document.getElementById('magazine-content');
 const watermarkPhoto = 'assets/images/modulo_uñas/vc_transparencia.png';
 
 function setCourseImage(image, source) {
-  if (courseKey !== 'barberia' || !source?.includes('/modulo_barberia/')) {
+  if (!magazine.imagenRespaldo || !source?.includes('/modulo_')) {
     image.src = source;
     return;
   }
@@ -161,7 +161,7 @@ if (!magazine.portada.plantilla) {
   cover.querySelector('.magazine-cover-description').textContent = course.descripcion;
   cover.querySelector('.magazine-cover-duration').textContent = course.duracion;
 }
-if (courseKey === 'barberia') {
+if (magazine.imagenRespaldo && cover.querySelector('.beauty-cover-photo')) {
   setCourseImage(cover.querySelector('.beauty-cover-photo'), magazine.portada.imagen);
 }
 content.append(cover);
@@ -247,7 +247,7 @@ if (COURSE_VIDEOS_ENABLED && course.videoId && !magazine.ocultarVideoExterno) {
 }
 
 const investment = cloneTemplate('magazine-investment-template');
-if (courseKey === 'barberia') investment.classList.add('barberia-investment');
+if (magazine.imagenRespaldo) investment.classList.add('barberia-investment');
 const investmentPhoto = investment.querySelector('.magazine-page-photo');
 if (magazine.videoInversion && COURSE_VIDEOS_ENABLED) {
   const investmentVideo = document.createElement('video');
@@ -317,7 +317,17 @@ investment.querySelector('.exam-note').textContent =
 if (magazine.notasInversion) {
   const notes = investment.querySelector('.exam-note').parentElement;
   notes.replaceChildren();
-  addItems(notes, magazine.notasInversion);
+  magazine.notasInversion.forEach(text => {
+    const item = document.createElement('li');
+    if (/reembolsables/i.test(text)) {
+      const strong = document.createElement('strong');
+      strong.textContent = text;
+      item.append(strong);
+    } else {
+      item.textContent = text;
+    }
+    notes.append(item);
+  });
 }
 content.append(investment);
 

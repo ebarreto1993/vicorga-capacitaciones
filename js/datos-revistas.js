@@ -165,9 +165,34 @@ const revistas = {
     "notaExamen": "EXAMEN FINAL OBLIGATORIO PARA RECIBIR TU CERTIFICACIÓN (SESIÓN DE FOTOS)."
   },
   "lashista": {
+    "ocultarVideoExterno": true,
+    "imagenRespaldo": "assets/images/lashista.jpeg",
     "portada": {
-      "imagen": "assets/images/lashista.jpeg"
-    }
+      "plantilla": "lashista-cover-template",
+      "imagen": "assets/images/modulo_lahista/m1/m1.jpeg"
+    },
+    "paginasPrevias": [
+      {
+        "id": "dirigido-a",
+        "titulo": "¿A QUIÉNES VA DIRIGIDA ESTA CARRERA?",
+        "texto": "Esta carrera es ideal para quienes desean ampliar sus servicios en el área de la belleza e incrementar sus ingresos. Empezamos desde cero, por lo que no necesitas conocimientos previos. Aprenderás nuevas técnicas para lograr resultados excelentes.",
+        "imagen": "assets/images/modulo_lahista/m2/m2.jpeg",
+        "clase": "barberia-intro lashista-intro",
+        "marcaAgua": true
+      }
+    ],
+    "modulos": [
+      {"imagen":"assets/images/modulo_lahista/m3/m3.jpeg","clase":"barberia-module lashista-module","marcaAgua":true},
+      {"imagen":"assets/images/modulo_lahista/m4/m4.jpeg","clase":"barberia-module lashista-module page-text-left","marcaAgua":true},
+      {"imagen":"assets/images/modulo_lahista/m5/m5.jpeg","clase":"barberia-module lashista-module","marcaAgua":true}
+    ],
+    "imagenInversion": "assets/images/modulo_lahista/m6/m6.jpeg",
+    "opcionalCertificado": "Certificado con aval del Ministerio de Trabajo, visible en la plataforma (previo derecho de examen).",
+    "notasInversion": [
+      "Examen final obligatorio para recibir la certificación (sesión de fotos).",
+      "Puedes reservar tu cupo con $20 y hacer abonos poco a poco. La matrícula y la pensión deberán estar pagadas hasta el día de inicio.",
+      "Ojo: los valores cancelados o abonados no serán reembolsables bajo ninguna circunstancia."
+    ]
   },
   "barberia": {
     "ocultarVideoExterno": true,

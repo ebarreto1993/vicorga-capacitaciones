@@ -603,6 +603,7 @@
 .barberia-cover .beauty-cover-photo { object-position: center 38%; }
 .barberia-cover .beauty-cover-heading { top: 38%; }
 .barberia-cover .beauty-cover-heading p { font-size: clamp(20px, 2.8cqw, 40px); }
+.lashista-cover .beauty-cover-heading h1 { font-size: clamp(40px, 4.8cqw, 70px); }
 .barberia-intro .magazine-page-photo,
 .barberia-module .magazine-page-photo { width: 52%; object-fit: cover; object-position: center 35%; -webkit-mask-image: linear-gradient(90deg, #000 62%, transparent); mask-image: linear-gradient(90deg, #000 62%, transparent); }
 .barberia-intro .magazine-page-photo { object-fit: cover; }
@@ -629,6 +630,7 @@
   .barberia-cover .beauty-cover-heading { top: auto; }
   .barberia-cover .beauty-cover-heading h1 { font-size: 42px; }
   .barberia-cover .beauty-cover-heading p { font-size: 21px; }
+  .lashista-cover .beauty-cover-heading h1 { font-size: 39px; }
   .barberia-intro, .barberia-module { padding-top: 0; min-height: 0; }
   .barberia-intro .magazine-page-photo,
   .barberia-module .magazine-page-photo,

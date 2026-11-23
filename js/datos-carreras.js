@@ -62,17 +62,17 @@ const carreras = {
     },
     "lashista": {
         nombre: "Lashista",
-        descripcion: "Conviértete en lashista profesional en tan solo 3 meses. Curso exclusivo de 3 módulos donde te convertirás en especialista de miradas con extensiones de pestañas.",
-        duracion: "3 meses (1 vez por semana, en horario matutino o vespertino)",
+        descripcion: "Formación Lash Artist desde cero en diseño de cejas, lifting y extensiones de pestañas, con prácticas en modelos reales.",
+        duracion: "3 meses",
         videoId: "IkzzymNarfE",
         modulos: [
-            {"numero":"01","nombre":"Fundamentos de Lashista","temas":["Anatomía del párpado","Tipos de pestañas naturales","Herramientas profesionales","Seguridad e higiene"]},
-            {"numero":"02","nombre":"Técnica de Extensiones","temas":["Técnica clásica","Técnica volumen ruso","Aplicación de extensiones","Retoque y mantenimiento"]},
-            {"numero":"03","nombre":"Diseño y Especialización","temas":["Diseño de mirada","Diferentes estilos de lashes","Lashes para eventos","Prácticas en modelos reales"]}
+            {"numero":"01","nombre":"Diseño de cejas y lifting","temas":["Visagismo","Diseño de cejas","Depilación con hilo","Teoría e introducción al laminado de cejas","Tinturado con RefectoCil","Tinturado con henna","Práctica de laminado en modelo real","Teoría de lifting de pestañas","Práctica en modelo real con Maxymova"]},
+            {"numero":"02","nombre":"Extensiones pelo a pelo","temas":["Introducción a las pestañas pelo a pelo","Adhesivos y su composición","Temperatura y humedad","Curvatura, grosor y tamaño","Diseños de mirada: natural, ardilla, muñeca, ojo abierto y ojo de gato","Técnicas a utilizar: clásicas o volumen","Prácticas de direccionamiento","Método de aplicación","Técnica clásica pelo a pelo: clásicas, flat y efecto rímel"]},
+            {"numero":"03","nombre":"Volumen y efectos","temas":["Volumen ruso","Creación de abanicos","Volumen tecnológico en modelo real","Práctica de técnica híbrida en clase con modelo real","Práctica de técnica wispy en clase con modelo real","Práctica de efecto 4D con pop de color","Examen final"]}
         ],
         matricula: 80,
         mensualidad: 150,
-        incluye: ["Uniforme de la academia","Mochila de la academia","30% de los materiales para las clases","Certificación de la academia"]
+        incluye: ["Camiseta","Guía de estudio","Mochila de la academia","Materiales para trabajar en clase","Certificado avalado por la academia"]
     },
     "micropigmentacion": {
         nombre: "Micropigmentación",
