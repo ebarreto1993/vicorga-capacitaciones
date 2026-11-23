@@ -598,6 +598,51 @@
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 42%);
   mask-image: linear-gradient(90deg, transparent, #000 42%);
 }
+
+/* Barbería mantiene la misma retícula editorial de Belleza y Uñas. */
+.barberia-cover .beauty-cover-photo { object-position: center 38%; }
+.barberia-cover .beauty-cover-heading { top: 38%; }
+.barberia-cover .beauty-cover-heading p { font-size: clamp(20px, 2.8cqw, 40px); }
+.barberia-intro .magazine-page-photo,
+.barberia-module .magazine-page-photo { width: 52%; object-fit: cover; object-position: center 35%; -webkit-mask-image: linear-gradient(90deg, #000 62%, transparent); mask-image: linear-gradient(90deg, #000 62%, transparent); }
+.barberia-intro .magazine-page-photo { object-fit: cover; }
+.barberia-intro .magazine-page-copy { padding-top: 10%; text-align: center; }
+.barberia-intro p { margin-top: 10%; }
+.barberia-module .magazine-page-copy { position: relative; z-index: 1; width: 59%; margin-left: 40%; padding: 5% 4% 5%; }
+.barberia-module.page-text-left .magazine-page-photo { left: auto; right: 0; width: 52%; -webkit-mask-image: linear-gradient(270deg, #000 62%, transparent); mask-image: linear-gradient(270deg, #000 62%, transparent); }
+.barberia-module.page-text-left .magazine-page-copy { width: 59%; margin-left: 0; }
+.barberia-module ol { font-size: clamp(17px, 1.65cqw, 24px); line-height: 1.34; }
+.barberia-module li + li { margin-top: .2em; }
+.barberia-module li::marker { color: #a47f45; }
+.barberia-module .magazine-page-watermark { opacity: .09; }
+.barberia-module-two ol, .barberia-module-four ol { font-size: clamp(16px, 1.48cqw, 21px); line-height: 1.29; }
+.barberia-module-two li + li, .barberia-module-four li + li { margin-top: .12em; }
+.barberia-module-three ol { font-size: clamp(16px, 1.55cqw, 22px); }
+.barberia-cover ~ #pensum .magazine-investment .magazine-page-copy { width: 70%; }
+.barberia-cover ~ #pensum .magazine-investment p,
+.barberia-cover ~ #pensum .magazine-investment ul { font-size: clamp(16px, 1.65cqw, 23px); }
+.investment-optional { margin: .8em 0; }
+.investment-optional p:first-child { font-weight: 700; }
+
+@media(max-width:600px) {
+  .barberia-cover .beauty-cover-photo { object-position: center 32%; }
+  .barberia-cover .beauty-cover-heading { top: auto; }
+  .barberia-cover .beauty-cover-heading h1 { font-size: 42px; }
+  .barberia-cover .beauty-cover-heading p { font-size: 21px; }
+  .barberia-intro, .barberia-module { padding-top: 0; min-height: 0; }
+  .barberia-intro .magazine-page-photo,
+  .barberia-module .magazine-page-photo,
+  .barberia-module.page-text-left .magazine-page-photo { position: relative; inset: auto; display: block; width: 100%; height: auto; max-height: 56vh; aspect-ratio: 4/3; object-fit: cover; -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent); mask-image: linear-gradient(180deg, #000 70%, transparent); }
+  .barberia-intro::before, .barberia-module::before, .barberia-module.page-text-left::before { background: none; }
+  .barberia-intro .magazine-page-copy,
+  .barberia-module .magazine-page-copy,
+  .barberia-module.page-text-left .magazine-page-copy { width: 100%; margin: 0; padding: 20px 7% 44px; }
+  .barberia-intro p { margin-top: 0; }
+  .barberia-module ol, .barberia-module-two ol, .barberia-module-three ol, .barberia-module-four ol { font-size: 18px; line-height: 1.45; }
+  .barberia-cover ~ #pensum .magazine-investment .magazine-page-copy { width: 100%; }
+  .barberia-cover ~ #pensum .magazine-investment p,
+  .barberia-cover ~ #pensum .magazine-investment ul { font-size: 18px; }
+}
 @media(max-width:600px) {
   .magazine-cover { padding-top: 230px; min-height: 0; }
   .magazine-cover-photo { width: 100%; height: 300px; }
@@ -808,4 +853,24 @@
     mask-image: linear-gradient(180deg, #000 0 62%, transparent 100%);
   }
   .magazine-page.cosmiatria-intro > .magazine-page-photo:first-child { height: clamp(390px, 112vw, 490px); object-position: center top; }
+}
+
+@media(max-width:600px) {
+  .magazine-page.barberia-intro > .magazine-page-photo:first-child,
+  .magazine-page.barberia-module > .magazine-page-photo:first-child,
+  .magazine-page.barberia-investment > .magazine-page-photo:first-child {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: clamp(340px, 100vw, 440px);
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center 38%;
+    -webkit-mask-image: linear-gradient(180deg, #000 0 62%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0 62%, transparent 100%);
+  }
+  .magazine-page.barberia-intro > .magazine-page-photo:first-child { height: clamp(390px, 112vw, 490px); }
+  .magazine-page.barberia-investment { padding-top: 0; }
+  .barberia-investment .magazine-page-copy { padding-top: 18px; }
 }

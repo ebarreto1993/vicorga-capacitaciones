@@ -170,9 +170,36 @@ const revistas = {
     }
   },
   "barberia": {
+    "ocultarVideoExterno": true,
+    "imagenRespaldo": "assets/images/barberia.jpeg",
     "portada": {
-      "imagen": "assets/images/barberia.jpeg"
-    }
+      "plantilla": "barberia-cover-template",
+      "imagen": "assets/images/modulo_barberia/m1/m1.jpeg"
+    },
+    "paginasPrevias": [
+      {
+        "id": "dirigido-a",
+        "titulo": "¿A QUIÉNES VA DIRIGIDA ESTA CARRERA?",
+        "texto": "Esta carrera es ideal para quienes desean ingresar al mundo de la barbería. Empezamos desde cero, por lo que no necesitas conocimientos previos. Aprenderás nuevas técnicas eficientes para lograr resultados excelentes.",
+        "imagen": "assets/images/modulo_barberia/m2/m2.jpeg",
+        "clase": "barberia-intro",
+        "marcaAgua": true
+      }
+    ],
+    "modulos": [
+      {"imagen":"assets/images/modulo_barberia/m3/m3.jpeg","clase":"barberia-module barberia-module-one","marcaAgua":true},
+      {"imagen":"assets/images/modulo_barberia/m4/m4.jpeg","clase":"barberia-module page-text-left barberia-module-two","marcaAgua":true},
+      {"imagen":"assets/images/modulo_barberia/m5/m5.jpeg","clase":"barberia-module barberia-module-three","marcaAgua":true},
+      {"imagen":"assets/images/modulo_barberia/m6/m6.jpeg","clase":"barberia-module page-text-left barberia-module-four","marcaAgua":true}
+    ],
+    "imagenInversion": "assets/images/modulo_barberia/m7/m7.jpeg",
+    "opcionalCertificado": "Certificado con aval del Ministerio de Trabajo, visible en la plataforma, con una carga horaria de 210 horas (previo derecho de examen).",
+    "notaExamen": "Examen final obligatorio para recibir la certificación (sesión de fotos).",
+    "notasInversion": [
+      "Examen final obligatorio para recibir la certificación (sesión de fotos).",
+      "Puedes reservar tu cupo con $20 y hacer abonos poco a poco. La matrícula y la pensión deberán estar pagadas hasta el día de inicio.",
+      "Ojo: los valores cancelados o abonados no serán reembolsables bajo ningún motivo ni circunstancia."
+    ]
   },
   "maquillaje": {
     "portada": {

@@ -11,6 +11,24 @@ const magazine = revistas[courseKey];
 const content = document.getElementById('magazine-content');
 const watermarkPhoto = 'assets/images/modulo_uñas/vc_transparencia.png';
 
+function setCourseImage(image, source) {
+  if (courseKey !== 'barberia' || !source?.includes('/modulo_barberia/')) {
+    image.src = source;
+    return;
+  }
+  const candidates = [source, ...['jpg', 'png', 'webp'].map(ext => source.replace(/\.jpeg$/i, '.' + ext))];
+  let index = 0;
+  image.src = magazine.imagenRespaldo;
+  function tryNextImage() {
+    if (index >= candidates.length) return;
+    const probe = new Image();
+    probe.onload = () => { image.src = candidates[index]; };
+    probe.onerror = () => { index++; tryNextImage(); };
+    probe.src = candidates[index];
+  }
+  tryNextImage();
+}
+
 function cloneTemplate(id) {
   return document.getElementById(id).content.firstElementChild.cloneNode(true);
 }
@@ -93,7 +111,7 @@ function createPage(id, title, layout) {
     primaryImage.replaceWith(video);
     video.play().catch(() => {});
   } else {
-    primaryImage.src = layout.imagen;
+    setCourseImage(primaryImage, layout.imagen);
   }
   if (layout.marcaAgua) addWatermark(page);
   if (layout.segundaImagen) {
@@ -138,10 +156,13 @@ if (!magazine.portada.plantilla) {
     cover.querySelector('.magazine-cover-mark')?.remove();
     cover.classList.add('magazine-cover-code');
   } else {
-    cover.querySelector('.magazine-cover-photo').src = magazine.portada.imagen;
+    setCourseImage(cover.querySelector('.magazine-cover-photo'), magazine.portada.imagen);
   }
   cover.querySelector('.magazine-cover-description').textContent = course.descripcion;
   cover.querySelector('.magazine-cover-duration').textContent = course.duracion;
+}
+if (courseKey === 'barberia') {
+  setCourseImage(cover.querySelector('.beauty-cover-photo'), magazine.portada.imagen);
 }
 content.append(cover);
 
@@ -199,7 +220,7 @@ if (magazine.examen) {
     const image = document.createElement('img');
     image.className = 'magazine-page-photo';
     if (index > 0) image.classList.add('magazine-page-photo-second');
-    image.src = photo;
+    setCourseImage(image, photo);
     image.alt = magazine.examen.descripciones[index];
     image.loading = 'lazy';
     exam.append(image);
@@ -226,6 +247,7 @@ if (COURSE_VIDEOS_ENABLED && course.videoId && !magazine.ocultarVideoExterno) {
 }
 
 const investment = cloneTemplate('magazine-investment-template');
+if (courseKey === 'barberia') investment.classList.add('barberia-investment');
 const investmentPhoto = investment.querySelector('.magazine-page-photo');
 if (magazine.videoInversion && COURSE_VIDEOS_ENABLED) {
   const investmentVideo = document.createElement('video');
@@ -242,7 +264,7 @@ if (magazine.videoInversion && COURSE_VIDEOS_ENABLED) {
   investmentPhoto.replaceWith(investmentVideo);
   investmentVideo.play().catch(() => {});
 } else {
-  investmentPhoto.src = magazine.imagenInversion || magazine.portada.imagen;
+  setCourseImage(investmentPhoto, magazine.imagenInversion || magazine.portada.imagen);
 }
 const duration = investment.querySelector('.investment-duration');
 const valuesList = investment.querySelector('.investment-values');
@@ -280,8 +302,23 @@ if (magazine.inversionProgramas) {
   addItems(valuesList, values);
 }
 addItems(investment.querySelector('.investment-includes'), course.incluye.map(text => text.toLocaleUpperCase('es')));
+if (magazine.opcionalCertificado) {
+  const optional = document.createElement('div');
+  optional.className = 'investment-optional';
+  const heading = document.createElement('p');
+  heading.textContent = 'OPCIONALES:';
+  const description = document.createElement('p');
+  description.textContent = magazine.opcionalCertificado;
+  optional.append(heading, description);
+  investment.querySelector('.investment-includes').after(optional);
+}
 investment.querySelector('.exam-note').textContent =
   magazine.notaExamen || 'EXAMEN FINAL OBLIGATORIO PARA RECIBIR TU CERTIFICACIÓN.';
+if (magazine.notasInversion) {
+  const notes = investment.querySelector('.exam-note').parentElement;
+  notes.replaceChildren();
+  addItems(notes, magazine.notasInversion);
+}
 content.append(investment);
 
 document.querySelectorAll('[data-contact]').forEach(link => {

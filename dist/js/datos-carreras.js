@@ -107,19 +107,18 @@ const carreras = {
     },
     "barberia": {
         nombre: "Barbería",
-        descripcion: "Titúlate como técnico profesional en barbería en tan solo 4 meses. Domina cortes modernos, técnicas de barba y servicio profesional. Cupos limitados a 8 estudiantes.",
-        duracion: "3 meses (lunes y miércoles) o 4 meses (sábados)",
+        descripcion: "Técnico profesional en barbería. Aprende desde cero técnicas de corte, desvanecidos, barba y color.",
+        duracion: "4 meses",
         videoId: "FaFkNU3nGTk",
         modulos: [
-            {"numero":"01","nombre":"Historia y Fundamentos de Barbería","temas":["Historia de la barbería","Técnicas clásicas","Herramientas profesionales","Seguridad e higiene"]},
-            {"numero":"02","nombre":"Cortes Clásicos","temas":["Corte sólido 0° y 45°","Taper fade","Mohicano","Skin fade"]},
-            {"numero":"03","nombre":"Rituals de Barba","temas":["Afeitado clásico","Ritual de barba completo","Cuidado de la barba","Productos especializados"]},
-            {"numero":"04","nombre":"Cortes Modernos","temas":["Cortes actuales","Diseños personalizados","Líneas y detalles","Prácticas en clientes reales"]}
+            {"numero":"01","nombre":"Fundamentos y corte","temas":["Introducción a la barbería","Manipulación de portanavaja y tijera","Nomenclatura y reconocimiento de alzas","Visagismo en barbería","Teoría del corte","Corte básico con máquina","Corte con tijera","Técnicas de sombreado","Estructuras de corte","Técnica fade doble partición"]},
+            {"numero":"02","nombre":"Cabello y técnicas de corte","temas":["Técnicas de seccionamiento","Manipulación del cabello en cabezotes","Particiones, subsecciones y distribuciones","Elevaciones y ángulos de corte","Tricología","Clasificación del cabello","Características del cabello","Ciclo del cabello","Composición química del cabello","Pautas para la determinación del cabello","Enfermedades más comunes del cuero cabelludo","Reconocimiento de productos para enfermedades capilares","El cabello y su preparación","Exfoliación del cabello","Limpiezas faciales"]},
+            {"numero":"03","nombre":"Desvanecidos y barba","temas":["Técnicas de texturizar","Tipos de desvanecidos: low fade, mid fade y high fade","Técnica para realizar blow out o taper fade","Diseños y figuras","Peinados","La barba","Tipos de barba","Tipos de bigote","Visagismo en la barba","Ritual de afeitado","Pigmentación para barba y cortes","Cejas","Permacología"]},
+            {"numero":"04","nombre":"Colorimetría","temas":["Historia del color","Estrella de color","Leyes del color","Altura de tonos","Colores fríos y cálidos","Clasificación de tintes","Clasificación de peróxidos u oxidantes","Reglas de oro del peróxido","pH del cabello","Diagnóstico capilar","Técnica para cubrimiento de canas","Técnica tono sobre tono","Técnica rayitos","Técnica de mechas localizadas","Técnica de mechón y colores fantasía","Técnica de decoloración global"]}
         ],
         matricula: 80,
         mensualidad: 150,
-        mensualidadEntreSemana: 190,
-        incluye: ["Máquina de cortar cabello","Uniforme de la academia","Mochila de la academia","30% de los materiales para las clases","Certificación de la academia"]
+        incluye: ["Uniforme de la academia (chaqueta y capa)","Materiales y máquinas para trabajar en clase","Certificado avalado por la academia"]
     },
     "tatuajes": {
         nombre: "Tatuajes",
