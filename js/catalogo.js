@@ -1,11 +1,11 @@
 'use strict';
 
-const COURSE_VIDEOS_ENABLED = false;
 const pageCourse = decodeURIComponent(location.pathname.split('/').pop() || '').replace(/\.html$/i, '');
 const requestedCourse = new URLSearchParams(location.search).get('carrera') || pageCourse;
 const courseAliases = { cosmetologia: 'cosmiatria', 'maestra-belleza': 'maestria-belleza' };
 const legacyCourse = courseAliases[requestedCourse] || requestedCourse;
 const courseKey = Object.hasOwn(carreras, legacyCourse) ? legacyCourse : 'maquillaje';
+const COURSE_VIDEOS_ENABLED = ['maestria-belleza', 'unas', 'cosmiatria'].includes(courseKey);
 const course = carreras[courseKey];
 const magazine = revistas[courseKey];
 const content = document.getElementById('magazine-content');
