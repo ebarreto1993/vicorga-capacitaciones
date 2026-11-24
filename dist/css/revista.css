@@ -876,3 +876,25 @@
   .magazine-page.barberia-investment { padding-top: 0; }
   .barberia-investment .magazine-page-copy { padding-top: 18px; }
 }
+
+.professional-cover .beauty-cover-heading h1 {
+  font-size: clamp(26px, 4.2cqw, 62px);
+  overflow-wrap: anywhere;
+}
+
+.professional-cover .beauty-cover-heading p {
+  font-size: clamp(16px, 2.25cqw, 34px);
+}
+
+.professional-cover .beauty-cover-edition svg {
+  width: clamp(34px, 4cqw, 56px);
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  .professional-cover .beauty-cover-edition svg { order: -1; }
+
+  .professional-cover .beauty-cover-heading h1 {
+    font-size: clamp(22px, 7vw, 40px);
+  }
+}

@@ -164,6 +164,10 @@ if (!magazine.portada.plantilla) {
 if (magazine.imagenRespaldo && cover.querySelector('.beauty-cover-photo')) {
   setCourseImage(cover.querySelector('.beauty-cover-photo'), magazine.portada.imagen);
 }
+if (magazine.portada.titulo) {
+  cover.querySelector('h1').textContent = magazine.portada.titulo;
+  cover.querySelector('.beauty-cover-heading p').textContent = magazine.portada.subtitulo;
+}
 content.append(cover);
 
 const pages = document.createElement('div');
@@ -177,17 +181,21 @@ if (magazine.introduccion) {
     clase: 'nails-audience',
     marcaAgua: intro.marcaAgua
   });
-  const text = document.createElement('p');
-  text.textContent = intro.texto;
-  page.querySelector('.magazine-page-copy').append(text);
+  if (intro.texto) {
+    const text = document.createElement('p');
+    text.textContent = intro.texto;
+    page.querySelector('.magazine-page-copy').append(text);
+  }
   pages.append(page);
 }
 
 (magazine.paginasPrevias || []).forEach((intro, index) => {
   const page = createPage(intro.id || 'presentacion-' + (index + 1), intro.titulo, intro);
-  const text = document.createElement('p');
-  text.textContent = intro.texto;
-  page.querySelector('.magazine-page-copy').append(text);
+  if (intro.texto) {
+    const text = document.createElement('p');
+    text.textContent = intro.texto;
+    page.querySelector('.magazine-page-copy').append(text);
+  }
   pages.append(page);
 });
 

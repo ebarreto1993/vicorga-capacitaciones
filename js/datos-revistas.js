@@ -227,14 +227,118 @@ const revistas = {
     ]
   },
   "maquillaje": {
+    "imagenRespaldo": "assets/images/maquillaje.jpeg",
     "portada": {
-      "imagen": "assets/images/maquillaje.jpeg"
-    }
+      "plantilla": "professional-cover-template",
+      "imagen": "assets/images/modulo_maquillaje/m1/m1.jpeg",
+      "titulo": "MAQUILLAJE PROFESIONAL",
+      "subtitulo": "BÁSICO – INTERMEDIO – AVANZADO"
+    },
+    "paginasPrevias": [
+      {
+        "id": "dirigido-a",
+        "titulo": "¿A QUIÉNES VA DIRIGIDA ESTA CARRERA?",
+        "imagen": "assets/images/modulo_maquillaje/m2/m2.jpeg",
+        "clase": "barberia-intro",
+        "marcaAgua": true,
+        "texto": "Esta carrera es ideal para quienes desean aprender y emprender. Te ayuda a desarrollar tu técnica en las diferentes áreas del maquillaje para convertirte en una artista de élite, aprovechar todo tu potencial y comenzar a trabajar. Empezamos desde cero."
+      }
+    ],
+    "modulos": [
+      {
+        "titulo": "Módulo teórico",
+        "imagen": "assets/images/modulo_maquillaje/m3/m3.jpeg",
+        "clase": "barberia-module",
+        "marcaAgua": true
+      },
+      {
+        "titulo": "Módulo básico: maquillaje social y de misses",
+        "imagen": "assets/images/modulo_maquillaje/m4/m4.jpeg",
+        "clase": "barberia-module page-text-left",
+        "marcaAgua": true
+      },
+      {
+        "titulo": "Módulo técnico: redes sociales y tendencias",
+        "imagen": "assets/images/modulo_maquillaje/m5/m5.jpeg",
+        "clase": "barberia-module",
+        "marcaAgua": true
+      },
+      {
+        "titulo": "Especialización en técnicas sociales en tendencia y novias",
+        "imagen": "assets/images/modulo_maquillaje/m6/m6.jpeg",
+        "clase": "barberia-module page-text-left",
+        "marcaAgua": true
+      },
+      {
+        "titulo": "Especialización en cortes y caracterización",
+        "imagen": "assets/images/modulo_maquillaje/m7/m7.jpeg",
+        "clase": "barberia-module",
+        "marcaAgua": true
+      }
+    ],
+    "imagenInversion": "assets/images/modulo_maquillaje/m8/m8.jpeg",
+    "opcionalCertificado": "Certificación con aval del Ministerio de Trabajo (opcional).",
+    "notasInversion": [
+      "Ojo: los valores cancelados o abonados no serán reembolsables bajo ninguna circunstancia."
+    ]
   },
   "micropigmentacion": {
+    "imagenRespaldo": "assets/images/micropigmentacion.jpeg",
     "portada": {
-      "imagen": "assets/images/micropigmentacion.jpeg"
-    }
+      "plantilla": "professional-cover-template",
+      "imagen": "assets/images/modulo_micropigmentacion/m1/m1.jpeg",
+      "titulo": "MICROPIGMENTACIÓN",
+      "subtitulo": "CEJAS – OJOS – LABIOS"
+    },
+    "paginasPrevias": [
+      {
+        "id": "dirigido-a",
+        "titulo": "¿A QUIÉNES VA DIRIGIDA ESTA CARRERA?",
+        "texto": "Esta carrera está dirigida a profesionales de la imagen personal, especialmente del maquillaje integral en el área de estética, y a quienes deseen adquirir conocimientos sobre asesoramiento y aplicación de técnicas de micropigmentación.",
+        "imagen": "assets/images/modulo_micropigmentacion/m2/m2.jpeg",
+        "clase": "barberia-intro",
+        "marcaAgua": true
+      }
+    ],
+    "modulos": [
+      {
+        "imagen": "assets/images/modulo_micropigmentacion/m3/m3.jpeg",
+        "clase": "barberia-module",
+        "marcaAgua": true
+      },
+      {
+        "imagen": "assets/images/modulo_micropigmentacion/m4/m4.jpeg",
+        "clase": "barberia-module page-text-left",
+        "marcaAgua": true
+      },
+      {
+        "imagen": "assets/images/modulo_micropigmentacion/m5/m5.jpeg",
+        "clase": "barberia-module",
+        "marcaAgua": true
+      },
+      {
+        "imagen": "assets/images/modulo_micropigmentacion/m6/m6.jpeg",
+        "clase": "barberia-module page-text-left",
+        "marcaAgua": true
+      },
+      {
+        "imagen": "assets/images/modulo_micropigmentacion/m7/m7.jpeg",
+        "clase": "barberia-module",
+        "marcaAgua": true
+      },
+      {
+        "imagen": "assets/images/modulo_micropigmentacion/m8/m8.jpeg",
+        "clase": "barberia-module page-text-left",
+        "marcaAgua": true
+      }
+    ],
+    "imagenInversion": "assets/images/modulo_micropigmentacion/m9/m9.jpeg",
+    "opcionalCertificado": "Certificado avalado por el Ministerio de Trabajo (opcional, con costo adicional).",
+    "notasInversion": [
+      "Título por prácticas profesionales, previo pago del derecho de examen y con costo adicional.",
+      "Contamos con instalaciones adecuadas para tu aprendizaje.",
+      "Ojo: los valores cancelados o abonados no serán reembolsables bajo ninguna circunstancia."
+    ]
   },
   "cosmiatria": {
     "ocultarVideoExterno": true,

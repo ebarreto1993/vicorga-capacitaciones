@@ -76,34 +76,34 @@ const carreras = {
     },
     "micropigmentacion": {
         nombre: "Micropigmentación",
-        descripcion: "Aprende micropigmentación facial: cejas, labios y perfilado con técnicas de precisión. Especialización en 6 meses. Conviértete en una experta en esta técnica semipermanente.",
-        duracion: "6 meses (1 vez por semana, en horario matutino o vespertino)",
-        videoId: "vXYwpOcHC-w",
+        descripcion: "Formación en micropigmentación de cejas, ojos y labios.",
+        duracion: "6 meses",
         modulos: [
-            {"numero":"01","nombre":"Fundamentos de Micropigmentación","temas":["Historia de la micropigmentación","Técnicas básicas","Equipos y herramientas","Seguridad e higiene"]},
-            {"numero":"02","nombre":"Diseño de Cejas","temas":["Análisis facial","Formas de cejas","Diseño personalizado","Técnica de aplicación"]},
-            {"numero":"03","nombre":"Perfilado de Labios","temas":["Teoría de labios","Formas y proporciones","Técnica de perfilado","Correcciones y ajustes"]},
-            {"numero":"04","nombre":"Delineado de Ojos","temas":["Anatomía del ojo","Tipos de delineado","Técnica de aplicación","Efectos y estilos"]},
-            {"numero":"05","nombre":"Pigmentos y Cuidados","temas":["Selección de pigmentos","Cuidados post-procedimiento","Retoque y mantenimiento","Prácticas en modelos reales"]}
+            {"numero": "01", "nombre": "Módulo 1", "temas": ["Introducción a la micropigmentación", "Historia y evolución del microblading", "Diferencias entre el microblading y el tatuaje", "Anatomía y estructura de la piel", "Normas de higiene y seguridad", "Contraindicaciones absolutas y relativas", "Preparación de la piel", "Herramientas e insumos para el diseño", "Visagismo", "Depilación con navaja o pinza", "Técnicas de micropigmentación: microblading, microshading y efecto polvo", "Prácticas en látex y frutas"]},
+            {"numero": "02", "nombre": "Módulo 2", "temas": ["Colorimetría básica", "Teoría del color", "Pigmentología: creación de colores orgánicos e inorgánicos", "Biotipos y fototipos cutáneos", "Selección de pigmentos según el tono de piel y cabello", "Cuidado y mantenimiento del equipo", "Tipos de agujas y sus usos específicos", "Técnica y práctica", "Dibujo de trazos y diseño de cejas"]},
+            {"numero": "03", "nombre": "Módulo 3", "temas": ["Efecto polvo", "Maniobra pendular básica", "Técnica de sombreado suave para un efecto más difuso", "Neutralización", "Tipos de remoción: química, enzimática y con láser", "Tipos de agujas", "Integración con otras técnicas", "Prácticas en látex y frutas", "Prácticas con modelos reales"]},
+            {"numero": "04", "nombre": "Módulo 4", "temas": ["Microshading o cejas híbridas", "Por qué y para qué se aplica la técnica", "Contraindicaciones absolutas y relativas", "Combinación de píxeles, ombré brows, powder brows y sombreado", "Creación del efecto y retención del color", "Ángulos de aplicación del pigmento", "Prácticas en látex y frutas", "Prácticas con modelos reales"]},
+            {"numero": "05", "nombre": "Módulo 5", "temas": ["Micropigmentación de labios", "Anatomía y nervios", "Morfología y visagismo de los labios", "Contraindicaciones absolutas y relativas", "Técnicas para definir y dar volumen a los labios", "Selección de pigmentos y colores adecuados", "Neutralización según el fototipo", "Técnicas de relleno y contorno", "Corrección del color y la forma", "Técnica Baby Lips", "Técnica Full Lips"]},
+            {"numero": "06", "nombre": "Módulo 6", "temas": ["Delineado de ojos", "Anatomía del ojo", "Contraindicaciones absolutas y relativas", "Tipos de delineado según la morfología del ojo", "Visagismo del ojo", "Técnicas de delineado permanente: efecto de volumen en pestañas y eyeliner", "Cuidados posteriores"]}
         ],
-        matricula: 80,
+        matricula: 70,
         mensualidad: 150,
-        incluye: ["Uniforme de la academia","Mochila de la academia","30% de los materiales para las clases","Certificación de la academia"]
+        incluye: ["Camiseta", "Guía de estudio", "Kit de inicio", "Certificado avalado por la academia"]
     },
     "maquillaje": {
         nombre: "Maquillaje",
-        descripcion: "Titúlate como maquilladora profesional en tan solo 4 meses. Domina técnicas de maquillaje artístico, de novia, y peinado profesional. Alto rendimiento.",
-        duracion: "4 meses (una vez por semana)",
-        videoId: "ccu2RzYMCLI",
+        descripcion: "Maquillaje profesional de nivel básico, intermedio y avanzado.",
+        duracion: "4 meses",
         modulos: [
-            {"numero":"01","nombre":"Fundamentos de Maquillaje","temas":["Teoría del color","Biotipos de piel","Preparación de la piel","Herramientas y brochas"]},
-            {"numero":"02","nombre":"Maquillaje de Día y Noche","temas":["Maquillaje natural","Maquillaje de noche","Contouring básico","Técnicas de iluminación"]},
-            {"numero":"03","nombre":"Maquillaje Artístico","temas":["Maquillaje temático","Body art","Efectos especiales","Fantasía y creatividad"]},
-            {"numero":"04","nombre":"Maquillaje Profesional","temas":["Maquillaje de novia","Maquillaje para eventos","Maquillaje televisivo","Prácticas en modelos reales"]}
+            {"numero": "01", "nombre": "Módulo teórico", "temas": ["Laboratorio de productos y herramientas", "Colorimetría básica y face chart", "Visagismo facial y corporal", "Tipos y fototipos de piel", "Preparación e hidratación de la piel", "Diseño de cejas", "Laminado y tinturado de cejas", "Aplicación de bases y neutralizaciones básicas"]},
+            {"numero": "02", "nombre": "Módulo básico: maquillaje social y de misses", "temas": ["Módulo técnico básico y social", "Piel perfecta", "Piel madura y maquillaje exprés correctivo", "Piel ébano y degrade de cuatro colores", "Smokey eyes clásico", "Halo makeup", "Esfumado glam", "Maquillaje de reina"]},
+            {"numero": "03", "nombre": "Módulo técnico: redes sociales y tendencias", "temas": ["Mirror y glowly skin", "Foxy eyes", "Piel mate", "Maquillaje de novia", "Semi cut crease", "Cut con luz", "Pieles resistentes a la fricción", "Maquillaje editorial", "Delineados gráficos", "Efecto piel húmeda"]},
+            {"numero": "04", "nombre": "Especialización en técnicas sociales en tendencia y novias", "temas": ["Novia romántica (blindaje)", "Maquillaje nupcial"]},
+            {"numero": "05", "nombre": "Especialización en cortes y caracterización", "temas": ["Samurái, nivel 1", "Samurái, nivel 2", "Efectos especiales", "Técnicas de envejecimiento", "Caracterización 1", "Caracterización 2"]}
         ],
         matricula: 80,
         mensualidad: 150,
-        incluye: ["Uniforme de la academia","30% de los materiales para las clases","Mochila de la academia","Certificación de la academia"]
+        incluye: ["Uniforme completo", "Mochila", "Guía de estudio", "Materiales para trabajar en clase", "Certificado avalado por la academia", "Título por prácticas preprofesionales o a través de asociaciones o gremios"]
     },
     "barberia": {
         nombre: "Barbería",
