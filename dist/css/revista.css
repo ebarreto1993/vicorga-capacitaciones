@@ -918,7 +918,9 @@
 
 .lashista-intro .magazine-page-watermark,
 .lashista-module.page-text-left .magazine-page-watermark,
-.lashista-investment .magazine-page-watermark {
+.lashista-investment .magazine-page-watermark,
+.micropigmentacion-intro .magazine-page-watermark,
+.micropigmentacion-module.page-text-left .magazine-page-watermark {
   left: -11%;
   right: auto;
   opacity: .1;

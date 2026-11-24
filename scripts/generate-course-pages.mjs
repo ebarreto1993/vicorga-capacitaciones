@@ -69,6 +69,9 @@ function coursePage(template, slug, course) {
   const url = `${siteUrl}/${slug}.html`;
   const image = `${siteUrl}/assets/images/logo_para_redes.jpg`;
   let html = addFavicon(replaceCourseLinks(template));
+  if (slug === 'lashista') {
+    html = html.replace('assets/images/modulo_uñas/m10/m10.jpeg', 'assets/images/modulo_lahista/metodo_de_pago.jpeg');
+  }
   html = html.replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${escapeAttribute(course.description)}">`);
   html = html.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${escapeAttribute(title)}">`);
   html = html.replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${escapeAttribute(course.description)}">`);

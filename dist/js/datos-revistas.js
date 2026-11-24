@@ -283,7 +283,7 @@ const revistas = {
     "imagenRespaldo": "assets/images/micropigmentacion.jpeg",
     "portada": {
       "plantilla": "professional-cover-template",
-      "imagen": "assets/images/modulo_micropigmentacion/m1/m1.jpeg",
+      "imagen": "assets/images/modulo_micropigmentacion/m1/m1.jpg",
       "titulo": "MICROPIGMENTACIÓN",
       "subtitulo": "CEJAS – OJOS – LABIOS"
     },
@@ -293,7 +293,7 @@ const revistas = {
         "titulo": "¿A QUIÉNES VA DIRIGIDA ESTA CARRERA?",
         "texto": "Esta carrera está dirigida a profesionales de la imagen personal, especialmente del maquillaje integral en el área de estética, y a quienes deseen adquirir conocimientos sobre asesoramiento y aplicación de técnicas de micropigmentación.",
         "imagen": "assets/images/modulo_micropigmentacion/m2/m2.jpeg",
-        "clase": "barberia-intro",
+        "clase": "barberia-intro micropigmentacion-intro",
         "marcaAgua": true
       }
     ],
@@ -305,7 +305,7 @@ const revistas = {
       },
       {
         "imagen": "assets/images/modulo_micropigmentacion/m4/m4.jpeg",
-        "clase": "barberia-module page-text-left",
+        "clase": "barberia-module micropigmentacion-module page-text-left",
         "marcaAgua": true
       },
       {
@@ -314,18 +314,18 @@ const revistas = {
         "marcaAgua": true
       },
       {
-        "imagen": "assets/images/modulo_micropigmentacion/m6/m6.jpeg",
-        "clase": "barberia-module page-text-left",
+        "imagen": "assets/images/modulo_micropigmentacion/m6/m6.jpg",
+        "clase": "barberia-module micropigmentacion-module page-text-left",
         "marcaAgua": true
       },
       {
-        "imagen": "assets/images/modulo_micropigmentacion/m7/m7.jpeg",
+        "videoFondo": "assets/images/modulo_micropigmentacion/m7/m7_video.mp4", "permitirVideo": true,
         "clase": "barberia-module",
         "marcaAgua": true
       },
       {
         "imagen": "assets/images/modulo_micropigmentacion/m8/m8.jpeg",
-        "clase": "barberia-module page-text-left",
+        "clase": "barberia-module micropigmentacion-module page-text-left",
         "marcaAgua": true
       }
     ],
