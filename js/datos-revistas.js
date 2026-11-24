@@ -236,7 +236,7 @@ const revistas = {
       {
         "id": "dirigido-a",
         "titulo": "¿A QUIÉNES VA DIRIGIDA ESTA CARRERA?",
-        "imagen": "assets/images/modulo_maquillaje/m2/m2.jpeg",
+        "videoFondo": "assets/images/modulo_maquillaje/m2/m2.mp4", "permitirVideo": true,
         "clase": "barberia-intro",
         "marcaAgua": true,
         "texto": "Esta carrera es ideal para quienes desean aprender y emprender. Te ayuda a desarrollar tu técnica en las diferentes áreas del maquillaje para convertirte en una artista de élite, aprovechar todo tu potencial y comenzar a trabajar. Empezamos desde cero."
@@ -245,7 +245,7 @@ const revistas = {
     "modulos": [
       {
         "titulo": "Módulo teórico",
-        "imagen": "assets/images/modulo_maquillaje/m3/m3.jpeg",
+        "imagen": "assets/images/modulo_maquillaje/m3/m3.jpg",
         "clase": "barberia-module",
         "marcaAgua": true
       },
@@ -269,7 +269,7 @@ const revistas = {
       },
       {
         "titulo": "Especialización en cortes y caracterización",
-        "imagen": "assets/images/modulo_maquillaje/m7/m7.jpeg",
+        "videoFondo": "assets/images/modulo_maquillaje/m7/m7.mp4", "permitirVideo": true,
         "clase": "barberia-module",
         "marcaAgua": true
       }

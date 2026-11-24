@@ -999,3 +999,13 @@
     z-index: 0;
   }
 }
+
+@media (min-width: 601px) {
+  .magazine-page.barberia-module.page-text-left::before {
+    background: linear-gradient(to right, #fff 42%, #ffffffef 50%, transparent 72%);
+  }
+
+  .magazine-page:is(.barberia-intro, .barberia-module) > .magazine-page-video {
+    z-index: 0;
+  }
+}
