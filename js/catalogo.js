@@ -5,7 +5,7 @@ const requestedCourse = new URLSearchParams(location.search).get('carrera') || p
 const courseAliases = { cosmetologia: 'cosmiatria', 'maestra-belleza': 'maestria-belleza' };
 const legacyCourse = courseAliases[requestedCourse] || requestedCourse;
 const courseKey = Object.hasOwn(carreras, legacyCourse) ? legacyCourse : 'maquillaje';
-const COURSE_VIDEOS_ENABLED = ['maestria-belleza', 'unas', 'cosmiatria'].includes(courseKey);
+const COURSE_VIDEOS_ENABLED = ['maestria-belleza', 'unas', 'cosmiatria', 'lashista'].includes(courseKey);
 const course = carreras[courseKey];
 const magazine = revistas[courseKey];
 const content = document.getElementById('magazine-content');
@@ -256,6 +256,10 @@ if (COURSE_VIDEOS_ENABLED && course.videoId && !magazine.ocultarVideoExterno) {
 
 const investment = cloneTemplate('magazine-investment-template');
 if (magazine.imagenRespaldo) investment.classList.add('barberia-investment');
+if (courseKey === 'lashista') {
+  investment.classList.add('lashista-investment');
+  addWatermark(investment);
+}
 const investmentPhoto = investment.querySelector('.magazine-page-photo');
 if (magazine.videoInversion && COURSE_VIDEOS_ENABLED) {
   const investmentVideo = document.createElement('video');

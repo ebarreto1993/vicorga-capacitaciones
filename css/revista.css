@@ -915,3 +915,18 @@
     mask-image: linear-gradient(to bottom, transparent, #000 clamp(60px, 22vw, 110px));
   }
 }
+
+.lashista-intro .magazine-page-watermark,
+.lashista-module.page-text-left .magazine-page-watermark,
+.lashista-investment .magazine-page-watermark {
+  left: -11%;
+  right: auto;
+  opacity: .1;
+}
+
+@media (min-width: 601px) {
+  .lashista-investment > .magazine-page-video {
+    -webkit-mask-image: linear-gradient(to left, #000 62%, transparent);
+    mask-image: linear-gradient(to left, #000 62%, transparent);
+  }
+}
