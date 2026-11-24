@@ -911,7 +911,7 @@
     max-height: none;
     aspect-ratio: auto;
     object-fit: contain;
-    -webkit-mask-image: none;
-    mask-image: none;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 clamp(60px, 22vw, 110px));
+    mask-image: linear-gradient(to bottom, transparent, #000 clamp(60px, 22vw, 110px));
   }
 }
