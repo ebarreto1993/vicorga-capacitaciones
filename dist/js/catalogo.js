@@ -256,7 +256,7 @@ if (COURSE_VIDEOS_ENABLED && course.videoId && !magazine.ocultarVideoExterno) {
 
 const investment = cloneTemplate('magazine-investment-template');
 if (magazine.imagenRespaldo) investment.classList.add('barberia-investment');
-if (['lashista', 'micropigmentacion'].includes(courseKey)) {
+if (['lashista', 'micropigmentacion', 'barberia'].includes(courseKey)) {
   investment.classList.add(courseKey + '-investment');
   addWatermark(investment);
 }

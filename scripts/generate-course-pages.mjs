@@ -86,9 +86,9 @@ function coursePage(template, slug, course) {
   html = html.replace(/<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${image}">`);
   html = html.replace(/<meta name="twitter:image:alt" content="[^"]*">/, '<meta name="twitter:image:alt" content="Logo de Vicorga Capacitaciones sobre fondo negro">');
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
-  if (slug === 'barberia' || slug === 'lashista') {
-    html = html.replace(/css\/revista\.css\?v=[^" ]+/, 'css/revista.css?v=20261124-9');
-    html = html.replace(/js\/datos-carreras\.js\?v=[^" ]+/, 'js/datos-carreras.js?v=20261124-4');
+  if (slug === 'lashista') {
+    html = html.replace(/css\/revista\.css\?v=[^" ]+/, 'css/revista.css?v=20261124-14');
+    html = html.replace(/js\/datos-carreras\.js\?v=[^" ]+/, 'js/datos-carreras.js?v=20261124-12');
     html = html.replace(/js\/datos-revistas\.js\?v=[^" ]+/, 'js/datos-revistas.js?v=20261124-9');
     html = html.replace(/js\/catalogo\.js\?v=[^" ]+/, 'js/catalogo.js?v=20261124-9');
   }

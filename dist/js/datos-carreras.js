@@ -86,7 +86,7 @@ const carreras = {
             {"numero": "05", "nombre": "Módulo 5", "temas": ["Micropigmentación de labios", "Anatomía y nervios", "Morfología y visagismo de los labios", "Contraindicaciones absolutas y relativas", "Técnicas para definir y dar volumen a los labios", "Selección de pigmentos y colores adecuados", "Neutralización según el fototipo", "Técnicas de relleno y contorno", "Corrección del color y la forma", "Técnica Baby Lips", "Técnica Full Lips"]},
             {"numero": "06", "nombre": "Módulo 6", "temas": ["Delineado de ojos", "Anatomía del ojo", "Contraindicaciones absolutas y relativas", "Tipos de delineado según la morfología del ojo", "Visagismo del ojo", "Técnicas de delineado permanente: efecto de volumen en pestañas y eyeliner", "Cuidados posteriores"]}
         ],
-        matricula: 70,
+        matricula: 80,
         mensualidad: 150,
         incluye: ["Camiseta", "Kit de inicio", "Mochila", "30% de los materiales para trabajar en clase", "Certificado"]
     },

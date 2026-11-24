@@ -938,3 +938,58 @@
     background: linear-gradient(to right, #fff 42%, #ffffffef 50%, transparent 72%);
   }
 }
+
+.barberia-audience .magazine-page-watermark,
+.barberia-module-two .magazine-page-watermark,
+.barberia-module-four .magazine-page-watermark {
+  left: -11%;
+  right: auto;
+  opacity: .1;
+}
+
+@media (min-width: 601px) {
+  .barberia-module-two.page-text-left::before,
+  .barberia-module-four.page-text-left::before {
+    background: linear-gradient(to right, #fff 42%, #ffffffef 50%, transparent 72%);
+  }
+
+  .magazine-page:is(.barberia-intro, .barberia-module) {
+    display: flex;
+    align-items: center;
+  }
+
+  .magazine-page.barberia-intro .magazine-page-copy {
+    padding-block: 6%;
+  }
+
+  .magazine-page.barberia-intro .magazine-page-copy p {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .magazine-page:is(.barberia-intro, .barberia-module) > .magazine-page-copy {
+    margin-inline: auto;
+    padding-block: 24px 36px;
+  }
+}
+
+@media (min-width: 601px) {
+  .magazine-page:is(.beauty-about, .beauty-audience, .beauty-cortes,
+    .beauty-maquillaje, .beauty-barberia, .nails-audience,
+    .nails-module-three, .nails-module-four, .cosmiatria-intro,
+    .barberia-investment) {
+    display: flex;
+    align-items: center;
+  }
+
+  .magazine-page:is(.beauty-about, .beauty-audience,
+    .nails-audience, .cosmiatria-intro) > .magazine-page-copy {
+    padding-block: 6%;
+  }
+
+  .magazine-page:is(.beauty-about, .beauty-audience,
+    .nails-audience, .cosmiatria-intro) > .magazine-page-copy p {
+    margin-top: 1.5rem;
+  }
+}

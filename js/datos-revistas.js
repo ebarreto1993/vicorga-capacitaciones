@@ -206,15 +206,15 @@ const revistas = {
         "titulo": "¿A QUIÉNES VA DIRIGIDA ESTA CARRERA?",
         "texto": "Esta carrera es ideal para quienes desean ingresar al mundo de la barbería. Empezamos desde cero, por lo que no necesitas conocimientos previos. Aprenderás nuevas técnicas eficientes para lograr resultados excelentes.",
         "imagen": "assets/images/modulo_barberia/m2/m2.jpeg",
-        "clase": "barberia-intro",
+        "clase": "barberia-intro barberia-audience",
         "marcaAgua": true
       }
     ],
     "modulos": [
-      {"imagen":"assets/images/modulo_barberia/m3/m3.jpeg","clase":"barberia-module barberia-module-one","marcaAgua":true},
-      {"imagen":"assets/images/modulo_barberia/m4/m4.jpeg","clase":"barberia-module page-text-left barberia-module-two","marcaAgua":true},
+      {"videoFondo":"assets/images/modulo_barberia/m3/m3_video.mp4","permitirVideo":true,"clase":"barberia-module barberia-module-one","marcaAgua":true},
+      {"videoFondo":"assets/images/modulo_barberia/m4/m4_video.mp4","permitirVideo":true,"clase":"barberia-module page-text-left barberia-module-two","marcaAgua":true},
       {"imagen":"assets/images/modulo_barberia/m5/m5.jpeg","clase":"barberia-module barberia-module-three","marcaAgua":true},
-      {"imagen":"assets/images/modulo_barberia/m6/m6.jpeg","clase":"barberia-module page-text-left barberia-module-four","marcaAgua":true}
+      {"videoFondo":"assets/images/modulo_barberia/m6/m6_video.mp4","permitirVideo":true,"clase":"barberia-module page-text-left barberia-module-four","marcaAgua":true}
     ],
     "imagenInversion": "assets/images/modulo_barberia/m7/m7.jpeg",
     "notaExamen": "Examen final obligatorio para recibir la certificación (sesión de fotos).",
