@@ -57,11 +57,11 @@ address strong, address span { display: block; }
 .closing h2 { font-size: 42px; }
 .closing h2 em { color: var(--gold); }
 footer { padding-block: 40px 0; }
-.footer-grid { display: grid; grid-template-columns: .7fr 1.25fr 1fr 1.4fr; gap: 30px; }
-.footer-grid h3 { font-size: 13px; margin-bottom: 15px; }
-.footer-grid a:not(.brand) { display: block; font-size: 12px; margin-block: 7px; overflow-wrap: anywhere; }
-.footer-grid p { font-size: 12px; }
-.footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 30px; padding-block: 20px; }
+.footer-grid { display: grid; grid-template-columns: .7fr 1.25fr 1.4fr; gap: 30px; }
+.footer-grid h3 { font-size: 18px; margin-bottom: 15px; }
+.footer-grid a:not(.brand) { display: block; font-size: 16px; margin-block: 7px; overflow-wrap: anywhere; }
+.footer-grid p { font-size: 16px; overflow-wrap: anywhere; }
+.footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; font-size: 15px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 30px; padding-block: 20px; }
 .footer-bottom a { margin-right: 12px; }
 @media(max-width:900px) {
   .location-info { padding: 26px; }
