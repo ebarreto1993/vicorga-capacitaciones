@@ -932,3 +932,9 @@
     mask-image: linear-gradient(to left, #000 62%, transparent);
   }
 }
+
+@media (min-width: 601px) {
+  .micropigmentacion-module.page-text-left::before {
+    background: linear-gradient(to right, #fff 42%, #ffffffef 50%, transparent 72%);
+  }
+}
