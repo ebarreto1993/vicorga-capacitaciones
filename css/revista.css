@@ -1022,3 +1022,16 @@
     overflow-wrap: anywhere;
   }
 }
+
+@media (min-width: 601px) {
+  .magazine-page.lashista-module > .magazine-page-copy {
+    box-sizing: border-box;
+    width: 50%;
+    margin-inline: auto 0;
+    padding: 5% clamp(20px, 3.5cqw, 50px);
+  }
+
+  .magazine-page.lashista-module.page-text-left > .magazine-page-copy {
+    margin-inline: 0 auto;
+  }
+}
