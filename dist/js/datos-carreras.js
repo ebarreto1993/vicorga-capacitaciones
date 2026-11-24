@@ -88,7 +88,7 @@ const carreras = {
         ],
         matricula: 70,
         mensualidad: 150,
-        incluye: ["Camiseta", "Kit de inicio", "30% de los materiales para trabajar en clase", "Certificado"]
+        incluye: ["Camiseta", "Kit de inicio", "Mochila", "30% de los materiales para trabajar en clase", "Certificado"]
     },
     "maquillaje": {
         nombre: "Maquillaje",
@@ -118,7 +118,7 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
-        incluye: ["Uniforme de la academia (chaqueta y capa)", "30% de los materiales para trabajar en clase", "Máquinas para trabajar en clase", "Certificado"]
+        incluye: ["Uniforme de la academia (chaqueta y capa)", "Mochila", "30% de los materiales para trabajar en clase", "Máquinas para trabajar en clase", "Certificado"]
     },
     "tatuajes": {
         nombre: "Tatuajes",
