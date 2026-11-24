@@ -1083,3 +1083,63 @@
     object-fit: contain;
   }
 }
+
+@media (max-width: 600px) {
+  .magazine .beauty-cover > .beauty-cover-heading {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    padding: 20px 6% 24px;
+    text-align: left;
+  }
+
+  .magazine .beauty-cover-heading h1 {
+    font-size: clamp(22px, 7.2cqw, 40px);
+    overflow-wrap: anywhere;
+  }
+
+  .magazine .beauty-cover-heading p {
+    margin-top: 3cqw;
+    font-size: clamp(13px, 3.8cqw, 22px);
+    line-height: 1.25;
+  }
+
+  .magazine .beauty-cover-edition {
+    position: relative;
+    inset: auto;
+    width: auto;
+    margin: 0 6%;
+    padding-bottom: 24px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2cqw;
+    transform: none;
+    text-align: left;
+  }
+
+  .magazine .beauty-cover-edition p {
+    font-size: clamp(14px, 4.2cqw, 24px);
+  }
+
+  .magazine .beauty-cover-edition :is(img, svg) {
+    order: 0;
+    width: 7.5cqw;
+    height: auto;
+  }
+
+  .magazine .beauty-cover > .beauty-cover-photo {
+    -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
+    mask-image: linear-gradient(to bottom, #000 70%, transparent);
+  }
+}
+
+.magazine-cover-edition { display: none; }
+
+@media (max-width: 600px) {
+  .magazine .magazine-cover-copy { padding: 20px 6% 24px; }
+  .magazine .magazine-cover-copy h1 {
+    font-size: clamp(22px, 7.2cqw, 40px);
+    overflow-wrap: anywhere;
+  }
+  .magazine .magazine-cover-edition { display: flex; }
+}
