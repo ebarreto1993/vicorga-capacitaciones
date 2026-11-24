@@ -1005,6 +1005,7 @@
     background: linear-gradient(to right, #fff 42%, #ffffffef 50%, transparent 72%);
   }
 
+  .magazine-page.barberia-module.page-text-left > .magazine-page-photo,
   .magazine-page:is(.barberia-intro, .barberia-module) > .magazine-page-video {
     z-index: 0;
   }
