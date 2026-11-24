@@ -1035,3 +1035,51 @@
     margin-inline: 0 auto;
   }
 }
+
+@media (max-width: 600px) {
+  .magazine :is(.beauty-cover, .nails-cover, .magazine-cover, .magazine-payment) {
+    min-height: 0;
+    padding-top: 0;
+  }
+
+  .magazine :is(.beauty-cover, .nails-cover, .magazine-cover, .magazine-payment)::before {
+    background: none;
+  }
+
+  .magazine :is(.beauty-cover-photo, .nails-cover-photo, .magazine-cover-photo, .magazine-payment-photo),
+  .magazine .magazine-page > .magazine-page-photo:first-child {
+    position: relative;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(to bottom, #000 84%, transparent);
+    mask-image: linear-gradient(to bottom, #000 84%, transparent);
+  }
+
+  .magazine .nails-cover { aspect-ratio: auto; }
+  .magazine .nails-cover-heading {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    padding: 20px 6% 24px;
+  }
+  .magazine .nails-edition {
+    position: relative;
+    inset: auto;
+    margin: 0 6% 24px;
+  }
+
+  .magazine .nails-exam > .magazine-page-photo {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
