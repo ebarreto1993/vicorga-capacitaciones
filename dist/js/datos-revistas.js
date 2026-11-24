@@ -211,10 +211,10 @@ const revistas = {
       }
     ],
     "modulos": [
-      {"videoFondo":"assets/images/modulo_barberia/m3/m3_video.mp4","permitirVideo":true,"clase":"barberia-module barberia-module-one","marcaAgua":true},
-      {"videoFondo":"assets/images/modulo_barberia/m4/m4_video.mp4","permitirVideo":true,"clase":"barberia-module page-text-left barberia-module-two","marcaAgua":true},
+      {"videoFondo":"assets/images/modulo_barberia/m3/m3_video.mp4","poster":"assets/images/modulo_barberia/m3/m3_poster.jpg","permitirVideo":true,"clase":"barberia-module barberia-module-one","marcaAgua":true},
+      {"videoFondo":"assets/images/modulo_barberia/m4/m4_video.mp4","poster":"assets/images/modulo_barberia/m4/m4_poster.jpg","permitirVideo":true,"clase":"barberia-module page-text-left barberia-module-two","marcaAgua":true},
       {"imagen":"assets/images/modulo_barberia/m5/m5.jpeg","clase":"barberia-module barberia-module-three","marcaAgua":true},
-      {"videoFondo":"assets/images/modulo_barberia/m6/m6_video.mp4","permitirVideo":true,"clase":"barberia-module page-text-left barberia-module-four","marcaAgua":true}
+      {"videoFondo":"assets/images/modulo_barberia/m6/m6_video.mp4","poster":"assets/images/modulo_barberia/m6/m6_poster.jpg","permitirVideo":true,"clase":"barberia-module page-text-left barberia-module-four","marcaAgua":true}
     ],
     "imagenInversion": "assets/images/modulo_barberia/m7/m7.jpeg",
     "notaExamen": "Examen final obligatorio para recibir la certificación (sesión de fotos).",
