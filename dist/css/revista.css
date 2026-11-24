@@ -1121,13 +1121,8 @@
     font-size: clamp(14px, 4.2cqw, 24px);
   }
 
-  .magazine .nails-edition .nails-book { width: clamp(44px, 13cqw, 66px); }
+  .magazine :is(.nails-edition, .beauty-cover-edition) > .nails-book { width: clamp(44px, 13cqw, 66px); }
 
-  .magazine .beauty-cover-edition :is(img, svg) {
-    order: 0;
-    width: clamp(44px, 13cqw, 66px);
-    height: auto;
-  }
 
   .magazine .beauty-cover > .beauty-cover-photo {
     -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
@@ -1144,4 +1139,23 @@
     overflow-wrap: anywhere;
   }
   .magazine .magazine-cover-edition { display: flex; }
+}
+
+.magazine .beauty-cover-edition {
+  gap: 1.7cqw;
+}
+
+.magazine .beauty-cover-edition p {
+  font: 400 min(2.25cqw, 3.18cqh)/1.2 'Caladea', Georgia, serif;
+  white-space: nowrap;
+}
+
+.magazine .beauty-cover-edition .nails-book img {
+  width: 240%;
+  order: 0;
+}
+
+@media (max-width: 600px) {
+  .magazine .beauty-cover-edition { gap: 2cqw; }
+  .magazine .beauty-cover-edition p { font-size: 4.2cqw; }
 }
