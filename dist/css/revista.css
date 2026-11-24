@@ -1121,9 +1121,11 @@
     font-size: clamp(14px, 4.2cqw, 24px);
   }
 
+  .magazine .nails-edition .nails-book { width: clamp(44px, 13cqw, 66px); }
+
   .magazine .beauty-cover-edition :is(img, svg) {
     order: 0;
-    width: 7.5cqw;
+    width: clamp(44px, 13cqw, 66px);
     height: auto;
   }
 
