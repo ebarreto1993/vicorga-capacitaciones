@@ -85,8 +85,8 @@ function coursePage(template, slug, course) {
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
   if (slug === 'barberia' || slug === 'lashista') {
     html = html.replace(/css\/revista\.css\?v=[^" ]+/, 'css/revista.css?v=20261123-6');
-    html = html.replace(/js\/datos-carreras\.js\?v=[^" ]+/, 'js/datos-carreras.js?v=20261123-6');
-    html = html.replace(/js\/datos-revistas\.js\?v=[^" ]+/, 'js/datos-revistas.js?v=20261123-6');
+    html = html.replace(/js\/datos-carreras\.js\?v=[^" ]+/, 'js/datos-carreras.js?v=20261124-3');
+    html = html.replace(/js\/datos-revistas\.js\?v=[^" ]+/, 'js/datos-revistas.js?v=20261124-3');
     html = html.replace(/js\/catalogo\.js\?v=[^" ]+/, 'js/catalogo.js?v=20261123-6');
   }
   return html;

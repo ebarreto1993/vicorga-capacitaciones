@@ -22,7 +22,7 @@ const carreras = {
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["Uniforme completo","Mochila","30% de los materiales, excepto principios activos y herramientas personales","Aparatología de última generación para todas las prácticas en clase: láser, Picosecond, HIFU, carboxia, entre otras"]
+        incluye: ["Uniforme completo", "Mochila", "30% de los materiales para trabajar en clase, excepto principios activos y herramientas personales", "Aparatología de última generación para todas las prácticas en clase: láser, Picosecond, HIFU, carboxia, entre otras", "Certificado"]
     },
     "maestria-belleza": {
         nombre: "Maestra en Belleza",
@@ -43,7 +43,7 @@ const carreras = {
         matricula: 80,
         mensualidad: 120,
         mensualidadEntreSemana: 190,
-        incluye: ["Uniforme de la academia","Mochila","30% de los materiales para las clases","Certificación de la academia"]
+        incluye: ["Uniforme de la academia", "Mochila", "30% de los materiales para trabajar en clase", "Certificado"]
     },
     "unas": {
         nombre: "Técnica profesional en uñas",
@@ -58,7 +58,7 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
-        incluye: ["Drill y lámparas para prácticas","30% de los materiales para las clases","Uniforme de la academia","Mochila de la academia","Certificación de la academia"]
+        incluye: ["Drill y lámparas para prácticas", "30% de los materiales para trabajar en clase", "Uniforme de la academia", "Mochila de la academia", "Certificado"]
     },
     "lashista": {
         nombre: "Lashista",
@@ -72,7 +72,7 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
-        incluye: ["Camiseta","Guía de estudio","Mochila de la academia","Materiales para trabajar en clase","Certificado avalado por la academia"]
+        incluye: ["Camiseta", "Mochila de la academia", "30% de los materiales para trabajar en clase", "Certificado"]
     },
     "micropigmentacion": {
         nombre: "Micropigmentación",
@@ -88,7 +88,7 @@ const carreras = {
         ],
         matricula: 70,
         mensualidad: 150,
-        incluye: ["Camiseta", "Guía de estudio", "Kit de inicio", "Certificado avalado por la academia"]
+        incluye: ["Camiseta", "Kit de inicio", "30% de los materiales para trabajar en clase", "Certificado"]
     },
     "maquillaje": {
         nombre: "Maquillaje",
@@ -103,7 +103,7 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
-        incluye: ["Uniforme completo", "Mochila", "Guía de estudio", "Materiales para trabajar en clase", "Certificado avalado por la academia", "Título por prácticas preprofesionales o a través de asociaciones o gremios"]
+        incluye: ["Uniforme completo", "Mochila", "30% de los materiales para trabajar en clase", "Certificado"]
     },
     "barberia": {
         nombre: "Barbería",
@@ -118,7 +118,7 @@ const carreras = {
         ],
         matricula: 80,
         mensualidad: 150,
-        incluye: ["Uniforme de la academia (chaqueta y capa)","Materiales y máquinas para trabajar en clase","Certificado avalado por la academia"]
+        incluye: ["Uniforme de la academia (chaqueta y capa)", "30% de los materiales para trabajar en clase", "Máquinas para trabajar en clase", "Certificado"]
     },
     "tatuajes": {
         nombre: "Tatuajes",
@@ -134,6 +134,6 @@ const carreras = {
         matricula: 80,
         mensualidad: 150,
         mensualidadEntreSemana: 190,
-        incluye: ["Equipos básicos para prácticas","Uniforme de la academia","Mochila de la academia","30% de los materiales para las clases","Certificación de la academia"]
+        incluye: ["Equipos básicos para prácticas", "Uniforme de la academia", "Mochila de la academia", "30% de los materiales para trabajar en clase", "Certificado"]
     }
 };

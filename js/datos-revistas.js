@@ -187,7 +187,6 @@ const revistas = {
       {"imagen":"assets/images/modulo_lahista/m5/m5.jpeg","clase":"barberia-module lashista-module","marcaAgua":true}
     ],
     "imagenInversion": "assets/images/modulo_lahista/m6/m6.jpeg",
-    "opcionalCertificado": "Certificado con aval del Ministerio de Trabajo, visible en la plataforma (previo derecho de examen).",
     "notasInversion": [
       "Examen final obligatorio para recibir la certificación (sesión de fotos).",
       "Puedes reservar tu cupo con $20 y hacer abonos poco a poco. La matrícula y la pensión deberán estar pagadas hasta el día de inicio.",
@@ -218,7 +217,6 @@ const revistas = {
       {"imagen":"assets/images/modulo_barberia/m6/m6.jpeg","clase":"barberia-module page-text-left barberia-module-four","marcaAgua":true}
     ],
     "imagenInversion": "assets/images/modulo_barberia/m7/m7.jpeg",
-    "opcionalCertificado": "Certificado con aval del Ministerio de Trabajo, visible en la plataforma, con una carga horaria de 210 horas (previo derecho de examen).",
     "notaExamen": "Examen final obligatorio para recibir la certificación (sesión de fotos).",
     "notasInversion": [
       "Examen final obligatorio para recibir la certificación (sesión de fotos).",
@@ -277,7 +275,6 @@ const revistas = {
       }
     ],
     "imagenInversion": "assets/images/modulo_maquillaje/m8/m8.jpeg",
-    "opcionalCertificado": "Certificación con aval del Ministerio de Trabajo (opcional).",
     "notasInversion": [
       "Ojo: los valores cancelados o abonados no serán reembolsables bajo ninguna circunstancia."
     ]
@@ -333,9 +330,7 @@ const revistas = {
       }
     ],
     "imagenInversion": "assets/images/modulo_micropigmentacion/m9/m9.jpeg",
-    "opcionalCertificado": "Certificado avalado por el Ministerio de Trabajo (opcional, con costo adicional).",
     "notasInversion": [
-      "Título por prácticas profesionales, previo pago del derecho de examen y con costo adicional.",
       "Contamos con instalaciones adecuadas para tu aprendizaje.",
       "Ojo: los valores cancelados o abonados no serán reembolsables bajo ninguna circunstancia."
     ]
