@@ -898,3 +898,20 @@
     font-size: clamp(22px, 7vw, 40px);
   }
 }
+
+.cosmiatria-m14 > .magazine-page-photo-second { display: none; }
+
+@media (max-width: 600px) {
+  .magazine-page.cosmiatria-m14 > .magazine-page-photo-second {
+    display: block;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}

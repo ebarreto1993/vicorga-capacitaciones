@@ -362,7 +362,7 @@ const revistas = {
       {"imagen":"assets/images/modulo_cosmiatria/m11/m11.jpg","clase":"cosmiatria-module page-text-left","marcaAgua":true},
       {"imagen":"assets/images/modulo_cosmiatria/m12/m12.jpeg","clase":"cosmiatria-module","marcaAgua":true},
       {"videoFondo":"assets/images/modulo_cosmiatria/m13/m13.mp4","clase":"cosmiatria-module page-text-left","marcaAgua":true,"permitirVideo":true},
-      {"imagen":"assets/images/modulo_cosmiatria/m14/m14.jpeg","clase":"cosmiatria-module","marcaAgua":true}
+      {"videoFondo":"assets/images/modulo_cosmiatria/m14/m14_video.mp4","segundaImagen":"assets/images/modulo_cosmiatria/m14/m14.jpeg","clase":"cosmiatria-module cosmiatria-m14","marcaAgua":true}
     ],
     "imagenInversion": "assets/photos/cosmetologia.jpg",
     "inversionProgramas": [
