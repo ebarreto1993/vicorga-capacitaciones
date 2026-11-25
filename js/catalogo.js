@@ -206,10 +206,10 @@ course.modulos.forEach((module, index) => {
     ...magazine.modulos?.[index]
   };
   const section = module.subseccion;
-  const title = section ? module.nombre : layout.titulo || 'MÓDULO ' + Number(module.numero);
+  const title = layout.titulo || 'MÓDULO ' + Number(module.numero);
   const page = createPage('modulo-' + module.numero, title, layout);
   const copy = page.querySelector('.magazine-page-copy');
-  if (!section && (!magazine.portada.plantilla || ['cosmiatria', 'barberia'].includes(courseKey))) {
+  if (!magazine.portada.plantilla || ['cosmiatria', 'barberia'].includes(courseKey)) {
     const name = document.createElement('p');
     name.className = 'magazine-module-name';
     name.textContent = module.nombre;
@@ -220,6 +220,7 @@ course.modulos.forEach((module, index) => {
   copy.append(topics);
   if (section) {
     const heading = document.createElement('h3');
+    heading.className = 'magazine-module-name';
     heading.textContent = section.titulo;
     const remainingTopics = document.createElement('ol');
     remainingTopics.start = section.inicio + 1;

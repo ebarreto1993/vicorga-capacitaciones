@@ -619,20 +619,18 @@
 .barberia-module-two ol, .barberia-module-four ol { font-size: clamp(16px, 1.48cqw, 21px); line-height: 1.29; }
 .barberia-module-two li + li, .barberia-module-four li + li { margin-top: .12em; }
 .barberia-module-three ol { font-size: clamp(16px, 1.55cqw, 22px); }
-.barberia-module:is(.barberia-module-one, .barberia-module-four) .magazine-page-copy {
-  text-align: center;
-}
-.barberia-module:is(.barberia-module-one, .barberia-module-four) .magazine-page-copy :is(h2, h3) {
+.barberia-module:is(.barberia-module-one, .barberia-module-four) .magazine-module-name {
   font: 400 clamp(18px, 2.1cqw, 30px)/1.48 'Caladea', Georgia, serif;
-  margin: 0 0 .6em;
+  margin-bottom: .6em;
 }
-.barberia-module:is(.barberia-module-one, .barberia-module-four) .magazine-page-copy h3 {
+.barberia-module:is(.barberia-module-one, .barberia-module-four) h3.magazine-module-name {
   margin-top: 1em;
 }
-.barberia-module:is(.barberia-module-one, .barberia-module-four) .magazine-page-copy ol {
-  list-style-position: inside;
-  padding-inline: 0;
-  text-align: center;
+.barberia-module:is(.barberia-module-one, .barberia-module-four) .magazine-page-copy > ol {
+  width: auto;
+  margin-inline: 0;
+  padding-inline: 1.6em 0;
+  text-align: left;
 }
 .barberia-cover ~ #pensum .magazine-investment .magazine-page-copy { width: 70%; }
 .barberia-cover ~ #pensum .magazine-investment p,
