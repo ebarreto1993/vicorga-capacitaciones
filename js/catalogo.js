@@ -205,23 +205,22 @@ course.modulos.forEach((module, index) => {
     clase: index % 2 === 0 ? 'page-text-left' : '',
     ...magazine.modulos?.[index]
   };
-  const page = createPage('modulo-' + module.numero, layout.titulo || 'MÓDULO ' + Number(module.numero), layout);
+  const section = module.subseccion;
+  const title = section ? module.nombre : layout.titulo || 'MÓDULO ' + Number(module.numero);
+  const page = createPage('modulo-' + module.numero, title, layout);
   const copy = page.querySelector('.magazine-page-copy');
-  if (!magazine.portada.plantilla || ['cosmiatria', 'barberia'].includes(courseKey)) {
+  if (!section && (!magazine.portada.plantilla || ['cosmiatria', 'barberia'].includes(courseKey))) {
     const name = document.createElement('p');
     name.className = 'magazine-module-name';
     name.textContent = module.nombre;
     copy.append(name);
   }
   const topics = document.createElement('ol');
-  const section = module.subseccion;
   addItems(topics, section ? module.temas.slice(0, section.inicio) : module.temas);
   copy.append(topics);
   if (section) {
-    const heading = document.createElement('p');
-    const title = document.createElement('strong');
-    title.textContent = section.titulo;
-    heading.append(title);
+    const heading = document.createElement('h3');
+    heading.textContent = section.titulo;
     const remainingTopics = document.createElement('ol');
     remainingTopics.start = section.inicio + 1;
     addItems(remainingTopics, module.temas.slice(section.inicio));
