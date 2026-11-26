@@ -2,7 +2,7 @@
 
 const pageCourse = decodeURIComponent(location.pathname.split('/').pop() || '').replace(/\.html$/i, '');
 const requestedCourse = new URLSearchParams(location.search).get('carrera') || pageCourse;
-const courseAliases = { cosmetologia: 'cosmiatria', 'maestra-belleza': 'maestria-belleza' };
+const courseAliases = { cosmetologia: 'cosmiatria', 'carrera-cosmiatria': 'cosmiatria', 'maestra-belleza': 'maestria-belleza' };
 const legacyCourse = courseAliases[requestedCourse] || requestedCourse;
 const courseKey = Object.hasOwn(carreras, legacyCourse) ? legacyCourse : 'maquillaje';
 const COURSE_VIDEOS_ENABLED = ['maestria-belleza', 'unas', 'cosmiatria', 'lashista'].includes(courseKey);
@@ -209,10 +209,10 @@ course.modulos.forEach((module, index) => {
   const title = layout.titulo || 'MÓDULO ' + Number(module.numero);
   const page = createPage('modulo-' + module.numero, title, layout);
   const copy = page.querySelector('.magazine-page-copy');
-  if (!magazine.portada.plantilla || ['cosmiatria', 'barberia'].includes(courseKey)) {
+  if (layout.subtitulo || !magazine.portada.plantilla || ['cosmiatria', 'barberia'].includes(courseKey)) {
     const name = document.createElement('p');
     name.className = 'magazine-module-name';
-    name.textContent = module.nombre;
+    name.textContent = layout.subtitulo || module.nombre;
     copy.append(name);
   }
   const topics = document.createElement('ol');

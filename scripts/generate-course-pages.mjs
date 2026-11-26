@@ -48,7 +48,7 @@ const courses = {
 };
 
 const escapeAttribute = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;');
-const staticLink = slug => `${slug}.html`;
+const staticLink = slug => slug === 'cosmiatria' ? 'carrera-cosmiatria.html' : `${slug}.html`;
 
 function addFavicon(html) {
   if (html.includes('rel="icon"')) return html;
@@ -66,7 +66,7 @@ function replaceCourseLinks(html) {
 
 function coursePage(template, slug, course) {
   const title = `${course.title} · Vicorga Capacitaciones`;
-  const url = `${siteUrl}/${slug}.html`;
+  const url = `${siteUrl}/${staticLink(slug)}`;
   const image = `${siteUrl}/assets/images/logo_para_redes.jpg`;
   let html = addFavicon(replaceCourseLinks(template));
   if (slug === 'lashista') {
@@ -106,8 +106,8 @@ await writeFile(resolve(root, 'dist/curso.html'), addFavicon(replaceCourseLinks(
 
 for (const [slug, course] of Object.entries(courses)) {
   const html = coursePage(sourceTemplate, slug, course);
-  await writeFile(resolve(root, `${slug}.html`), html);
-  await writeFile(resolve(root, 'dist', `${slug}.html`), html);
+  await writeFile(resolve(root, staticLink(slug)), html);
+  await writeFile(resolve(root, 'dist', staticLink(slug)), html);
 }
 
 console.log(`Generated ${Object.keys(courses).length} course pages in source and dist.`);

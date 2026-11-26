@@ -128,7 +128,8 @@ const revistas = {
     "modulos": [
       {
         "imagen": "assets/images/modulo_uñas/m3/m3.jpeg",
-        "clase": "nails-module-one"
+        "clase": "nails-module-one",
+        "subtitulo": "VIP Russian – Manicure on Fire"
       },
       {
         "imagen": "assets/images/modulo_uñas/m4/m4.jpeg",
